@@ -1,0 +1,30 @@
+{
+    "name": "yaroslaw74/kyg_framework",
+    "description": "KYG Framework",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "KYG\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kataev Yaroslav Georgievich",
+            "email": "yaroslaw74@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.1.0",
+        "ext-openssl": "*",
+        "ext-curl": "*",
+        "ext-mbstring": "*",
+        "ext-zip": "*",
+        "phpmailer/phpmailer": "^6.8",
+        "smarty/smarty": "^4.3"
+    },
+    "prefer-stable": true
+}
