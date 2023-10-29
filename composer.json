@@ -4,11 +4,6 @@
     "type": "project",
     "license": "GPL-3.0-or-later",
     "version": "1.0.0",
-    "autoload": {
-        "psr-4": {
-            "KYG\\": "app/"
-        }
-    },
     "authors": [
         {
             "name": "Kataev Yaroslav Georgievich",
@@ -16,7 +11,24 @@
             "role": "Developer"
         }
     ],
+    "support": {
+        "wiki": "https://github.com/yaroslaw74/KYG-Framework/wiki",
+        "issues": "https://github.com/yaroslaw74/KYG-Framework/issues",
+        "source": "https://github.com/yaroslaw74/KYG-Framework"
+    },
+    "autoload": {
+        "psr-4": {
+            "KYG\\": "app/"
+        }
+    },
+    "config": {
+        "vendor-dir": "external",
+        "platform": {
+          "php": "7.1.0"
+        }
+    },
     "minimum-stability": "stable",
+    "prefer-stable": true,
     "require": {
         "php": ">=7.1.0",
         "ext-openssl": "*",
@@ -25,6 +37,5 @@
         "ext-zip": "*",
         "phpmailer/phpmailer": "^6.8",
         "smarty/smarty": "^4.3"
-    },
-    "prefer-stable": true
+    }   
 }
