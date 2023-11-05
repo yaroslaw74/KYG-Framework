@@ -31,11 +31,14 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.1.0",
-        "ext-openssl": "*",
         "ext-curl": "*",
+        "ext-gettext": "*",
         "ext-mbstring": "*",
+        "ext-openssl": "*",
         "ext-zip": "*",
+        "gettext/gettext": "^4.8",
         "phpmailer/phpmailer": "^6.8",
-        "smarty/smarty": "^4.3"
+        "smarty/smarty": "^4.3",
+        "smarty-gettext/smarty-gettext": "^1.7"
     }   
 }
