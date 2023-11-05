@@ -36,6 +36,8 @@
         "ext-mbstring": "*",
         "ext-openssl": "*",
         "ext-zip": "*",
+        "components/jquery": "^3.7",
+        "components/jqueryui": "^1.12",
         "gettext/gettext": "^4.8",
         "phpmailer/phpmailer": "^6.8",
         "smarty/smarty": "^4.3",
