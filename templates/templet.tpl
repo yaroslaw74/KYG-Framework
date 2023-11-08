@@ -8,6 +8,7 @@
   * @E-mail     yaroslaw74@gmail.com
   * @License    GNU General Public License version 3 or later; see LICENSE.txt
   ***************************************************************************************}}
+{{locale path="./languages/{{$LanguageSystem}}/" domain="{{$Domain}}"}}
 <!doctype html>
 <html lang="{{$LanguagePage}}">
 	<head>
@@ -25,7 +26,17 @@
 		<link rel="icon" sizes="512X512" href="{{$Url}}libraries/favicon/favicon-512x512.png" type="image/png" />
 		<link rel="icon" size="1024X1024" href="{{$Url}}libraries/favicon/favicon-1024x1024.png" type="image/png" />
 		<link rel="icon" sizes="any" href="{{$Url}}libraries/favicon/favicon.svg" type="image/svg+xml" />
-		{{block name=head}}{{/block}}
+		<link rel="stylesheet" href="{{$Url}}external/components/jqueryui/themes/base/jquery-ui.min.css" />
+		<link rel="stylesheet" href="{{$Url}}external/components/jqueryui/themes/base/button.css" />
+		<link rel="stylesheet" href="{{$Url}}external/components/jqueryui/themes/base/core.css" />
+		<link rel="stylesheet" href="{{$Url}}external/components/jqueryui/themes/base/selectable.css" />
+		<link rel="stylesheet" href="{{$Url}}external/components/jqueryui/themes/{{$Theme}}/theme.css" />
+		{{block name=head_style}}{{/block}}
+		<script src="{{$Url}}external/components/jquery/jquery.min.js"></script>
+		<script src="{{$Url}}external/components/jqueryui/jquery-ui.min.js"></script>
+		<script src="{{$Url}}external/components/jqueryui/ui/widgets/button.js"></script>
+		<script src="{{$Url}}external/components/jqueryui/ui/widgets/selectmenu.js"></script>
+		{{block name=head_script}}{{/block}}
 	</head>
 	<body>
 		{{block name=body}}{{/block}}

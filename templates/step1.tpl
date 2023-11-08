@@ -10,14 +10,18 @@
   ***************************************************************************************}}
 {{extends file='install.tpl'}}
 {{block name=main}}
-	<form action="{{$Url}}components/install/step2.php" method="post">
-		<p>
-			<select  class="lang" size="1" required name="LanguageSetup">
+	<div align="center">
+		<form action="{{$Url}}components/install/step2.php" method="post">
+			<select  class="lang" name="LanguageSetup" id="number">
 				{{foreach $LanguageList as $key => $Value}}
-					<option value="{{$key}}" lang="{{$Value[1]}}">{{$Value[0]}}</option>
+					{{if $key == $LanguageSystem}}
+						<option value="{{$key}}" lang="{{$Value[1]}}" selected="selected">{{$Value[0]}}</option>
+					{{else}}
+						<option value="{{$key}}" lang="{{$Value[1]}}">{{$Value[0]}}</option>
+					{{/if}}
 				{{/foreach}}
 			</select>
-			<input class="lang" type="submit" value="OK">
-		</p>
-	</form>
+			<input class="ui-button ui-widget ui-corner-all" type="submit" value="OK">
+		</form>
+	</div>
 {{/block}}

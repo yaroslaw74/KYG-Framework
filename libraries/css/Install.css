@@ -97,18 +97,22 @@ label {
 	font-size: 20px;
 	font-weight: 300;
 }
+div {
+	width: 100%;
+	margin-top: 15px;
+	margin-bottom: 15px
+}
 	/*p a {
 		color: #1c3d5c;
 		font-weight: 700
 	}*/
 .lang {
-	font-size: 30px;
+	font-size: 25px;
+	vertical-align: middle;
 }
 .space {
 	font-size: 20px;
-}
-.button {
-	font-size: 25px;
+	
 }
 	/*
 	.link-help {

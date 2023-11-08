@@ -9,9 +9,12 @@
   * @License    GNU General Public License version 3 or later; see LICENSE.txt
   ***************************************************************************************}}
 {{extends file='templet.tpl'}}
-{{block name=head}}
+{{block name=head_style}}
 	<link rel="stylesheet" href="{{$Url}}libraries/css/Install.css">
-	{{block name=install_head}}{{/block}}
+	{{block name=install_head_style}}{{/block}}
+{{/block}}
+{{block name=head_script}}
+	{{block name=Install_head_script}}{{/block}}
 {{/block}}
 {{block name=body}}
 	<header>
