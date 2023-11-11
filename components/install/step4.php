@@ -10,12 +10,17 @@
  ***************************************************************************************/
 use KYG\templates;
 
-$LanguageSystem = $_POST['LanguageSetup'];
+$TimeZoneSystem = $_POST['TimeZoneSystem'];
+$DataFormat = $_POST['DataFormat'];
+$TimeFormat = $_POST['TimeFormat'];
 
 $NameHost = $_COOKIE['NameHost'];
 $UrlHTML = $_COOKIE['UrlHTML'];
+$LanguageSystem = $_COOKIE['LanguageSystem'];
 
-setrawcookie('LanguageSystem', $LanguageSystem, 0, '/', $NameHost);
+setrawcookie('TimeZoneSystem', $TimeZoneSystem, 0, '/', $NameHost);
+setrawcookie('DataFormat', $DataFormat, 0, '/', $NameHost);
+setrawcookie('TimeFormat', $TimeFormat, 0, '/', $NameHost);
 
 $DefinesDir = $_COOKIE['DefinesDir'];
 require_once($DefinesDir . 'defines.php');
@@ -24,25 +29,4 @@ require(KYG_PATH_EXTERNAL . 'autoload.php');
 
 $TemplatsHTML = new \KYG\templates\TemplateHTML($LanguageSystem, $UrlHTML, $NameHost);
 
-
-
-/*if (version_compare(PHP_VERSION, KYG_MINIMUM_PHP, '<')) {
-	echo $HTMLInstallClass->HTMLPrintErrorPHP($UrlHost);
-	exit;
-}
-if (session_status() == PHP_SESSION_DISABLED) {
-	echo $HTMLInstallClass->HTMLPrintErrorSession($UrlHost);
-	exit;
-}	
-if (session_status() == PHP_SESSION_ACTIVE) {
-	echo $HTMLInstallClass->HTMLPrintErrorSessionAuto($UrlHost);
-	exit;
-}
-if (!(extension_loaded('mysqli') or extension_loaded('pdo_mysql'))) {
-	echo $HTMLInstallClass->HTMLPrintErrorSQL($UrlHost);
-	exit;
-}*/
-
-
-
-$TemplatsHTML->display('step2.tpl');
+$TemplatsHTML->display('step4.tpl');

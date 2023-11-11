@@ -1,12 +1,12 @@
 <?php
 /****************************************************************************************
- * @Проект           KYG Framework
- * @Версия           1.0
- * @Дата изменения   01.01.2024 г.
+ * @Project    KYG Framework
+ * @Version    1.0
+ * @Data       01.01.2024 г.
  *
- * @Авторские права  (C) 2024 Катаев Ярослав Георгиевич 
- * @E-mail           yaroslaw74@outlook.com
- * @Лицензия         GNU General Public License version 2 or later; смотри LICENSE.txt
+ * @Copyright  (C) 2024 Kataev Yaroslav Georgievich 
+ * @E-mail     yaroslaw74@gmail.com
+ * @License    GNU General Public License version 3 or later; see LICENSE.txt
  ***************************************************************************************/
 use KYG\templates;
 
