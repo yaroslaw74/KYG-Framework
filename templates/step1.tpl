@@ -10,7 +10,7 @@
   ***************************************************************************************}}
 {{extends file='install.tpl'}}
 {{block name=main}}
-	<div align="center">
+	<div align="center" id="effect" class="ui-corner-all">
 		<form action="{{$Url}}components/install/step2.php" method="post">
 			<select  class="lang" name="LanguageSetup" id="number">
 				{{foreach $LanguageList as $key => $Value}}
@@ -21,7 +21,7 @@
 					{{/if}}
 				{{/foreach}}
 			</select>
-			<input class="ui-button ui-widget ui-corner-all" type="submit" value="OK">
+			<input class="ui-button ui-widget ui-corner-all ui-state-default" type="submit" value="OK">
 		</form>
 	</div>
 {{/block}}

@@ -11,13 +11,13 @@
 {{extends file='install.tpl'}}
 {{block name=main}}
 	<h2>{{t}}Конфигурация системы{{/t}}</h2>
-	<div align="center">
+	<div align="center" id="effect" class="ui-corner-all">
 		<form action="{{$Url}}components/install/step4.php" method="post">
 			<table>
 				<tr>
 					<td><label for="TimeZoneSistem">{{t}}Часовой пояс{{/t}}</label></td>
 					<td>
-						<select  class="space" size="1" required name="TimeZoneSistem" id="speed">
+						<select  class="space" size="1" required name="TimeZoneSystem" id="speed">
 							{{foreach $TimeZone as $Value}}
 								<option value="{{$Value}}" lang="en">{{$Value}}</option>
 							{{/foreach}}
@@ -27,7 +27,7 @@
 				<tr>
 					<td><label for="DataSistem">{{t}}Формат даты{{/t}}</label></td>
 					<td>
-						<select  class="space" size="1" required name="DataSistem" id="speed">
+						<select  class="space" size="1" required name="DataFormatSystem" id="speed">
 							{{foreach $DataForm as $key => $Value}}
 								<option value="{{$key}}">{{$key}} {{t}}например{{/t}} {{$Value}}</option>
 							{{/foreach}}
@@ -37,7 +37,7 @@
 				<tr>
 					<td><label for="TimeSistem">{{t}}Формат времени{{/t}}</label></td>
 					<td>
-						<select  class="space" size="1" required name="TimeSistem" id="speed">
+						<select  class="space" size="1" required name="TimeFormatSystem" id="speed">
 							{{foreach $TimeForm as $key => $Value}}
 								<option value="{{$key}}">{{$key}} {{t}}например{{/t}} {{$Value}}</option>
 							{{/foreach}}
@@ -45,7 +45,7 @@
 					</td>
 				</tr>
 			</table>
-			<input type="submit" value="{{t}}схоранить{{/t}}" class="ui-button ui-widget ui-corner-all">
+			<input type="submit" value="{{t}}схоранить{{/t}}" class="ui-button ui-widget ui-corner-all ui-state-default">
 		</form>
 	</div>
 {{/block}}

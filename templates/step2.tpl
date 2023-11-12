@@ -11,31 +11,31 @@
 {{extends file='install.tpl'}}
 {{block name=main}}
 	<h2>{{t}}Конфигурация базы данных{{/t}}</h2>
-	<div align="center">
+	<div align="center" id="effect" class="ui-corner-all">
 		<form action="{{$Url}}components/install/step3.php" method="post">
 			<table>
 				<tr>
 					<td><label for="HostDB">{{t}}Имя хоста базы данных{{/t}}</label></td>
-					<td><input type="text" name="HostDB" required size="15" value="localhost" class="space" id="HostDB"></td>
+					<td><input type="text" name="HostDB" required size="30" value="localhost" class="space" id="HostDB"></td>
 				</tr>
 				<tr>
 					<td><label for="PortDB">{{t}}Порт базы данных{{/t}}</label></td>
-					<td><input type="text" name="PortDB" required size="15" value="3306" class="space" id="PortDB"></td>
+					<td><input type="text" name="PortDB" required size="30" value="3306" class="space" id="PortDB"></td>
 				</tr>
 				<tr>
 					<td><label for="NameDB"  class="space">{{t}}Имя базы данных{{/t}}</label></td>
-					<td><input type="text" name="NameDB" required size="15" class="space" id="NameDB"></td>
+					<td><input type="text" name="NameDB" required size="30" class="space" id="NameDB"></td>
 				</tr>
 				<tr>
 					<td><label>{{t}}Имя пользователя базы данных{{/t}}</label></td>
-					<td><input type="text" name="UserDB" required size="15" class="space"></td>
+					<td><input type="text" name="UserDB" required size="30" class="space"></td>
 				</tr>
 				<tr>
 					<td><label for="PasswordDB">{{t}}Пароль пользователя базы данных{{/t}}</label></td>
-					<td><input type="password" name="PasswordDB" required size="15" class="space" id="PasswordDB"></td>
+					<td><input type="password" name="PasswordDB" required size="30" class="space" id="PasswordDB"></td>
 				</tr>
 				<tr>
-					<td align="center"><input type="submit" value="{{t}}схоранить{{/t}}" class="ui-button ui-widget ui-corner-all"></td>
+					<td align="center"><input type="submit" value="{{t}}схоранить{{/t}}" class="ui-button ui-widget ui-corner-all ui-state-default"></td>
 					<td align="center"><input type="reset" value="{{t}}очистить{{/t}}" class="ui-button ui-widget ui-corner-all"></td>
 				</tr>
 			</table>

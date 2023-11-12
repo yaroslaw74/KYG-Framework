@@ -11,19 +11,23 @@
 {{extends file='install.tpl'}}
 {{block name=main}}
 	<h2>{{t}}Настройка суперадминистратора{{/t}}</h2>
-	<div align="center">
+	<div align="center" id="effect" class="ui-corner-all">
 		<form action="{{$Url}}components/install/step5.php" method="post" autocomplete="on">
 			<table>
 				<tr>
 					<td><label for="AdminLogin">{{t}}Логин администратора{{/t}}</label></td>
-					<td><input type="text" name="AdminLogin" required size="15" class="space"></td>
+					<td><input type="text" name="AdminLogin" required size="30" class="space"></td>
+				</tr>
+				<tr>
+					<td><label for="AdminEmail">{{t}}Email администратора{{/t}}</label></td>
+					<td><input type="email" name="AdminEmail" required size="30" class="space"></td>
 				</tr>
 				<tr>
 					<td><label for="AdminPassword">{{t}}Пароль администратора{{/t}}</label></td>
-					<td><input type="password" name="AdminPassword" required size="15" class="space"></td>
+					<td><input type="password" name="AdminPassword" required size="30" class="space"></td>
 				</tr>
 			</table>
-			<input type="submit" value="{{t}}схоранить{{/t}}" class="ui-button ui-widget ui-corner-all">
+			<input type="submit" value="{{t}}схоранить{{/t}}" class="ui-button ui-widget ui-corner-all ui-state-default">
 		</form>
 	</div>
 {{/block}}

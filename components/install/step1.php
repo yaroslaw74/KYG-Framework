@@ -18,6 +18,7 @@ if (!file_exists(KYG_PATH_BASE . 'external'))
 	
 setrawcookie('DefinesDir', KYG_PATH_INCLUDES, 0, '/', $NameHost);
 setrawcookie('NameHost', $NameHost, 0, '/', $NameHost);
+setrawcookie('FullNameHost', $FullNameHost, 0, '/', $NameHost);
 setrawcookie('UrlHTML', $UrlHTML, 0, '/', $NameHost);
 
 require(KYG_PATH_EXTERNAL . 'autoload.php');

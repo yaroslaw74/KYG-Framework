@@ -38,8 +38,12 @@
         "ext-zip": "*",
         "components/jquery": "^3.7",
         "components/jqueryui": "^1.12",
+        "doctrine/orm": "^2.13",
         "gettext/gettext": "^4.8",
+        "pclzip/pclzip": "^2.8",
         "phpmailer/phpmailer": "^6.8",
+        "ramsey/uuid": "^3.9",
+        "ramsey/uuid-doctrine": "^1.8",
         "smarty/smarty": "^4.3",
         "smarty-gettext/smarty-gettext": "^1.7"
     }   
