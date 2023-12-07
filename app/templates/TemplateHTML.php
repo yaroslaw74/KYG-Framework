@@ -15,7 +15,7 @@ namespace KYG\templates;
 class TemplateHTML extends \Smarty {
 
 	protected $LanguageHTML;
-	protected $Themes = array();
+	protected $Themes = array('base', 'black-tie', 'blitzer', 'cupertino', 'dark-hive', 'dot-luv', 'eggplant', 'excite-bike', 'flick', 'hot-sneaks', 'humanity', 'le-frog', 'mint-choc', 'overcast', 'pepper-grinder', 'redmond', 'smoothness', 'south-street', 'start', 'sunny', 'swanky-purse', 'trontastic', 'ui-darkness', 'ui-lightness', 'vader');
 	protected $Effects = array('blind', 'bounce', 'clip', 'drop', 'explode', 'fade', 'fold', 'highlight', 'puff', 'pulsate', 'scale', 'shake', 'size', 'slide', 'transfer');
 	public $TimeZone = array();
 	public $DataForm = array(
@@ -313,7 +313,6 @@ class TemplateHTML extends \Smarty {
 	function __construct(string $LanguageSystem, string $UrlHost, string $NameHost, int $ThemeSystem = 0, int $EffectSystem = 0) {
 		$this->TimeZone = \DateTimeZone::listIdentifiers();
 		$this->LanguageHTML = $LanguageSystem;
-		$this->Themes = scandir(\KYG_PATH_EXTERNAL . 'components' . DIRECTORY_SEPARATOR . 'jqueryui' . DIRECTORY_SEPARATOR . 'themes');
 		parent::__construct();
         $this->setTemplateDir(\KYG_PATH_TEMPLATES);
         $this->setCompileDir(\KYG_PATH_TEMPLATES_C);

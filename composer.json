@@ -29,6 +29,7 @@
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
+    "sort-packages": true,
     "require": {
         "php": ">=7.1.0",
         "ext-curl": "*",
@@ -36,8 +37,6 @@
         "ext-mbstring": "*",
         "ext-openssl": "*",
         "ext-zip": "*",
-        "components/jquery": "^3.7",
-        "components/jqueryui": "^1.12",
         "doctrine/orm": "^2.13",
         "gettext/gettext": "^4.8",
         "pclzip/pclzip": "^2.8",
