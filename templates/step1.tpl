@@ -9,10 +9,51 @@
   * @License    GNU General Public License version 3 or later; see LICENSE.txt
   ***************************************************************************************}}
 {{extends file='install.tpl'}}
+{{block name=Install_head_script}}
+	<script>
+		$(function() {
+			function runEffect() {
+				var selectedEffect = "{{$Effect}}";
+				var options = {};
+				if (selectedEffect === "scale") {
+					options = {percent: 50};
+				} else if (selectedEffect === "transfer") {
+					options = {
+						to: "#button",
+						className: "ui-effects-transfer"
+					};
+				} else if (selectedEffect === "size") {
+					options = {
+						to: {
+							width: 200,
+							height: 60
+						}
+					};
+				}
+				$("#effect").effect(selectedEffect, options, 500, callback);
+			};
+			function callback() {
+				setTimeout(function() {
+					$("#effect").removeAttr("style").hide().fadeIn();
+				}, 1000);
+			};
+			$("#language")
+				.selectmenu({width: 450})
+				.selectmenu("menuWidget")
+        		.addClass("overflow");
+			$(".widget input[type=submit]").button("enable");
+			$("input").on("click", function(event) {
+				event.preventDefault();
+				runEffect();
+				return false;
+			});
+		});
+	</script>
+{{/block}}
 {{block name=main}}
-	<div align="center" id="effect" class="ui-corner-all">
+	<div id="effect" class="cont widget ui-corner-all">
 		<form action="{{$Url}}components/install/step2.php" method="post">
-			<select  class="lang" name="LanguageSetup" id="number">
+			<select name="LanguageSetup" id="language">
 				{{foreach $LanguageList as $key => $Value}}
 					{{if $key == $LanguageSystem}}
 						<option value="{{$key}}" lang="{{$Value[1]}}" selected="selected">{{$Value[0]}}</option>
@@ -21,7 +62,7 @@
 					{{/if}}
 				{{/foreach}}
 			</select>
-			<input class="ui-button ui-widget ui-corner-all ui-state-default" type="submit" value="OK">
+			<input id="button" class="ui-button ui-widget ui-state-default ui-corner-all" type="submit" value="OK">
 		</form>
 	</div>
 {{/block}}

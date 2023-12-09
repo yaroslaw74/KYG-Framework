@@ -14,10 +14,9 @@ namespace KYG\templates;
 
 class TemplateHTML extends \Smarty {
 
-	protected $LanguageHTML;
 	protected $Themes = array('base', 'black-tie', 'blitzer', 'cupertino', 'dark-hive', 'dot-luv', 'eggplant', 'excite-bike', 'flick', 'hot-sneaks', 'humanity', 'le-frog', 'mint-choc', 'overcast', 'pepper-grinder', 'redmond', 'smoothness', 'south-street', 'start', 'sunny', 'swanky-purse', 'trontastic', 'ui-darkness', 'ui-lightness', 'vader');
 	protected $Effects = array('blind', 'bounce', 'clip', 'drop', 'explode', 'fade', 'fold', 'highlight', 'puff', 'pulsate', 'scale', 'shake', 'size', 'slide', 'transfer');
-	public $TimeZone = array();
+	protected $TimeZone = array();
 	public $DataForm = array(
 		'YYYY.MM.DD' => 'Y.m.d',
 		'YYYY-MM-DD' => 'Y-m-d', 
@@ -310,9 +309,8 @@ class TemplateHTML extends \Smarty {
 		'zu-ZA'          => array('isiZulu (iNingizimu Afrika)', 'zu', 'en-GB')
 	); 
 	
-	function __construct(string $LanguageSystem, string $UrlHost, string $NameHost, int $ThemeSystem = 0, int $EffectSystem = 0) {
+	function __construct(string $LanguageSystem, string $UrlHost, string $NameHost, int $ThemeSystem = 18, int $EffectSystem = 5) {
 		$this->TimeZone = \DateTimeZone::listIdentifiers();
-		$this->LanguageHTML = $LanguageSystem;
 		parent::__construct();
         $this->setTemplateDir(\KYG_PATH_TEMPLATES);
         $this->setCompileDir(\KYG_PATH_TEMPLATES_C);
