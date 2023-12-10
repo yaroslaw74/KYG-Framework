@@ -1,2 +1,2 @@
-# KYG Framework
-KYG Framework
+# KYG-Framework
+KYG-Framework
