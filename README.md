@@ -1,2 +1,0 @@
-# KYG-Framework
-KYG-Framework
