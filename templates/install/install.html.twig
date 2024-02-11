@@ -1,0 +1,40 @@
+{#****************************************************************************************
+  * @Project    KYG Framework
+  * @Version    1.0
+  * @Data       03.01.2024
+  *
+  * @Copyright  (C) 2024 Kataev Yaroslav Georgievich 
+  * @E-mail     yaroslaw74@gmail.com
+  * @License    GNU General Public License version 3 or later; see LICENSE.txt
+  ***************************************************************************************#}
+{% extends 'core.html.twig' %}
+
+{% block style %}
+ 	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('libraries/css/Install.css') }}">
+{% endblock %}
+
+{% block script_head %}
+	{{ parent() }}
+	{% block Install_head_script %}{% endblock %}
+{% endblock %}
+
+{% block header %}
+    {% include 'logo.svg.twig' %}
+{% endblock %}
+
+{% block article %}
+    <article>
+		<h1>KYG Framework</h1>
+	</article>
+{% endblock %}
+    
+{% block main %}
+    <div class="main flex_0_0_95">
+        {% block install_main %}{% endblock %}
+    </div>
+{% endblock %}	
+	
+ {% block script_body %}
+    {% block install_body_script %}{% endblock %}
+ {% endblock %}

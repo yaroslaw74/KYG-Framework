@@ -1,0 +1,62 @@
+{#****************************************************************************************
+  * @Project    KYG Framework
+  * @Version    1.0
+  * @Data       03.01.2024
+  *
+  * @Copyright  (C) 2024 Kataev Yaroslav Georgievich 
+  * @E-mail     yaroslaw74@gmail.com
+  * @License    GNU General Public License version 3 or later; see LICENSE.txt
+  ***************************************************************************************#}
+{% extends 'core.html.twig' %}
+
+{% block style %}
+ 	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('libraries/css/Install.css') }}">
+{% endblock %}
+
+{% block script_head %}
+	{{ parent() }}
+	<script src="{{ asset('libraries/jquery/plugins/prevue.js/js/jquery.prevue.min.js') }}"></script>
+	<script>
+		$(document).ready(function(){
+			$('.preview-password').prevue();
+		});
+		$(".widget input[type=submit]").button("enable");
+	</script>
+{% endblock %}
+
+{% block header %}
+    {% include 'logo.svg.twig' %}
+{% endblock %}
+
+{% block article %}
+    <article>
+		<h1>KYG Framework</h1>
+	</article>
+{% endblock %}
+    
+{% block main %}
+    <div class="login flex_row_center">
+		{{ form_start(form) }}
+			<table  class="ui-corner-all widget">
+				<tr>
+					<td><label for="{{ field_name(form.Login) }}"  class="ui-corner-all">{{ form_label(form.login) }}</label></td>
+					<td><input type="text" name="{{ field_name(form.Login) }}" required size="25" class="space"></td>
+				</tr>
+				<tr>
+					<td><label for="{{ field_name(form.Password) }}"  class="ui-corner-all">{{ form_label(form.label) }}</label></td>
+					<td><input type="password" name="{{ field_name(form.Password) }}" required size="25" class="preview-password  space"></td>
+				</tr>				
+				<tr>
+					<td></td>
+					<td>
+						<input type="checkbox" name="{{ field_name(form.Memory) }}">
+						<label for="{{ field_name(form.Memory) }}" class="ui-corner-all">{{ form_label(form.Memory) }}</label>
+					</td>
+				</tr>
+			</table>
+			<p><input type="submit" name="{{ field_name(form.Save) }}" value="{{ form_label(form.Save) }}" class="ui-button ui-widget ui-state-default ui-corner-all" id="button"></p>
+			<a href="#"><h3>Забыл пароль</h3></a>
+		{{ form_end(form) }}
+	</div>
+{% endblock %}	
