@@ -14,15 +14,19 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Filesystem\Filesystem;
+
 class HomeController extends AbstractController
 {
     private $Interface = [
-            'Theme' => 'start'
-        ];
+        'Theme' => 'start'
+    ];
     #[Route('/', name: 'home')]
     public function index(): Response
     {
         $filesystem = new Filesystem();
+        if (!$filesystem->exists($this->getParameter('app.config_dir') . DIRECTORY_SEPARATOR . 'db_config.yaml'))
+            return $this->redirectToRoute('app_install');
+        $this->denyAccessUnlessGranted('ROLE_USER');
         return $this->render('home/index.html.twig', [
             'Interface' => $this->Interface
         ]);

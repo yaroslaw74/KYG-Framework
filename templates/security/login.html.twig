@@ -1,0 +1,66 @@
+{#********************************************************************************
+  * @Project    KYG Framework
+  * @Version    1.0
+  * @Data       11.02.2024
+  *
+  * @Copyright  (C) 2024 Kataev Yaroslav Georgievich 
+  * @E-mail     yaroslaw74@gmail.com
+  * @License    GNU General Public License version 3 or later; see LICENSE.md
+  ********************************************************************************#}
+{% extends 'core.html.twig' %}
+
+{% block style %}
+	<link rel="stylesheet" href="{{ asset('css/Install.css') }}">
+{% endblock %}
+
+{% block script_head %}
+	<script src="{{ asset('prevue.js/src/js/jquery.prevue.min.js') }}"></script>
+    <script src="{{ asset('jquery-ui/ui/widgets/button.js') }}"></script>
+	<script>
+		$(document).ready(function(){
+			$('.preview-password').prevue();
+		});
+		$(".widget input[type=submit]").button("enable");
+	</script>
+{% endblock %}
+
+{% block header %}
+    {% include 'logo.svg.twig' %}
+{% endblock %}
+
+{% block article %}
+    <article>
+		<h1>KYG Framework for business</h1>
+	</article>
+{% endblock %}
+
+{% block main %}
+    <div class="login flex_row_center">
+        {% if app.user %}
+            <div class="mb-3">
+                You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+            </div>
+        {% endif %}
+		<form action="{{ path('app_login') }}" method="post">
+			<table  class="ui-corner-all widget">
+				<tr>
+					<td><label for="username"  class="ui-corner-all">Username</label></td>
+					<td><input type="text" value="{{ last_username }}" name="_username" id="username" required size="25" class="space form-control" autocomplete="username" required autofocus></td>
+				</tr>
+				<tr>
+					<td><label for="password" class="ui-corner-all">Password</label></td>
+					<td><input type="password" name="_password" id="password"required size="25"  class="preview-password  space form-control" autocomplete="current-password" required></td>
+				</tr>				
+				<tr>
+					<td><input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"></td>
+					<td>
+                        <input type="checkbox" name="_remember_me">
+                        <label for="remember_me" class="ui-corner-all">Remember me</label>
+					</td>
+				</tr>
+			</table>
+			<p><input type="submit" value="Sign in" class="ui-button ui-widget ui-state-default ui-corner-all btn btn-lg btn-primary" id="button"></p>
+            <a href="{{ path('app_password') }}"><h3>I forgot my password</h3></a>
+		</form>
+	</div>
+{% endblock %}	
