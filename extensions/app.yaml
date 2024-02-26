@@ -1,0 +1,6 @@
+parameters:
+    app.db.url: "%env(resolve:DATABASE_URL)%"
+    app.secret: "%env(APP_SECRET)%"
+    app.default_locale: en
+    app.locale:
+        - en
