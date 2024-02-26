@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+
+.name {
+	font-size: 1.8em;
+}
+
+.items,
+.name {
+	margin: 2.5px 5px 0 5px;
+}
+
+main,
+.menu,
+.content,
+.top_info {
+	border: solid;
+	border-color: #091C75;
+}
+
+.home,
+.work {
+	background: #ffffe3;
+}
+
+.menu,
+.content {
+	border-bottom-width: 0;
+}
+
+.menu,
+.content,
+.top_info {
+	border-top-width: 0;
+}
+
+main,
+.menu,
+.content,
+.top_info {
+	border-left-width: 0;
+}
+
+main,
+.top_info {
+	border-right-width: 0;
+}
+
+.menu {
+	padding: 0 2.5px 0 2.5px;
+	min-width: 200px;
+	overflow: visible;
+}
+
+main {
+	background: #97EC96;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+}
+
+.work {
+	min-height: calc(100vh - 93px);
+}
+
+.content,
+.top_info,
+.bottom_info {
+	padding: 2.5px;
+}
+
+.content {
+	border-right-width: 1px;
+	overflow: auto;
+}
+
+.top_info,
+.bottom_info {
+	overflow-y: auto;
+	overflow-x: visible;
+}
+
+.top_info {
+	border-bottom-width: 1px;
+}
+
+.bar {
+	min-width: 200px;
+	background: #f3e0e0;
+	overflow: visible;
+}
+
+.logo {
+	width: 2em;
+	height: 2em;
+}
