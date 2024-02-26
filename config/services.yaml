@@ -26,4 +26,4 @@ services:
     # please note that last definitions always *replace* previous ones
 
 imports:
-    - { resource: "../extensions/*.yaml" }
+    - { resource: "../extensions/Config/*.yaml" }
