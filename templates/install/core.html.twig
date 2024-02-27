@@ -1,0 +1,33 @@
+{#*******************************************************************************
+  * @Project    KYG Framework for business
+  * @Version    1.0.0
+  *
+  * @Copyright  (C) 2025 Kataev Yaroslav Georgievich 
+  * @E-mail     yaroslaw74@gmail.com
+  * @License    GNU General Public License version 3 or later; see LICENSE.md
+  *******************************************************************************#}
+{% extends 'core.html.twig' %}
+
+{% block style %}
+	<link rel="stylesheet" href="{{ asset('css/Install.css') }}">
+{% endblock %}
+
+{% block script_head %}{% endblock %}
+
+{% block header %}
+    {% include 'logo.svg.twig' %}
+{% endblock %}
+
+{% block article %}
+    <article>
+		<h1 lang="en">KYG Framework for business</h1>
+	</article>
+{% endblock %}
+    
+{% block main %}
+    <div class="main flex_0_0_95">
+        {% block install_main %}{% endblock %}
+    </div>
+{% endblock %}	
+
+{% block script_body %}{% endblock %}

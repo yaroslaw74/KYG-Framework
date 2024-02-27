@@ -1,0 +1,55 @@
+{#*******************************************************************************
+  * @Project    KYG Framework for business
+  * @Version    1.0.0
+  *
+  * @Copyright  (C) 2025 Kataev Yaroslav Georgievich 
+  * @E-mail     yaroslaw74@gmail.com
+  * @License    GNU General Public License version 3 or later; see LICENSE.md
+  *******************************************************************************#}
+{% extends 'install/core.html.twig' %}
+{% trans_default_domain 'install' %}
+
+{% block style %}
+	{{ parent() }}
+     <link rel="stylesheet" href="{{ asset('prevue.js/src/css/font-awesome-eyes.css') }}">
+{% endblock %}    
+
+{% block script_head %}
+	<script src="{{ asset('jquery-ui/ui/widgets/button.js') }}"></script>
+     <script src="{{ asset('prevue.js/src/js/jquery.prevue.min.js') }}"></script>
+	<script>
+		$(function() {
+			$(".widget input[type=submit]").button("enable");
+			$(".widget input[type=reset]").button("enable");
+		});
+          $(document).ready(function(){
+		     $('.preview-password').prevue();
+     	});
+	</script>
+{% endblock %}
+
+{% block install_main %}
+	<div class="flex_column flex_row_center cont widget ui-corner-all" lang="{{ Locale }}">
+		<form action="{{ path('install') }}" method="post">
+               <h2 lang="{{ Locale }}">{% trans into (Locale) %}install.user.user{% endtrans %}</h2>
+			<table>
+               <tr>
+                    <td><label for="Login" lang="{{ Locale }}">{% trans into (Locale) %}install.user.login{% endtrans %}</label></td>
+                    <td><input type="text" name="Login" required size="30" value="Admin" class="space" id="Login"></td>
+               </tr>
+               <tr>
+                    <td><label for="Email" lang="{{ Locale }}">{% trans into (Locale) %}install.user.email{% endtrans %}</label></td>
+                    <td><input type="email" name="Email" required size="30" class="space" id="Email"></td>
+               </tr>
+               <tr>
+                    <td><label for="Password" lang="{{ Locale }}">{% trans into (Locale)  %}install.user.password{% endtrans %}</label></td>
+                    <td><input type="password" name="Password" required size="30" class="space preview-password" id="Password"></td>
+               </tr>
+               <tr>
+                    <td></td>
+                    <td><input id="button" class="ui-button ui-widget ui-state-default ui-corner-all" type="submit" value="{% trans into (Locale) %}install.button.submit{% endtrans %}"></td>
+               </tr>
+            </table>
+		</form>
+	</div>
+{% endblock %}

@@ -4,4 +4,9 @@ parameters:
     app.default_locale: en
     app.locale:
         - en
+        - ru_RU
+        - uk_UA
+    app.interface:
+        Themes: "start"
+        Effects: "blind"
     app.install: false

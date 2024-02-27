@@ -1,0 +1,40 @@
+{#*******************************************************************************
+  * @Project    KYG Framework for business
+  * @Version    1.0.0
+  *
+  * @Copyright  (C) 2025 Kataev Yaroslav Georgievich 
+  * @E-mail     yaroslaw74@gmail.com
+  * @License    GNU General Public License version 3 or later; see LICENSE.md
+  *******************************************************************************#}
+{% extends 'install/core.html.twig' %}
+
+{% block script_head %}
+	<script src="{{ asset('jquery-ui/ui/widgets/selectable.js') }}"></script>
+	<script src="{{ asset('jquery-ui/ui/widgets/button.js') }}"></script>
+	<script>
+		$(function() {
+			$("#language")
+				.selectmenu({width: 450})
+				.selectmenu("menuWidget")
+				.addClass("overflow");
+			$(".widget input[type=submit]").button("enable");
+		});
+	</script>
+{% endblock %}
+
+{% block install_main %}
+	<div class="flex_column flex_row_center cont widget ui-corner-all">
+		<form action="{{ path('app_install') }}" method="post">
+			<select name="LanguageSetup" id="language">
+				{% foreach Languages as key => Value %}
+					{% if key == 'ru_RU' %}
+						<option value="{{ key }}" lang="{{ key }}" selected="selected">{{ Value.name }}</option>
+					{% else %}
+						<option value="{{ key }}" lang="{{ key }}">{{ Value.name }}</option>
+					{% endif %}
+				{% endforeach %}
+			</select>
+			<input id="button" class="ui-button ui-widget ui-state-default ui-corner-all" type="submit" value="OK">
+		</form>
+	</div>
+{% endblock %}
