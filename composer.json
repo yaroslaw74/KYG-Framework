@@ -45,7 +45,7 @@
         "ext-zip": "*",
         "brick/math": "^0.11",
         "doctrine/cache": "^2.2",
-        "doctrine/collections": "^2.1",
+        "doctrine/collections": "^2.2",
         "doctrine/dbal": "^3.8",
         "doctrine/deprecations": "^1.1",
         "doctrine/doctrine-bundle": "^2.11",
