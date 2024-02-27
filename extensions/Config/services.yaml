@@ -1,5 +1,4 @@
 services:
     KYG\:
-        resource: "../extensions/"
         exclude:
             - "../extensions/Modules/User/Entity/"
