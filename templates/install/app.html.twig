@@ -108,9 +108,9 @@
 								<select  class="space" size="1" required name="ThemeSistem" id="ThemeSistem"  style="width: 300px">
 									{% foreach Themes as key => Value %}
 										{% if Value == 'start' %}
-											<option value="{{ key }}" selected="selected" lang="{{ Locale }}">{{ Value }}</option>
+											<option value="{{ key }}" selected="selected" lang="{{ Locale }}">{{ Value.text }}</option>
 										{% else %}
-											<option value="{{ key }}" lang="{{ Locale }}">{{ Value }}</option>
+											<option value="{{ key }}" lang="{{ Locale }}">{{ Value.text }}</option>
 										{% endif %}
 									{% endforeach %}			
 								</select>
@@ -121,7 +121,7 @@
 							<td>
 								<select  class="space" size="1" required name="EffectSistem" id="EffectSistem" style="width: 300px">
 									{% foreach Effects as key => Value %}
-										<option value="{{ key }}" lang="{{ Locale }}">{{ Value }}</option>
+										<option value="{{ key }}" lang="{{ Locale }}">{{ Value.text }}</option>
 									{% endforeach %}
 								</select>
 							</td>
