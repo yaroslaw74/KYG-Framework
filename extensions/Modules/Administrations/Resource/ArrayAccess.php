@@ -121,7 +121,7 @@ class ArrayAccess
     {
         $translator = new Translator($Language);
         foreach ($this->Themes as $key => $Value) {
-            $this->Themes[$key]['text'] = $translator->trans($Value['key'], [], 'themes', locale: $Language);
+            $this->Themes[$key]['text'] = $translator->trans($Value['key'], [], 'interface', locale: $Language);
         }
         return $this->Themes;
     }
@@ -129,7 +129,7 @@ class ArrayAccess
     {
         $translator = new Translator($Language);
         foreach ($this->Effects as $key => $Value) {
-            $this->Effects[$key]['text'] = $translator->trans($Value['key'], [], 'effects', locale: $Language);
+            $this->Effects[$key]['text'] = $translator->trans($Value['key'], [], 'interface', locale: $Language);
         }
         return $this->Effects;
     }
