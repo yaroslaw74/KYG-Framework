@@ -89,7 +89,7 @@ class InstallController extends AbstractController
         $app['parameters']['app.interface']['LangData'] = $var['language_default']['LangData'];
         $app['parameters']['app.data.format'] = $var['DateTime']['DataFormat'];
         $app['parameters']['app.time.format'] = $var['DateTime']['TimeFormat'];
-        $app['parameters']['app.db.url'] = 'mysql://' . $var['DataBase']['UserDB'] . ':' . $var['DataBase']['PasswordDB'] . '@' . $var['DataBase']['HostDB'] . ':' . $var['DataBase']['PortDB'] . '/' . $var['DataBase']['NameDB'];
+        $app['parameters']['app.db.url'] = 'mysql://' . $var['DataBase']['UserDB'] . ':' . $var['DataBase']['PasswordDB'] . '@' . $var['DataBase']['HostDB'] . ':' . $var['DataBase']['PortDB'] . '/' . $var['DataBase']['NameDB'] . '?charset=utf8mb4';
         $app['parameters']['app.secret'] = bin2hex(random_bytes(32));
         $app['parameters']['app.default_locale'] = $var['language_default']['laguage'];
         $app['parameters']['app.install'] = true;
