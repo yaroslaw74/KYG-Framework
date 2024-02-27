@@ -31,10 +31,9 @@ class InstallController extends AbstractController
     #[Route('/install/language', name: 'language_install')]
     public function languageInstall(): Response
     {
-        $Languages = Yaml::parseFile($this->getParameter('app.extensions.config_dir') . 'languages.yaml');
         return $this->render('install/language.html.twig', [
             'Interface' => $this->getParameter('app.interface'),
-            'Languages' => $Languages
+            'Languages' => $this->getParameter('app.language')
         ]);
     }
     #[Route('/install/app', name: 'app_install')]
