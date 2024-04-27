@@ -1,4 +1,0 @@
-framework:
-    translator:
-        path:
-            - "%app.modules_dir%/Administrations/Translations"

@@ -1,4 +1,0 @@
-services:
-    KYG\:
-        exclude:
-            - "../extensions/Modules/User/Entity/"
