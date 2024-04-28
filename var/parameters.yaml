@@ -1,13 +1,7 @@
 parameters:
-    app.name: "KYG Framework for Business"
     app.locale.default: "en"
     app.locale_list:
         - "ru-RU"
-    app.timezone: null
-    app.dataformat: null
-    app.timeformat: null
-    app.separator: " "
-    app.datatimeformat: "F j, Y H:i"
     app.decimals: 0
     app.decimal_point: "."
     app.thousands_separator: ","

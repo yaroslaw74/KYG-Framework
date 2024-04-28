@@ -22,7 +22,7 @@ class TimeZoneSubscriber implements EventSubscriberInterface
 
     public function onKernelController(ControllerEvent $event): void
     {
-        $TimeZone = $this->params->get('app.timezone');
+        $TimeZone = $_ENV('DATE_TIMEZONE');
         if ($TimeZone != null) {
             if ($TimeZone != date_default_timezone_get()) date_default_timezone_set($TimeZone);
         }
