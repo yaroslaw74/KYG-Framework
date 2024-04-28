@@ -1,6 +1,6 @@
 parameters:
     app.name: "KYG Framework for Business"
-    app.locale.default: "ru-RU"
+    app.locale.default: "en"
     app.locale_list:
         - "ru-RU"
     app.timezone: null
