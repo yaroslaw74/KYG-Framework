@@ -11,7 +11,7 @@
 /public/*.html
 /var/cache/
 /var/log/
-/var/*.yaml
+/var/env.yaml
 /vendor/
 ###< symfony/framework-bundle ###
 
