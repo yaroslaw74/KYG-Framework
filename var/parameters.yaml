@@ -2,9 +2,6 @@ parameters:
     app.locale.default: "en"
     app.locale_list:
         - "ru-RU"
-    app.decimals: 0
-    app.decimal_point: "."
-    app.thousands_separator: ","
     app.surname_sign: true
     app.email: "mailer@your-domain.com"
     app.email.user: "Acme Mail Bot"
