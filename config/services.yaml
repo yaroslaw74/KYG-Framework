@@ -28,8 +28,8 @@ services:
     # please note that last definitions always *replace* previous ones
     Squirrel\TwigPhpSyntax\PhpSyntaxExtension:
         tags: [twig.extension]
-    App\Twig\AppTwigExtension:
-        tags: [twig.extension]
+    #App\Twig\AppTwigExtension:
+    #    tags: [twig.extension]
     App\DependencyInjection\YamlEnvVarLoader:
         tags: [container.env_var_loader]
     App\EventSubscriber\LocaleSubscriber:
@@ -40,4 +40,4 @@ services:
         tags: [kernel.event_subscriber]
 
 imports:
-    - { resource: "%app.var_dir%/parameters.yaml" }
+    - { resource: "../var/parameters.yaml" }
