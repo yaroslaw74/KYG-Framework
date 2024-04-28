@@ -27,3 +27,6 @@ services:
     # please note that last definitions always *replace* previous ones
     Squirrel\TwigPhpSyntax\PhpSyntaxExtension:
         tags: [twig.extension]
+
+imports:
+    - { resource: "%app.var_dir%/parameters.yaml" }
