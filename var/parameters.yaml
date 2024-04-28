@@ -1,4 +1,5 @@
 parameters:
+    app.timezone: null
     app.locale.default: "en"
     app.locale_list:
         - "ru-RU"

@@ -14,7 +14,7 @@ twig:
         format: "%env(DATE_FORMAT)%"
 
         # The timezone used when formatting dates, when set to null, the timezone returned by date_default_timezone_get() is used
-        #timezone: "%env(DATE_TIMEZONE)%"
+        timezone: "%app.timezone%"
 
     # The default format options for the number_format filter
     number_format:

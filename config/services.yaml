@@ -9,11 +9,6 @@ parameters:
     app.templates_dir: "%kernel.project_dir%/templates"
     app.translations_dir: "%app.public_dir%/translations"
     app.var_dir: "%kernel.project_dir%/var"
-    # other
-    app.decimals: 0
-    app.decimal_point: "."
-    app.thousands_separator: ","
-    app.surname_sign: true
 
 services:
     # default configuration for services in *this* file

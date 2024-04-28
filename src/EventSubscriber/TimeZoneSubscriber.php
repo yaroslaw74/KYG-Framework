@@ -20,9 +20,9 @@ class TimeZoneSubscriber implements EventSubscriberInterface
 
     public function __construct(public ContainerBagInterface $params) {}
 
-    public function onKernelController(ControllerEvent $event): void
+    public function onKernelController(ControllerEvent $event, ContainerBagInterface $params): void
     {
-        $TimeZone = $_ENV('DATE_TIMEZONE');
+        $TimeZone = $params->get('app.timezone');
         if ($TimeZone != null) {
             if ($TimeZone != date_default_timezone_get()) date_default_timezone_set($TimeZone);
         }
