@@ -32,6 +32,12 @@ services:
         tags: [twig.extension]
     App\DependencyInjection\YamlEnvVarLoader:
         tags: [container.env_var_loader]
+    App\EventSubscriber\LocaleSubscriber:
+        tags: [kernel.event_subscriber]
+    App\EventSubscriber\UserLocaleSubscriber:
+        tags: [kernel.event_subscriber]
+    App\EventSubscriber\TimeZoneSubscriber:
+        tags: [kernel.event_subscriber]
 
 imports:
     - { resource: "%app.var_dir%/parameters.yaml" }
