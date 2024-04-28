@@ -1,2 +1,24 @@
 twig:
+    globals:
+        app_name: "%app.name%"
+        app_locale_list: "%app.locale_list%"
+
+    # The default path used to load templates
+    default_path: "%app.templates_dir%"
+
+    # Pattern of file name used for cache warmer and linter
     file_name_pattern: "*.twig"
+
+    # The default format options used by the date filter
+    date:
+        format: "%app.datatimeformat%"
+        interval_format: "%d days"
+
+        # The timezone used when formatting dates, when set to null, the timezone returned by date_default_timezone_get() is used
+        timezone: "%app.timezone%"
+
+    # The default format options for the number_format filter
+    number_format:
+        decimals: "%app.decimals%"
+        decimal_point: "%app.decimal_point%"
+        thousands_separator: "%app.thousands_separator%"
