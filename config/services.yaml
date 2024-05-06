@@ -32,5 +32,7 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    App\DependencyInjection\YamlEnvVarLoader:
+        tags: [container.env_var_loader]
     Squirrel\TwigPhpSyntax\PhpSyntaxExtension:
         tags: [twig.extension]
