@@ -34,5 +34,9 @@ services:
     # please note that last definitions always *replace* previous ones
     App\DependencyInjection\YamlEnvVarLoader:
         tags: [container.env_var_loader]
+    App\EventSubscriber\LocaleSubscriber:
+        tags: [kernel.event_subscriber]
+    App\EventSubscriber\UserLocaleSubscriber:
+        tags: [kernel.event_subscriber]
     Squirrel\TwigPhpSyntax\PhpSyntaxExtension:
         tags: [twig.extension]
