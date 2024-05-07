@@ -13,7 +13,7 @@
 	    <meta name="robots" content="noindex, nofollow">
 	    <meta name="autor" content="Kataev Yaroslav Georgievich">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}KYG Framework for Business{% endblock %}</title>
+        <title>{% block title %}{{ app_name }}{% endblock %}</title>
         <link rel="icon" href="favicon.ico">
 	    <link rel="stylesheet" href="{{ asset('css/core.css') }}">
 	    <link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.min.css') }}">
@@ -43,7 +43,7 @@
                     {{ include('symfony.swg.twig') }}
 			    </div>
 		    </div>
-		    <div class="align-self-center text-danger"><h6>error</h6></div>
+		    <div class="align-self-center text-danger"><h6>{{ app_error }}</h6></div>
 		    <div class="text-nowrap align-self-center me-3" lang="en"><h6><strong>&copy; 2025 Kataev Yaroslav</strong></h6></div>
 	    </footer>
         {% block body %}{% endblock %}

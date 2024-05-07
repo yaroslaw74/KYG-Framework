@@ -1,4 +1,6 @@
 twig:
+    globals:
+        app_name: "KYG Framework for Business"
     # The default path used to load templates
     default_path: "%app.templates_dir%"
 
