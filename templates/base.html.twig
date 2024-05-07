@@ -7,7 +7,7 @@
  #  @License    GNU General Public License version 3 or later; see LICENSE.md
  ##################################################################################}
 <!DOCTYPE html>
-<html lang="{{ app.locale }}" data-bs-theme="auto" dir="ltr">
+<html lang="{{ app.locale }}" data-bs-theme="auto" dir="{{ localedir(app.locale) }}">
     <head>
         <meta charset="utf-8">
 	    <meta name="robots" content="noindex, nofollow">
@@ -16,7 +16,11 @@
         <title>{% block title %}{{ app_name }}{% endblock %}</title>
         <link rel="icon" href="favicon.ico">
 	    <link rel="stylesheet" href="{{ asset('css/core.css') }}">
-	    <link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.min.css') }}">
+		{% if localedir(app.locale) == 'ltr' %}
+			<link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.min.css') }}">
+		{% else %}
+			<link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.rtl.min.css') }}">
+		{% endif %}
 	    <link rel="stylesheet" href="{{ asset('bootstrap-icons/font/bootstrap-icons.min.css') }}">
         <link rel="stylesheet" href="{{ asset('font-awesome/css/svg-with-js.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/button.css') }}">
