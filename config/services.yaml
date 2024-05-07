@@ -40,3 +40,5 @@ services:
         tags: [kernel.event_subscriber]
     Squirrel\TwigPhpSyntax\PhpSyntaxExtension:
         tags: [twig.extension]
+    App\Twig\AppTwigExtension:
+        tags: [twig.extension]
