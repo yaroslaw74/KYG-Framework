@@ -29,10 +29,10 @@
     <body>
         {{ include('button.svg.twig') }}
 	    <header class="container-fluid d-flex flex-column p-0">
-		    header
+            {% block header %}{% endblock %}
 	    </header>
 	    <main class="container-fluid d-flex flex-column p-0">
-		    main
+		    {% block main %}{% endblock %}
 	    </main>
 	    <footer class="container-fluid d-flex flex-row justify-content-between bg-body-tertiary p-0 mt-3">
 		    <div class="d-flex flex-row ms-3">
