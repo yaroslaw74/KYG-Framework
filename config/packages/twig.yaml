@@ -1,6 +1,6 @@
 twig:
     globals:
-        app_name: "%env(APP_NAME)%"
+        app_name: "%env(APP_NAME_CONST)%"
 
     # The default path used to load templates
     default_path: "%app.templates_dir%"
