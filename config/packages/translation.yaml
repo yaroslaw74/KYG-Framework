@@ -4,6 +4,8 @@ framework:
         - ru-RU
     translator:
         default_path: "%app.translations_dir%"
+        paths:
+            - "%app.modules_dir%/Administrations/Translations"
         fallbacks:
             - ru-RU
         providers:
