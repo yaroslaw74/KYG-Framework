@@ -7,6 +7,7 @@
  #  @License    GNU General Public License version 3 or later; see LICENSE.md
  ##################################################################################}
 {% extends 'base.html.twig' %}
+{% trans_default_domain 'main' %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
@@ -23,7 +24,7 @@
             </div>
         </div>
         <div class="input-group ps-3 m-1 align-self-center">
-            <input type="text" class="form-control bg-body-secondary text-body-emphasis border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+<input type="text" class="form-control bg-body-secondary text-body-emphasis border-0 small" placeholder="{% trans %}header.search{% endtrans %}" aria-label="Search" aria-describedby="basic-addon2">
             <div class="input-group-append">
 				<button class="btn btn-primary" type="button">
 					<i class="fas fa-search fa-sm"></i>
