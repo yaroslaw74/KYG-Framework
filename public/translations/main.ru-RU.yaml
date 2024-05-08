@@ -13,3 +13,5 @@ header:
 user:
     profile: "Мой профиль"
     settings: "Настройки"
+    help: "Нужна помощь?"
+    out: "Выход"
