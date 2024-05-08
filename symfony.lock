@@ -103,7 +103,6 @@
             "./config/routes/framework.yaml",
             "./config/services.yaml",
             "./public/index.php",
-            "./src/Controller/.gitignore",
             "./src/Kernel.php"
         ]
     },
@@ -223,8 +222,7 @@
             "ref": "e28e27f53663cc34f0be2837aba18e3a1bef8e7b"
         },
         "files": [
-            "./config/packages/translation.yaml",
-            "./translations/.gitignore"
+            "./config/packages/translation.yaml"
         ]
     },
     "symfony/twig-bundle": {
