@@ -131,8 +131,12 @@
             </div>
             <div class="m-1 ps-2 align-self-center">
                 <a class="d-flex align-items-center dropdown-toggle pe-0" href="#" data-bs-toggle="dropdown">
-                    {% if app.user.iso != null %}
-                        <img class="user" alt="" src="{{ asset('images/' ~ app.user.ico) }}">
+                    {% if app.user != null %}
+                        {% if app.user.iso != null %}
+                            <img class="user" alt="" src="{{ asset('images/' ~ app.user.ico) }}">
+                        {% else %}
+                            <i class="fa-solid fa-circle-user fa-2xl"></i>
+                        {% endif %}
                     {% else %}
                         <i class="fa-solid fa-circle-user fa-2xl"></i>
                     {% endif %}
