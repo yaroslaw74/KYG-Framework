@@ -12,6 +12,6 @@ header:
     search: "Искать..."
 user:
     profile: "Мой профиль"
-    settings: "Настройки"
+    settings: "Настройки пользователя"
     help: "Нужна помощь?"
     out: "Выход"

@@ -131,12 +131,22 @@
             </div>
             <div class="m-1 ps-2 align-self-center">
                 <a class="d-flex align-items-center dropdown-toggle pe-0" href="#" data-bs-toggle="dropdown">
-                    <i class="fa-solid fa-circle-user fa-2xl"></i>
+                    {% if app.user.iso != null %}
+                        <img class="user" alt="" src="{{ asset('images/' ~ app.user.ico) }}">
+                    {% else %}
+                        <i class="fa-solid fa-circle-user fa-2xl"></i>
+                    {% endif %}
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header text-primary-emphasis">
-                        <h6>Kevin Anderson</h6>
-                        <span>Web Designer</span>
+                        {% if app.user != null %}
+                            {% if app.user.name != null %}
+                                <h6>{{ app.user.name }}</h6>
+                            {% endif %}
+                            {% if app.user.post != null %}
+                                <span>{{ app.user.post }}</span>
+                            {% endif %}
+                        {% endif %}
                     </li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
