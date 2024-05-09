@@ -1,8 +1,15 @@
 <?php
+/**********************************************************************************
+ * @Project    KYG Framework for business
+ * @Version    1.0.0
+ *
+ * @Copyright  (C) 2025 Kataev Yaroslav Georgievich 
+ * @E-mail     yaroslaw74@gmail.com
+ * @License    GNU General Public License version 3 or later; see LICENSE.md
+ *********************************************************************************/
+namespace App\Modules\Users\Entity;
 
-namespace App\Entity;
-
-use App\Repository\UserRepository;
+use App\Modules\Users\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
