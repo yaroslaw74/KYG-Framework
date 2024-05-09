@@ -1,5 +1,12 @@
 <?php
-
+/**********************************************************************************
+ * @Project    KYG Framework for business
+ * @Version    1.0.0
+ *
+ * @Copyright  (C) 2025 Kataev Yaroslav Georgievich 
+ * @E-mail     yaroslaw74@gmail.com
+ * @License    GNU General Public License version 3 or later; see LICENSE.md
+ *********************************************************************************/
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -19,6 +26,7 @@ class SecurityController extends AbstractController
         $lastUsername = $authenticationUtils->getLastUsername();
 
         return $this->render('security/login.html.twig', [
+            'app_error' => '',
             'last_username' => $lastUsername,
             'error' => $error,
         ]);
