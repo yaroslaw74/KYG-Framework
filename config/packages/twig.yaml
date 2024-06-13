@@ -2,6 +2,7 @@ twig:
     globals:
         app_name: "%app.name%"
         app_locale_list: "%app.locale_list%"
+        app_ico: "%app.ico%"
 
     # The default path used to load templates
     default_path: "%app.templates_dir%"
