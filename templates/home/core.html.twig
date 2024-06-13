@@ -16,7 +16,13 @@
 {% block header %}
     <div class="d-flex flex-row p-0 justify-content-between bg-body-tertiary">
         <div class="d-flex flex-row p-0 align-self-center">
-            <a href="{{ path('app_home') }}" class="m-1">{{ include('kyg.svg.twig') }}</a>
+            <a href="{{ path('app_home') }}" class="m-1">
+                {% if app_ico != null %}
+                    <img class="kyg" title="{{ app_name }}"  src="{{ asset('images/' ~ app_ico) }}">
+                {% else %}
+                    {{ include('kyg.svg.twig') }}
+                {% endif %}
+            </a>
             <div class="text-nowrap align-self-center text-primary m-1 ps-3">
                 <h5>{{ app_name }}</h5>
             </div>
