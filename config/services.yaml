@@ -25,6 +25,7 @@ parameters:
     app.surname_sign: true
     app.email: "mailer@your-domain.com"
     app.email.user: "Acme Mail Bot"
+    app.ico: null
 
 services:
     # default configuration for services in *this* file
