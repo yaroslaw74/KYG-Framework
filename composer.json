@@ -37,6 +37,7 @@
         "ramsey/uuid": "^4.7",
         "ramsey/uuid-doctrine": "^2.1",
         "squirrelphp/twig-php-syntax": "^1.8",
+        "symfony/apache-pack": "^1.0",
         "symfony/asset": "7.1.*",
         "symfony/console": "7.1.*",
         "symfony/doctrine-messenger": "7.1.*",
