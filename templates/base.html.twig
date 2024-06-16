@@ -7,23 +7,23 @@
  #  @License    GNU General Public License version 3 or later; see LICENSE.md
  ##################################################################################}
 <!DOCTYPE html>
-<html  lang="ru-RU" data-bs-theme="auto" dir="ltr">
+<html  lang="{{ app.locale }}" data-bs-theme="auto" dir="ltr">
     <head>
         <meta charset="UTF-8">
         <meta name="robots" content="noindex, nofollow">
 	    <meta name="autor" content="Kataev Yaroslav Georgievich">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="favicon.ico">
-        <link rel="stylesheet" href="css/core.css">
-	    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
-	    <link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.min.css">
-	    <link rel="stylesheet" href="font-awesome/css/svg-with-js.min.css">
-	    <link rel="stylesheet" href="css/button.css">
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
+        <link rel="stylesheet" href="{{ asset('css/core.css') }}">
+	    <link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.min.css') }}">
+	    <link rel="stylesheet" href="{{ asset('bootstrap-icons/font/bootstrap-icons.min.css') }}">
+	    <link rel="stylesheet" href="{{ asset('font-awesome/css/svg-with-js.min.css') }}">
+	    <link rel="stylesheet" href="{{ asset('css/button.css') }}">
         {% block stylesheets %}{% endblock %}
-        <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-	    <script src="font-awesome/js/all.min.js"></script>
-	    <script src="js/color-modes.js"></script>
+        <script src="{{ asset('bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+	    <script src="{{ asset('font-awesome/js/all.min.js') }}"></script>
+	    <script src="{{ asset('js/color-modes.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </head>
     <body>
@@ -43,7 +43,7 @@
 				    {{ include('kyg.svg.twig') }}
 			    </div>
 		    </div>
-		    <div class="align-self-center text-danger"><h6>error</h6></div>
+		    <div class="align-self-center text-danger"><h6>{{ app_error }}</h6></div>
 		    <div class="text-nowrap align-self-center me-3" lang="en"><h6><strong>&copy; 2025 Kataev Yaroslav</strong></h6></div>
 	    </footer>
         {% block body %}{% endblock %}
