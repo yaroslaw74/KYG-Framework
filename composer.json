@@ -29,6 +29,7 @@
         "doctrine/doctrine-bundle": "^2.12",
         "doctrine/doctrine-migrations-bundle": "^3.3",
         "doctrine/orm": "^3.2",
+        "fortawesome/font-awesome": "^6.5",
         "liborm85/composer-vendor-cleaner": "^1.7",
         "mnsami/composer-custom-directory-installer": "^2.0",
         "phpdocumentor/reflection-docblock": "^5.4",
@@ -59,6 +60,8 @@
         "symfony/validator": "7.1.*",
         "symfony/web-link": "7.1.*",
         "symfony/yaml": "7.1.*",
+        "twbs/bootstrap": "^5.3",
+        "twbs/bootstrap-icons": "^1.11",
         "twig/extra-bundle": "^3.10",
         "twig/twig": "^3.10"
     },
