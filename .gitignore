@@ -3,8 +3,15 @@
 /.env.local.php
 /.env.*.local
 /config/secrets/prod/prod.decrypt.private.php
+/migrations/*.php
 /public/bundles/
-/var/
+/public/bootstrap/
+/public/bootstrap-icons/
+/public/font-awesome/
+/public/*.html
+/var/*.yaml
+/var/cache/
+/var/log/
 /vendor/
 ###< symfony/framework-bundle ###
 
