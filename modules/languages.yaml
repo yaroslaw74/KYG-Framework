@@ -538,6 +538,9 @@ languages:
     en-US:
         name: "English (United States)"
         dir: "ltr"
+    en-US-POSIX:
+        name: "English (United States, Computer)"
+        dir: "ltr"
     en-VC:
         name: "English (St. Vincent & Grenadines)"
         dir: "ltr"
@@ -561,6 +564,9 @@ languages:
         dir: "ltr"
     en-ZW:
         name: "English (Zimbabwe)"
+        dir: "ltr"
+    eo:
+        name: "Esperanto"
         dir: "ltr"
     es-AR:
         name: "español (Argentina)"
