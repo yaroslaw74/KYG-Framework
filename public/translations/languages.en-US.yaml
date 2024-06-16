@@ -2,18 +2,18 @@
 #  @Project    KYG Framework for business
 #  @Version    1.0.0
 #  @Domain     languages
-#  @Locale     ru-RU
+#  @Locale     en-US
 #
 #  @Copyright  (C) 2025 Kataev Yaroslav Georgievich
 #  @E-mail     yaroslaw74@gmail.com
 #  @License    GNU General Public License version 3 or later; see LICENSE.md
 ##################################################################################
 languages:
-    af-NA: "африкаанс (Намибия)"
-    af-ZA: "африкаанс (Южно-Африканская Республика)"
-    agq-CM: "агем (Камерун)"
-    ak-GH: "акан (Гана)"
-    am-ET: "амхарский (Эфиопия)"
+    af-NA: "Afrikaans (Namibia)"
+    af-ZA: "Afrikaans (South African Republic)"
+    agq-CM: "Agem (Cameroon)"
+    ak-GH: "Akan (Ghana)"
+    am-ET: "Amharic (Ethiopia)"
     ar-AE: "арабский (Объединенные Арабские Эмираты)"
     ar-BH: "арабский (Бахрейн)"
     ar-DJ: "арабский (Джибути)"
