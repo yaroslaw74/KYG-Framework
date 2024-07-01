@@ -8,6 +8,7 @@ parameters:
     app.config_dir: "%kernel.project_dir%/config"
     app.config_packages_dir: "%app.config_dir%/packages"
     app.public_dir: "%kernel.project_dir%/public"
+    app.templates_dir: "%kernel.project_dir%/templates"
     app.translations_dir: "%app.public_dir%/translations"
     # other
     app.name: "KYG Framework for Business"
