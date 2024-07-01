@@ -1,2 +1,10 @@
 twig:
+    globals:
+        app_name: "%app.name%"
+
+    # The default path used to load templates
+    default_path: "%app.templates_dir%"
+
+    # Pattern of file name used for cache warmer and linter
     file_name_pattern: "*.twig"
+    paths: null
