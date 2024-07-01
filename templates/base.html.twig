@@ -13,7 +13,7 @@
         <meta name="robots" content="noindex, nofollow">
 	    <meta name="autor" content="Kataev Yaroslav Georgievich">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}{{ app_name }}{% endblock %}</title>
         <link rel="icon" href="{{ asset('favicon.ico') }}">
         <link rel="stylesheet" href="{{ asset('css/base.css') }}">
 	    {% if localedir(app.locale) == 'ltr' %}
