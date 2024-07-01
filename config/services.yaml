@@ -5,6 +5,8 @@
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
     #dir
+    app.config_dir: "%kernel.project_dir%/config"
+    app.config_packages_dir: "%app.config_dir%/packages"
     app.public_dir: "%kernel.project_dir%/public"
     app.translations_dir: "%app.public_dir%/translations"
 
