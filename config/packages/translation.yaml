@@ -1,7 +1,8 @@
 framework:
     default_locale: ru-RU
+    enabled_locales: "%app.locale_list%"
     translator:
         default_path: "%app.translations_dir%"
-        fallbacks:
-            - en
+        fallbacks: "%app.locale_list%"
+        paths:
         providers:
