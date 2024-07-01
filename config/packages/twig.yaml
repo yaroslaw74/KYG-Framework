@@ -15,7 +15,7 @@ twig:
         interval_format: "%d days"
 
         # The timezone used when formatting dates, when set to null, the timezone returned by date_default_timezone_get() is used
-        timezone: null
+        timezone: "%app.timezone%"
 
     # The default format options for the number_format filter
     number_format:
