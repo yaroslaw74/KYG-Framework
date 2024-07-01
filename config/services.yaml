@@ -29,3 +29,5 @@ services:
     # please note that last definitions always *replace* previous ones
     Squirrel\TwigPhpSyntax\PhpSyntaxExtension:
         tags: [twig.extension]
+    App\Twig\AppTwigExtension:
+        tags: [twig.extension]
