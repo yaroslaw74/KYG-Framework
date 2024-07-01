@@ -12,6 +12,9 @@ parameters:
     app.translations_dir: "%app.public_dir%/translations"
     # other
     app.name: "KYG Framework for Business"
+    app.locale_list:
+        - "en-US"
+        - "ru-RU"
 
 services:
     # default configuration for services in *this* file
