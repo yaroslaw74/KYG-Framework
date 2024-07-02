@@ -10,3 +10,9 @@
 ##################################################################################
 header:
     search: "Search for..."
+menu:
+    user:
+        profile: "My Profile"
+        settings: "Account Settings"
+        help: "Need Help?"
+        out: "Sign Out"
