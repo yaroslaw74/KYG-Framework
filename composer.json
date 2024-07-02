@@ -43,6 +43,7 @@
         "egulias/email-validator": "^4.0",
         "fortawesome/font-awesome": "^6.5",
         "liborm85/composer-vendor-cleaner": "^1.7",
+        "lorenzo/pinky": "^1.1",
         "mnsami/composer-custom-directory-installer": "^2.0",
         "monolog/monolog": "^3.7",
         "phpdocumentor/reflection-common": "^2.2",
@@ -123,9 +124,13 @@
         "symfony/var-exporter": "7.1.*",
         "symfony/workflow": "7.1.*",
         "symfony/yaml": "7.1.*",
+        "tijsverkoyen/css-to-inline-styles": "^2.2",
         "twbs/bootstrap": "^5.3",
         "twbs/bootstrap-icons": "^1.11",
+        "twig/cssinliner-extra": "^3.10",
         "twig/extra-bundle": "^3.10",
+        "twig/inky-extra": "^3.10",
+        "twig/markdown-extra": "^3.10",
         "twig/twig": "^3.10",
         "webmozart/assert": "^1.11"
     },
@@ -295,7 +300,6 @@
         }
     },
     "require-dev": {
-        "lorenzo/pinky": "^1.1",
         "masterminds/html5": "^2.9",
         "myclabs/deep-copy": "^1.12",
         "nikic/php-parser": "^5.1",
@@ -329,8 +333,6 @@
         "symfony/dom-crawler": "7.1.*",
         "symfony/phpunit-bridge": "^7.1",
         "symfony/web-profiler-bundle": "7.1.*",
-        "theseer/tokenizer": "^1.2",
-        "twig/inky-extra": "^3.10",
-        "twig/markdown-extra": "^3.10"
+        "theseer/tokenizer": "^1.2"
     }
 }
