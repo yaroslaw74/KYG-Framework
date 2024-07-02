@@ -11,6 +11,7 @@ parameters:
     app.public_dir: "%kernel.project_dir%/public"
     app.templates_dir: "%kernel.project_dir%/templates"
     app.translations_dir: "%app.public_dir%/translations"
+    app.var_dir: "%kernel.project_dir%/var"
     # other
     app.name: "KYG Framework for Business"
     app.locale_list:
