@@ -331,6 +331,7 @@
         "symfony/css-selector": "7.1.*",
         "symfony/debug-bundle": "7.1.*",
         "symfony/dom-crawler": "7.1.*",
+        "symfony/maker-bundle": "^1.60",
         "symfony/phpunit-bridge": "^7.1",
         "symfony/web-profiler-bundle": "7.1.*",
         "theseer/tokenizer": "^1.2"
