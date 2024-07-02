@@ -57,3 +57,5 @@ services:
         tags: [kernel.event_subscriber]
     App\EventSubscriber\UserLocaleSubscriber:
         tags: [kernel.event_subscriber]
+    App\EventSubscriber\TimeZoneSubscriber:
+        tags: [kernel.event_subscriber]
