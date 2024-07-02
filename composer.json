@@ -295,6 +295,7 @@
         }
     },
     "require-dev": {
+        "lorenzo/pinky": "^1.1",
         "masterminds/html5": "^2.9",
         "myclabs/deep-copy": "^1.12",
         "nikic/php-parser": "^5.1",
@@ -328,6 +329,8 @@
         "symfony/dom-crawler": "7.1.*",
         "symfony/phpunit-bridge": "^7.1",
         "symfony/web-profiler-bundle": "7.1.*",
-        "theseer/tokenizer": "^1.2"
+        "theseer/tokenizer": "^1.2",
+        "twig/inky-extra": "^3.10",
+        "twig/markdown-extra": "^3.10"
     }
 }
