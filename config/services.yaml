@@ -51,3 +51,5 @@ services:
         tags: [twig.extension]
     App\Twig\AppTwigExtension:
         tags: [twig.extension]
+    App\DependencyInjection\YamlEnvVarLoader:
+        tags: [container.env_var_loader]
