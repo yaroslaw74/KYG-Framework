@@ -11,6 +11,9 @@ namespace App\Modules\Users\Entity;
 
 use App\Modules\Users\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Ramsey\Uuid\Doctrine\Uuidv7Generator;
+use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\UuidInterface;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -20,27 +23,40 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(type: 'integer')]
     private ?int $id = null;
 
-    #[ORM\Column(length: 180)]
+    #[Column(type: "uuid_binary", unique: true)]
+    #[GeneratedValue(strategy: "CUSTOM")]
+    #[CustomIdGenerator(class: UuidV7Generator::class)]
+    protected ?UuidInterface $uuid = null;
+
+    #[ORM\Column(type: 'string', length: 180, unique: true)]
     private ?string $username = null;
+
+    #[ORM\Column(type: 'string', length: 180, unique: true)]
+    private ?string $email = null;
 
     /**
      * @var list<string> The user roles
      */
-    #[ORM\Column]
+    #[ORM\Column(type: 'json')]
     private array $roles = [];
 
-    /**
+    /** 
      * @var string The hashed password
      */
-    #[ORM\Column]
+    #[ORM\Column(type: 'string')]
     private ?string $password = null;
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getUuid(): string
+    {
+        return Uuid::fromBytes($this->uuid);
     }
 
     public function getUsername(): ?string
@@ -51,6 +67,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setUsername(string $username): static
     {
         $this->username = $username;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
 
         return $this;
     }
