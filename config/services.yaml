@@ -19,7 +19,6 @@ parameters:
     app.timeformat: null
     app.separator: " "
     app.timezone: null
-
 services:
     # default configuration for services in *this* file
     _defaults:
