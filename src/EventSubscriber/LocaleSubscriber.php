@@ -15,15 +15,15 @@ use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
 class LocaleSubscriber implements EventSubscriberInterface
- {
-    public function onKernelRequest( RequestEvent $event ): void
- {
+{
+    public function onKernelRequest(RequestEvent $event): void
+    {
         $request = $event->getRequest();
-        $locale = $request->request->getString( '_locale' );
-        if ( $locale != '' ) $request->setLocale( $locale );
+        $locale = $request->request->getString('_locale');
+        if ($locale != '') $request->setLocale($locale);
     }
     public static function getSubscribedEvents(): array
- {
-        return [ KernelEvents::REQUEST => [ [ 'onKernelRequest', 20 ] ], ];
+    {
+        return [KernelEvents::REQUEST => [['onKernelRequest', 20]]];
     }
 }
