@@ -1,12 +1,13 @@
 <?php
 /**********************************************************************************
- * @Project    KYG Framework for business
- * @Version    1.0.0
- *
- * @Copyright  (C) 2025 Kataev Yaroslav Georgievich 
- * @E-mail     yaroslaw74@gmail.com
- * @License    GNU General Public License version 3 or later; see LICENSE.md
- *********************************************************************************/
+* @Project    KYG Framework for business
+* @Version    1.0.0
+*
+* @Copyright  (C) 2025 Kataev Yaroslav Georgievich
+* @E-mail     yaroslaw74@gmail.com
+* @License    GNU General Public License version 3 or later;
+see LICENSE.md
+*********************************************************************************/
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -17,15 +18,15 @@ use Symfony\Component\Routing\Attribute\Route;
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'index')]
-    public function index(): RedirectResponse 
+    public function index(): RedirectResponse
     {
         return $this->redirectToRoute('app_home');
     }
     #[Route('/app/home', name: 'app_home')]
-    public function home(): Response
-    {
+    public function home(): Response {
         return $this->render('home/index.html.twig', [
-            'app_error' => ''
+            'app_error' => '',
+            'controller_name' => 'HomeController',
         ]);
     }
 }

@@ -22,11 +22,5 @@ doctrine:
                 dir: "%kernel.project_dir%/src/Entity"
                 prefix: 'App\Entity'
                 alias: App
-            App\Modules\Users:
-                type: attribute
-                is_bundle: false
-                dir: "%app.modules_dir%/Users/Entity"
-                prefix: 'App\Modules\Users\Entity'
-                alias: App\Modules\Users
         controller_resolver:
             auto_mapping: false

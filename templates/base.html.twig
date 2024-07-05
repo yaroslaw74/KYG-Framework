@@ -9,26 +9,27 @@
 <!DOCTYPE html>
 <html  lang="{{ app.locale }}" data-bs-theme="auto" dir="{{ localedir(app.locale) }}">
     <head>
-        <meta charset="UTF-8">
-        <meta name="robots" content="noindex, nofollow">
-	    <meta name="autor" content="Kataev Yaroslav Georgievich">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}{{ app_name }}{% endblock %}</title>
-        <link rel="icon" href="{{ asset('favicon.ico') }}">
-        <link rel="stylesheet" href="{{ asset('css/base.css') }}">
-	    {% if localedir(app.locale) == 'ltr' %}
-			<link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.min.css') }}">
+        <meta charset="UTF-8" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="autor" content="Kataev Yaroslav Georgievich" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{% block title %}{{ app_name }}!{% endblock %}</title>
+        <link rel="icon" href="{{ asset('favicon.ico') }}" />
+        {% if localedir(app.locale) == 'ltr' %}
+			<link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.min.css') }}" />
 		{% else %}
-			<link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.rtl.min.css') }}">
+			<link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.rtl.min.css') }}" />
 		{% endif %}
-	    <link rel="stylesheet" href="{{ asset('bootstrap-icons/font/bootstrap-icons.min.css') }}">
-	    <link rel="stylesheet" href="{{ asset('font-awesome/css/svg-with-js.min.css') }}">
-	    <link rel="stylesheet" href="{{ asset('css/button.css') }}">
+        <link rel="stylesheet" href="{{ asset('bootstrap-icons/font/bootstrap-icons.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('font-awesome/css/svg-with-js.min.css"') }}" />
+        <link rel="stylesheet" href="{{ asset('css/button.css') }}" />
         {% block stylesheets %}{% endblock %}
         <script src="{{ asset('bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
-	    <script src="{{ asset('font-awesome/js/all.min.js') }}"></script>
-	    <script src="{{ asset('js/color-modes.js') }}"></script>
-        {% block javascripts %}{% endblock %}
+        <script src="{{ asset('font-awesome/js/all.min.js') }}"></script>
+        <script src="{{ asset('js/color-modes.js') }}"></script>
+        {% block javascripts %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
     </head>
     <body>
         {{ include('button.svg.twig') }}

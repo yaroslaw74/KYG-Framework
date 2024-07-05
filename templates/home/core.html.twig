@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 {% endblock %}
 
-{% block javascripts %}{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
 
 {% block header %}
     <div class="d-flex flex-row p-0 justify-content-between bg-body-tertiary">
@@ -215,8 +217,7 @@
 
 {% block main %}
     <div class="d-flex flex-row bg-body-tertiary p-0 main">
-		    <div class="flex-shrink-0 p-1 col-2 bg-primary-subtle">
-    		
+		<div class="flex-shrink-0 p-1 col-2 bg-primary-subtle">
     		<ul class="list-unstyled ps-0 ">
       			<li class="mb-1">
         			<button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
@@ -271,12 +272,12 @@
         			</div>
       			</li>
     		</ul>
-  		  </div>
-		    <div class="d-flex col-8 p-1 bg-body-secondary text-body-emphasis">
+  		</div>
+		<div class="d-flex col-8 p-1 bg-body-secondary text-body-emphasis">
             {% block content %}{% endblock %}
         </div>
-		    <div class="d-flex col-2 p-1 bg-info-subtle text-info-emphasis">mesage</div>
-	  </div>
+		<div class="d-flex col-2 p-1 bg-info-subtle text-info-emphasis">mesage</div>
+	</div>
 {% endblock %}
 
 {% block body %}{% endblock %}
