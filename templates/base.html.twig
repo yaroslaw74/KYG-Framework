@@ -48,7 +48,9 @@
 				    {{ include('kyg.svg.twig') }}
 			    </div>
 		    </div>
-		    <div class="align-self-center text-danger"><h6>{{ app_error }}</h6></div>
+            {% for message in app.flashes('footer') %}
+		        <div class="align-self-center text-danger"><h6>{{ message }}</h6></div>
+            {% endfor %}
 		    <div class="text-nowrap align-self-center me-3" lang="en"><h6><strong>&copy; 2025 Kataev Yaroslav</strong></h6></div>
 	    </footer>
         {% block body %}{% endblock %}
