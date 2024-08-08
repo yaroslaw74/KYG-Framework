@@ -4,27 +4,16 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
-    #dir
     app.config_dir: "%kernel.project_dir%/config"
     app.config_packages_dir: "%app.config_dir%/packages"
     app.modules_dir: "%kernel.project_dir%/modules"
     app.public_dir: "%kernel.project_dir%/public"
+    app.additions_dir: "%app.public_dir%/additions"
+    app.public_config_dir: "%app.public_dir%/config"
+    app.images_dir: "%app.public_dir%/images"
     app.templates_dir: "%kernel.project_dir%/templates"
     app.translations_dir: "%app.public_dir%/translations"
     app.var_dir: "%kernel.project_dir%/var"
-    # other
-    app.name: "KYG Framework for Business"
-    app.locale_list:
-        - "en-US"
-        - "ru-RU"
-    app.dataformat: null
-    app.timeformat: null
-    app.separator: " "
-    app.datatimeformat: "F j, Y H:i"
-    app.timezone: null
-    app.decimals: 0
-    app.decimal_point: "."
-    app.thousands_separator: ","
 
 services:
     # default configuration for services in *this* file
@@ -44,19 +33,27 @@ services:
         resource: "../modules/"
         exclude:
             - "../modules/*/Entity/"
-            - "../modules/*/Servises/"
+            - "../modules/*/Service/"
+    #App\Additions\:
+    #    resource: "../public/additions/"
+    #    exclude:
+    #        - "../public/additions/*/Entity/"
+    #        - "../public/additions/*/Service/"
+    security_emailverifier:
+        class: 'App\Modules\Users\Security\EmailVerifier'
+    event_subscribers:
+        namespace: 'App\EventSubscriber\'
+        resource: "../src/EventSubscriber/"
+        tags: [event_subscriber]
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
-    Squirrel\TwigPhpSyntax\PhpSyntaxExtension:
-        tags: [twig.extension]
-    App\Twig\AppTwigExtension:
-        tags: [twig.extension]
     App\DependencyInjection\YamlEnvVarLoader:
         tags: [container.env_var_loader]
-    App\EventSubscriber\LocaleSubscriber:
-        tags: [kernel.event_subscriber]
-    App\EventSubscriber\UserLocaleSubscriber:
-        tags: [kernel.event_subscriber]
-    App\EventSubscriber\TimeZoneSubscriber:
-        tags: [kernel.event_subscriber]
+    App\Twig\AppTwigExtension:
+        tags: [twig.extension]
+    Squirrel\TwigPhpSyntax\PhpSyntaxExtension:
+        tags: [twig.extension]
+
+imports:
+    - { resource: "../public/config/*.yaml", ignore_errors: true }

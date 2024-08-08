@@ -15,7 +15,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}{{ app_name }}{% endblock %}</title>
         <link rel="icon" href="{{ asset('favicon.ico') }}">
-        <link rel="stylesheet" href="{{ asset('css/base.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/base.css') }}">
 	    {% if localedir(app.locale) == 'ltr' %}
 			<link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.min.css') }}">
 		{% else %}
@@ -28,6 +28,7 @@
         <script src="{{ asset('bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
 	    <script src="{{ asset('font-awesome/js/all.min.js') }}"></script>
 	    <script src="{{ asset('js/color-modes.js') }}"></script>
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% block javascripts %}{% endblock %}
     </head>
     <body>
@@ -47,7 +48,13 @@
 				    {{ include('kyg.svg.twig') }}
 			    </div>
 		    </div>
-		    <div class="align-self-center text-danger"><h6>{{ app_error }}</h6></div>
+		    <div class="align-self-center text-danger">
+                <h6>
+                    {% for message in app.flashes('footer') %}
+                        {{ message }}
+                    {% endfor %}
+                </h6>
+            </div>
 		    <div class="text-nowrap align-self-center me-3" lang="en"><h6><strong>&copy; 2025 Kataev Yaroslav</strong></h6></div>
 	    </footer>
         {% block body %}{% endblock %}

@@ -1,0 +1,21 @@
+{##################################################################################
+ #  @Project    KYG Framework for business
+ #  @Version    1.0.0
+ #
+ #  @Copyright  (C) 2025 Kataev Yaroslav Georgievich 
+ #  @E-mail     yaroslaw74@gmail.com
+ #  @License    GNU General Public License version 3 or later; see LICENSE.md
+ ##################################################################################}
+{% trans_default_domain 'registration' %}
+
+<h1>{% trans %}mail.hi{% endtrans %}</h1>
+
+<p>
+    {% trans %}mail.please{% endtrans %} <br><br>
+    <a href="{{ signedUrl|raw }}">{% trans %}mail.confirm{% endtrans %}</a>.
+    {% trans %}mail.link{% endtrans %} {{ expiresAtMessageKey|trans(expiresAtMessageData, 'VerifyEmailBundle') }}.
+</p>
+
+<p>
+    {% trans %}mail.cheers{% endtrans %}
+</p>

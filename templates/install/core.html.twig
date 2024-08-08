@@ -1,0 +1,35 @@
+{##################################################################################
+ #  @Project    KYG Framework for business
+ #  @Version    1.0.0
+ #
+ #  @Copyright  (C) 2025 Kataev Yaroslav Georgievich 
+ #  @E-mail     yaroslaw74@gmail.com
+ #  @License    GNU General Public License version 3 or later; see LICENSE.md
+ ##################################################################################}
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/rotate.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/install.css') }}">
+{% endblock %}
+
+{% block header %}
+    <div class="py-1 container-fluid d-flex justify-content-center rotate">
+        {{ include('kyg.svg.twig') }}
+    </div>
+    <div class="container-fluid d-flex justify-content-center text-primary-emphasis" lang="en">
+        <h1><strong>KYG Framework for Business</strong></h1>
+    </div>
+{% endblock %}
+
+{% block main %}
+    <div class="border rounded-3 shadow bg-secondary-subtle d-flex flex-row justify-content-center main p-3 mb-3">
+        {% block content %}{% endblock %}
+    </div>
+{% endblock %}
+
+{% block body %}
+    <div class="dropdown position-fixed top-0 end-0 mb-3 me-3 bd-mode-toggle">
+        {{ include('button.html.twig') }}
+    </div>
+{% endblock %}
