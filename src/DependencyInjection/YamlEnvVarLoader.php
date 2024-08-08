@@ -21,12 +21,12 @@ final class YamlEnvVarLoader implements EnvVarLoaderInterface
 
     public function loadEnvVars(): array
  {
-        $fileName = $this->params->get('app.var_dir') . '/env.yaml';
+        $fileName = $this->params->get('app.public_dir') . '/env.yaml';
         $filesystem = new Filesystem();
         if (!$filesystem->exists($fileName)) {
             return [];
         } else {
-            $content = Yaml::parseFile( $fileName );
+            $content = Yaml::parseFile($fileName);
             return $content['vars'];
         }
     }
