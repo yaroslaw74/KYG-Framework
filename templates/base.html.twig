@@ -1,17 +1,61 @@
+{##################################################################################
+ #  @Project    KYG Framework for business
+ #  @Version    1.0.0
+ #
+ #  @Copyright  (C) 2025 Kataev Yaroslav Georgievich 
+ #  @E-mail     yaroslaw74@gmail.com
+ #  @License    GNU General Public License version 3 or later; see LICENSE.md
+ ##################################################################################}
 <!DOCTYPE html>
-<html>
+<html  lang="{{ app.locale }}" data-bs-theme="auto" dir="{{ localedir(app.locale) }}">
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
-
+         <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+	    <meta name="autor" content="Kataev Yaroslav Georgievich">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}{{ app_name }}{% endblock %}</title>
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
+        {% if localedir(app.locale) == 'ltr' %}
+			<link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.min.css') }}" />
+		{% else %}
+			<link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.rtl.min.css') }}" />
+		{% endif %}
+        <link rel="stylesheet" href="{{ asset('bootstrap-icons/font/bootstrap-icons.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('font-awesome/css/svg-with-js.min.css"') }}" />
+        <link rel="stylesheet" href="{{ asset('css/button.css') }}" />
+        {% block stylesheets %}{% endblock %}
+        <script src="{{ asset('font-awesome/js/all.min.js') }}"></script>
+	    <script src="{{ asset('js/color-modes.js') }}"></script>
         {% block javascripts %}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
     <body>
+        {{ include('button.svg.twig') }}
+	    <header class="container-fluid d-flex flex-column p-0">
+		    {% block header %}{% endblock %}
+	    </header>
+	    <main class="container-fluid d-flex flex-column p-0">
+		    {% block main %}{% endblock %}
+	    </main>
+	    <footer class="container-fluid d-flex flex-row justify-content-between bg-body-tertiary p-0">
+		    <div class="d-flex flex-row ms-3">
+			    <div class="align-self-center me-1">
+				    {{ include('symfony.svg.twig') }}
+			    </div>
+			    <div class="align-self-center">
+				    {{ include('kyg.svg.twig') }}
+			    </div>
+		    </div>
+		    <div class="align-self-center text-danger">
+                <h6>
+                    {% for message in app.flashes('footer') %}
+                        {{ message }}
+                    {% endfor %}
+                </h6>
+            </div>
+		    <div class="text-nowrap align-self-center me-3" lang="en"><h6><strong>&copy; 2025 Kataev Yaroslav</strong></h6></div>
+	    </footer>
         {% block body %}{% endblock %}
     </body>
 </html>

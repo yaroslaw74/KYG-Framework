@@ -11,6 +11,7 @@ parameters:
     app.additions_dir: "%app.public_dir%/additions"
     app.public_config_dir: "%app.public_dir%/config"
     app.images_dir: "%app.public_dir%/images"
+    app.translations_dir: "%app.public_dir%/translations"
     app.templates_dir: "%kernel.project_dir%/templates"
     app.var_dir: "%kernel.project_dir%/var"
 
