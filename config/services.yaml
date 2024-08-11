@@ -28,6 +28,19 @@ services:
             - "../src/DependencyInjection/"
             - "../src/Entity/"
             - "../src/Kernel.php"
+    event_subscribers:
+        namespace: 'App\EventSubscriber\'
+        resource: "../src/EventSubscriber/"
+        tags: [event_subscriber]
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    App\DependencyInjection\YamlEnvVarLoader:
+        tags: [container.env_var_loader]
+    App\Twig\AppTwigExtension:
+        tags: [twig.extension]
+    Squirrel\TwigPhpSyntax\PhpSyntaxExtension:
+        tags: [twig.extension]
+
+    imports:
+        - { resource: "../public/config/*.yaml", ignore_errors: true }
