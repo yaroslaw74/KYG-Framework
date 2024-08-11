@@ -27,3 +27,5 @@
 /public/bootstrap/
 /public/bootstrap-icons/
 /public/font-awesome/
+/public/*.html
+/migrations/*.php
