@@ -42,5 +42,5 @@ services:
     Squirrel\TwigPhpSyntax\PhpSyntaxExtension:
         tags: [twig.extension]
 
-    imports:
-        - { resource: "../public/config/*.yaml", ignore_errors: true }
+    #imports:
+    #    - { resource: "../public/config/*.yaml", ignore_errors: true }
