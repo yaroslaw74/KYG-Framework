@@ -27,13 +27,18 @@ services:
         namespace: 'App\EventSubscriber\'
         resource: "../src/EventSubscriber/"
         tags: [event_subscriber]
-
     App\:
         resource: "../src/"
         exclude:
             - "../src/DependencyInjection/"
             - "../src/Entity/"
             - "../src/Kernel.php"
+    App\Modules\:
+        resource: "../modules/"
+        exclude:
+            - "../modules/*/DependencyInjection/"
+            - "../modules/*/Entity/"
+            - "../modules/*/Service/"
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
