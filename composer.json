@@ -117,7 +117,7 @@
         "symfony/twig-bridge": "7.1.*",
         "symfony/twig-bundle": "7.1.*",
         "symfony/type-info": "7.1.*",
-        "symfony/ux-toggle-password": "^2.19",
+        "symfony/ux-toggle-password": "*",
         "symfony/ux-turbo": "^2.19",
         "symfony/validator": "7.1.*",
         "symfony/var-dumper": "7.1.*",
