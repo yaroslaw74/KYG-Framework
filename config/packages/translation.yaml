@@ -4,5 +4,6 @@ framework:
     translator:
         default_path: "%app.translations_dir%"
         fallbacks: "%app.locale_list%"
-        paths: null
+        paths:
+            - "%app.modules_dir%/Users/Translations"
         providers: null
