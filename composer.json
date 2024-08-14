@@ -148,6 +148,10 @@
             "liborm85/composer-vendor-cleaner": true,
             "mnsami/composer-custom-directory-installer": true
         },
+        "dev-files": {
+            "match-case": false,
+            "no-dev-only": true
+        },
         "sort-packages": true
     },
     "autoload": {
@@ -209,7 +213,9 @@
                 "docs/",
                 ".gitattributes",
                 ".gitignore",
-                "*.md"
+                "*.md",
+                "LICENSE",
+                "LICENSE.*"
             ],
             "fortawesome/font-awesome": [
                 "js-packages/",
