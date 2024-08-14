@@ -23,7 +23,10 @@
 .phpunit.result.cache
 ###< phpunit/phpunit ###
 
+/public/bootstrap/
+/public/bootstrap-icons/
 /public/config/
+/public/font-awesome/
 /public/images/
 /public/*.html
 /migrations/*.php
