@@ -190,6 +190,13 @@
         "symfony": {
             "allow-contrib": false,
             "require": "7.1.*"
+        },
+        "installer-paths": {
+            "./public/{$name}": [
+                "fortawesome/font-awesome",
+                "twbs/bootstrap",
+                "twbs/bootstrap-icons"
+            ]
         }
     },
     "require-dev": {
