@@ -1,4 +1,4 @@
-fframework:
+framework:
     default_locale: "%app.locale%"
     enabled_locales: "%app.locale_list%"
     translator:
