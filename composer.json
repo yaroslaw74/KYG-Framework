@@ -42,6 +42,7 @@
         "doctrine/persistence": "^3.3",
         "doctrine/sql-formatter": "^1.4",
         "egulias/email-validator": "^4.0",
+        "fortawesome/font-awesome": "^6.6",
         "league/commonmark": "^2.5",
         "league/config": "^1.2",
         "liborm85/composer-vendor-cleaner": "^1.7",
@@ -130,6 +131,8 @@
         "symfony/yaml": "7.1.*",
         "symfonycasts/verify-email-bundle": "^1.17",
         "tijsverkoyen/css-to-inline-styles": "^2.2",
+        "twbs/bootstrap": "^5.3",
+        "twbs/bootstrap-icons": "^1.11",
         "twig/cssinliner-extra": "^3.11",
         "twig/extra-bundle": "^3.11",
         "twig/inky-extra": "^3.11",
@@ -196,6 +199,72 @@
                 "fortawesome/font-awesome",
                 "twbs/bootstrap",
                 "twbs/bootstrap-icons"
+            ]
+        },
+        "dev-files": {
+            "*/*": [
+                ".github/",
+                "build/",
+                "tests/",
+                "docs/",
+                ".gitattributes",
+                ".gitignore",
+                "*.md"
+            ],
+            "fortawesome/font-awesome": [
+                "js-packages/",
+                "less/",
+                "metadata/",
+                "otfs/",
+                "scss/",
+                "sprites/",
+                "svgs/",
+                "webfonts/",
+                "*/brands.*",
+                "*/fontawesome.*",
+                "*/regular.*",
+                "*/solid.*",
+                "*/v4-font-face.*",
+                "*/v4-shims.*",
+                "*/v5-font-face.*",
+                "*/conflict-detection.*",
+                "css/all.*",
+                "css/svg-with-js.css",
+                "js/all.js"
+            ],
+            "twbs/*": [
+                ".*",
+                "hugo.yml",
+                "package.js",
+                "package.json",
+                "package-lock.json"
+            ],
+            "twbs/bootstrap": [
+                "nuget/",
+                "scss/",
+                "site/",
+                "*/*.map",
+                "js/dist/",
+                "js/src/",
+                "js/index.*",
+                "dist/css/bootstrap-grid.*",
+                "dist/css/bootstrap-reboot.*",
+                "dist/css/bootstrap-utilities.*",
+                "dist/css/bootstrap.css",
+                "dist/css/bootstrap.rtl.css",
+                "dist/js/bootstrap.esm.*",
+                "dist/js/bootstrap.js",
+                "dist/js/bootstrap.min.js",
+                "dist/js/bootstrap.bundle.js"
+            ],
+            "twbs/bootstrap-icons": [
+                "icons/",
+                "font/*.json",
+                "font/*.scss",
+                "font/bootstrap-icons.css",
+                "bootstrap-icons.svg",
+                "svgo.config.mjs",
+                "svg-sprite.json"
             ]
         }
     },
