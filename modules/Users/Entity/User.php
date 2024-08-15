@@ -5,7 +5,7 @@
 *
 * @Copyright  ( C ) 2025 Kataev Yaroslav Georgievich
 * @E-mail     yaroslaw74@gmail.com
-* @License    GNU General Public License version 3 or later; see LICENSE.md
+* @License    GNU General Public License version 3 or later, see LICENSE.md
 *********************************************************************************/
 namespace App\Modules\Users\Entity;
 
@@ -127,4 +127,5 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
+
 }
