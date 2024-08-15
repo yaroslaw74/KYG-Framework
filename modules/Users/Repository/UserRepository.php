@@ -1,8 +1,15 @@
 <?php
+/**********************************************************************************
+* @Project    KYG Framework for business
+* @Version    1.0.0
+*
+* @Copyright  ( C ) 2025 Kataev Yaroslav Georgievich
+* @E-mail     yaroslaw74@gmail.com
+* @License    GNU General Public License version 3 or later; see LICENSE.md
+*********************************************************************************/
+namespace App\Modules\Users\Repository;
 
-namespace App\Repository;
-
-use App\Entity\User;
+use App\Modules\Users\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
