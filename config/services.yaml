@@ -38,6 +38,12 @@ services:
             - "../modules/*/DependencyInjection/"
             - "../modules/*/Entity/"
             - "../modules/*/Service/"
+    App\Additions\:
+        resource: "../public/additions/"
+        exclude:
+            - "../public/additions/*/DependencyInjection/"
+            - "../public/additions/*/Entity/"
+            - "../public/additions/*/Service/"
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
