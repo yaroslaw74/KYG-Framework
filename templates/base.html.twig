@@ -22,13 +22,16 @@
 		{% endif %}
         <link rel="stylesheet" href="{{ asset('bootstrap-icons/font/bootstrap-icons.min.css') }}" />
         <link rel="stylesheet" href="{{ asset('font-awesome/css/svg-with-js.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/button.css') }}" />
         {% block stylesheets %}{% endblock %}
         <script src="{{ asset('bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('font-awesome/js/all.min.js') }}"></script>
+        <script src="{{ asset('js/color-modes.js') }}"></script>
         {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% block javascripts %}{% endblock %}
     </head>
     <body>
+        {{ include('button.svg.twig') }}
         {% block body_top %}{% endblock %}
 	    <header class="container-fluid d-flex flex-column p-0">
 		    {% block header %}{% endblock %}
