@@ -56,3 +56,5 @@ services:
 
 imports:
     - { resource: "../public/config/*.yaml", ignore_errors: true }
+    - { resource: "../modules/*/Config/*.yaml", ignore_errors: true }
+    - { resource: "../public/additions/*/Config/*.yaml", ignore_errors: true }
