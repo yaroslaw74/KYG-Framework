@@ -20,3 +20,6 @@ mail:
     confirm: "Confirm my Email"
     link: "This link will expire in"
     cheers: "Cheers!"
+controller:
+    verified: "Your email address has been verified."
+    confirm: "Please Confirm your Email"
