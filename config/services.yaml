@@ -4,6 +4,16 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
+    app.config_dir: "%kernel.project_dir%/config"
+    app.config_packages_dir: "%app.config_dir%/packages"
+    app.modules_dir: "%kernel.project_dir%/modules"
+    app.public_dir: "%kernel.project_dir%/public"
+    app.additions_dir: "%app.public_dir%/additions"
+    app.public_config_dir: "%app.public_dir%/config"
+    app.images_dir: "%app.public_dir%/images"
+    app.translations_dir: "%app.public_dir%/translations"
+    app.templates_dir: "%kernel.project_dir%/templates"
+    app.var_dir: "%kernel.project_dir%/var"
 
 services:
     # default configuration for services in *this* file
@@ -22,3 +32,8 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+imports:
+    - { resource: "../public/config/*.yaml", ignore_errors: true }
+    - { resource: "../modules/*/Config/*.yaml" }
+    - { resource: "../public/additions/*/Config/*.yaml" }
