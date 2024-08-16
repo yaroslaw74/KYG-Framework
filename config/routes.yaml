@@ -3,3 +3,8 @@ App_controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+Users_controllers:
+    resource:
+        path: ../modules/users/Controller/
+        namespace: App\Modules\Users\Controller
+    type: attribute

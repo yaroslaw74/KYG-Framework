@@ -8,7 +8,8 @@ twig:
 
     # Pattern of file name used for cache warmer and linter
     file_name_pattern: "*.twig"
-    paths: null
+    paths:
+        "modules/Users/Templates": "Users"
 
     # The default format options used by the date filter
     date:
