@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d63acab177170823ff10577cabd7edb3",
+    "content-hash": "e6cfa5e339385124fa928538529d9260",
     "packages": [
         {
             "name": "composer/semver",
@@ -1447,6 +1447,51 @@
             "time": "2023-10-06T06:47:41+00:00"
         },
         {
+            "name": "fortawesome/font-awesome",
+            "version": "6.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FortAwesome/Font-Awesome.git",
+                "reference": "37eff7fa00de26db41183a3ad8ed0e9119fbc44b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/37eff7fa00de26db41183a3ad8ed0e9119fbc44b",
+                "reference": "37eff7fa00de26db41183a3ad8ed0e9119fbc44b",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "CC-BY-4.0",
+                "OFL-1.1",
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "The Font Awesome Team",
+                    "homepage": "https://github.com/orgs/FortAwesome/people"
+                }
+            ],
+            "description": "The iconic font, CSS, and SVG framework",
+            "homepage": "https://fontawesome.com",
+            "keywords": [
+                "FontAwesome",
+                "awesome",
+                "bootstrap",
+                "font",
+                "icon",
+                "svg"
+            ],
+            "support": {
+                "docs": "http://fontawesome.com/docs",
+                "email": "hello@fontawesome.com",
+                "issues": "https://github.com/FortAwesome/Font-Awesome/issues",
+                "source": "https://github.com/FortAwesome/Font-Awesome"
+            },
+            "time": "2024-07-16T17:13:31+00:00"
+        },
+        {
             "name": "league/commonmark",
             "version": "2.5.3",
             "source": {
@@ -1635,6 +1680,66 @@
             "time": "2022-12-11T20:36:23+00:00"
         },
         {
+            "name": "liborm85/composer-vendor-cleaner",
+            "version": "1.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/liborm85/composer-vendor-cleaner.git",
+                "reference": "3d0feeb847c764d6eed2d993041101efbac67dcc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/liborm85/composer-vendor-cleaner/zipball/3d0feeb847c764d6eed2d993041101efbac67dcc",
+                "reference": "3d0feeb847c764d6eed2d993041101efbac67dcc",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1 || ^2.0",
+                "ext-json": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.10.23 || ^2.1.9",
+                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5 || ^8.4 || ^9.1"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Liborm85\\ComposerVendorCleaner\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Liborm85\\ComposerVendorCleaner\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Libor M.",
+                    "email": "liborm85@gmail.com"
+                }
+            ],
+            "description": "Composer Vendor Cleaner removes unnecessary development files and directories from vendor directory.",
+            "keywords": [
+                ".gitattributes",
+                "cleaner",
+                "cleanup",
+                "composer",
+                "composer-plugin",
+                "delete",
+                "ignore",
+                "php",
+                "remove"
+            ],
+            "support": {
+                "issues": "https://github.com/liborm85/composer-vendor-cleaner/issues",
+                "source": "https://github.com/liborm85/composer-vendor-cleaner"
+            },
+            "time": "2023-06-02T14:36:46+00:00"
+        },
+        {
             "name": "lorenzo/pinky",
             "version": "1.1.0",
             "source": {
@@ -1686,6 +1791,62 @@
                 "source": "https://github.com/lorenzo/pinky/tree/1.1.0"
             },
             "time": "2023-07-31T13:36:50+00:00"
+        },
+        {
+            "name": "mnsami/composer-custom-directory-installer",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mnsami/composer-custom-directory-installer.git",
+                "reference": "85f66323978d0b1cb0e6acc7f69b3e7b912f82d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mnsami/composer-custom-directory-installer/zipball/85f66323978d0b1cb0e6acc7f69b3e7b912f82d9",
+                "reference": "85f66323978d0b1cb0e6acc7f69b3e7b912f82d9",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": ">=5.3"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": [
+                    "Composer\\CustomDirectoryInstaller\\LibraryPlugin",
+                    "Composer\\CustomDirectoryInstaller\\PearPlugin",
+                    "Composer\\CustomDirectoryInstaller\\PluginPlugin"
+                ],
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Composer\\CustomDirectoryInstaller": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mina Nabil Sami",
+                    "email": "mina.nsami@gmail.com"
+                }
+            ],
+            "description": "A composer plugin, to help install packages of different types in custom paths.",
+            "keywords": [
+                "composer",
+                "composer-installer",
+                "composer-plugin"
+            ],
+            "support": {
+                "issues": "https://github.com/mnsami/composer-custom-directory-installer/issues",
+                "source": "https://github.com/mnsami/composer-custom-directory-installer/tree/2.0.0"
+            },
+            "time": "2020-08-18T11:00:11+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -7975,6 +8136,95 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.2.7"
             },
             "time": "2023-12-08T13:03:43+00:00"
+        },
+        {
+            "name": "twbs/bootstrap",
+            "version": "v5.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "6e1f75f420f68e1d52733b8e407fc7c3766c9dba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/6e1f75f420f68e1d52733b8e407fc7c3766c9dba",
+                "reference": "6e1f75f420f68e1d52733b8e407fc7c3766c9dba",
+                "shasum": ""
+            },
+            "replace": {
+                "twitter/bootstrap": "self.version"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                },
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "https://getbootstrap.com/",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "mobile-first",
+                "responsive",
+                "sass",
+                "web"
+            ],
+            "support": {
+                "issues": "https://github.com/twbs/bootstrap/issues",
+                "source": "https://github.com/twbs/bootstrap/tree/v5.3.3"
+            },
+            "time": "2024-02-20T15:14:29+00:00"
+        },
+        {
+            "name": "twbs/bootstrap-icons",
+            "version": "v1.11.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/icons.git",
+                "reference": "8d88686c03c3768a2d82ba4f20c3c4e1b100fa29"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/icons/zipball/8d88686c03c3768a2d82ba4f20c3c4e1b100fa29",
+                "reference": "8d88686c03c3768a2d82ba4f20c3c4e1b100fa29",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "Official open source SVG icon library for Bootstrap",
+            "homepage": "https://icons.getbootstrap.com/",
+            "keywords": [
+                "bootstrap",
+                "icon font",
+                "icons",
+                "svg"
+            ],
+            "support": {
+                "issues": "https://github.com/twbs/icons/issues",
+                "source": "https://github.com/twbs/icons/tree/v1.11.3"
+            },
+            "time": "2024-01-03T15:44:45+00:00"
         },
         {
             "name": "twig/cssinliner-extra",
