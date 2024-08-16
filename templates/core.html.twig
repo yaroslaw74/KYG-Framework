@@ -17,7 +17,7 @@
 {% block header %}
 	<div class="d-flex flex-row p-0 justify-content-between bg-body-tertiary">
 		<div class="d-flex flex-row p-0 align-self-center">
-			<a href="#" class="m-1">
+			<a href="{{ path('index') }}" class="m-1">
 				{{ include('kyg.svg.twig') }}
 			</a>
 			<div class="text-nowrap align-self-center text-primary m-1 ps-3" lang="{{ app_lang_name }}"><h5>{{ app_name }}</h5></div>
@@ -162,7 +162,7 @@
             		</li>
             		<li><hr class="dropdown-divider"></li>
             		<li>
-              			<a class="dropdown-item d-flex align-items-center text-primary-emphasis" href="#">
+              			<a class="dropdown-item d-flex align-items-center text-primary-emphasis" href="{{ path('app_logout') }}">
                 			<i class="bi bi-box-arrow-right me-1"></i>
                 			<span>{% trans %}menu.user.out{% endtrans %}</span>
               			</a>
