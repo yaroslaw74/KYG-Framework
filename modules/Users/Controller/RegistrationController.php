@@ -1,11 +1,18 @@
 <?php
+/**********************************************************************************
+ * @Project    KYG Framework for business
+ * @Version    1.0.0
+ *
+ * @Copyright  (C) 2025 Kataev Yaroslav Georgievich
+ * @E-mail     yaroslaw74@gmail.com
+ * @License    GNU General Public License version 3 or later, see LICENSE.md
+ *********************************************************************************/
+namespace App\Modules\Users\Controller;
 
-namespace App\Controller;
-
-use App\Form\RegistrationFormType;
+use App\Modules\Users\Form\RegistrationFormType;
 use App\Modules\Users\Entity\User;
 use App\Modules\Users\Repository\UserRepository;
-use App\Security\EmailVerifier;
+use App\Modules\Users\Security\EmailVerifier;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -49,7 +56,7 @@ class RegistrationController extends AbstractController
                     ->from(new Address('mailer@your-domain.com', 'Acme Mail Bot'))
                     ->to($user->getEmail())
                     ->subject('Please Confirm your Email')
-                    ->htmlTemplate('registration/confirmation_email.html.twig')
+                    ->htmlTemplate('@Users/registration/confirmation_email.html.twig')
             );
 
             // do anything else you need here, like send an email
@@ -57,7 +64,7 @@ class RegistrationController extends AbstractController
             return $security->login($user, 'form_login', 'main');
         }
 
-        return $this->render('registration/register.html.twig', [
+        return $this->render('@Users/registration/register.html.twig', [
             'registrationForm' => $form,
         ]);
     }

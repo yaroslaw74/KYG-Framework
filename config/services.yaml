@@ -27,6 +27,8 @@ services:
         namespace: 'App\EventSubscriber\'
         resource: "../src/EventSubscriber/"
         tags: [event_subscriber]
+    security_emailverifier:
+        class: 'App\Modules\Users\Security\EmailVerifier'
     App\:
         resource: "../src/"
         exclude:
