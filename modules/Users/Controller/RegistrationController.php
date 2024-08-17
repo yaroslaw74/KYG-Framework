@@ -98,6 +98,6 @@ class RegistrationController extends AbstractController
         // @TODO Change the redirect on success and handle or remove the flash message in your templates
         $this->addFlash('success', $this->translator->trans('controller.verified', [], 'registration'));
 
-        return $this->redirectToRoute('app_register');
+        return $this->redirectToRoute('index');
     }
 }

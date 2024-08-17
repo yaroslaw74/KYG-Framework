@@ -129,6 +129,7 @@
         "symfony/var-exporter": "7.1.*",
         "symfony/web-link": "7.1.*",
         "symfony/yaml": "7.1.*",
+        "symfonycasts/reset-password-bundle": "^1.22",
         "symfonycasts/verify-email-bundle": "^1.17",
         "tijsverkoyen/css-to-inline-styles": "^2.2",
         "twbs/bootstrap": "^5.3",
