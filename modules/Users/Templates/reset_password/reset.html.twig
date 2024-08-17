@@ -1,12 +1,35 @@
-{% extends 'base.html.twig' %}
+{##################################################################################
+ #  @Project    KYG Framework for business
+ #  @Version    1.0.0
+ #
+ #  @Copyright  (C) 2025 Kataev Yaroslav Georgievich 
+ #  @E-mail     yaroslaw74@gmail.com
+ #  @License    GNU General Public License version 3 or later, see LICENSE.md
+ ##################################################################################}
+{% extends 'add.html.twig' %}
+{% trans_default_domain 'reset_password' %}
+{% form_theme resetForm 'bootstrap_5_layout.html.twig' %}
 
-{% block title %}Reset your password{% endblock %}
+{% block title %}
+    {{ parent() }}
+    Reset your password
+{% endblock %}
 
-{% block body %}
-    <h1>Reset your password</h1>
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+{% endblock %}
 
-    {{ form_start(resetForm) }}
-        {{ form_row(resetForm.plainPassword) }}
-        <button class="btn btn-primary">Reset password</button>
-    {{ form_end(resetForm) }}
+{% block main %}
+    <div class="d-flex flex-row justify-content-center">
+		<div class="border rounded-3 shadow bg-secondary-subtle d-flex flex-row justify-content-center main p-3 mb-3">
+            {{ form_start(resetForm) }}
+                <div class="d-flex flex-row justify-content-center">
+                    <h1 class="mb-3 font-weight-normal text-primary-emphasis">{% trans %}form.title{% endtrans %}</h1>
+                </div>
+                {{ form_row(resetForm.plainPassword) }}
+                <button class="btn btn-primary">Reset password</button>
+            {{ form_end(resetForm) }}
+        </div>
+    </div>
 {% endblock %}
