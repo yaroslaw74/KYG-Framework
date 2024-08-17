@@ -14,6 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\NotCompromisedPassword;
@@ -21,6 +22,7 @@ use Symfony\Component\Validator\Constraints\PasswordStrength;
 
 class ChangePasswordFormType extends AbstractType
 {
+    public function __construct(private TranslatorInterface $translator) {}
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -34,23 +36,23 @@ class ChangePasswordFormType extends AbstractType
                 'first_options' => [
                     'constraints' => [
                         new NotBlank([
-                            'message' => 'Please enter a password',
+                            'message' => $this->translator->trans('message.password', [], 'reset_password'),
                         ]),
                         new Length([
                             'min' => 12,
-                            'minMessage' => 'Your password should be at least {{ limit }} characters',
+                            'minMessage' => $this->translator->trans('message.min', [], 'reset_password'),
                             // max length allowed by Symfony for security reasons
                             'max' => 4096,
                         ]),
                         new PasswordStrength(),
                         new NotCompromisedPassword(),
                     ],
-                    'label' => 'New password',
+                    'label' => $this->translator->trans('form.new', [], 'reset_password'),
                 ],
                 'second_options' => [
-                    'label' => 'Repeat Password',
+                    'label' => $this->translator->trans('form.repeat', [], 'reset_password'),
                 ],
-                'invalid_message' => 'The password fields must match.',
+                'invalid_message' => $this->translator->trans('message.invalid', [], 'reset_password'),
                 // Instead of being set onto the object directly,
                 // this is read and encoded in the controller
                 'mapped' => false,
