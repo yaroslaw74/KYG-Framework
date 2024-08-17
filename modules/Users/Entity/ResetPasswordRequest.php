@@ -1,9 +1,16 @@
 <?php
-
-namespace App\Entity;
+/**********************************************************************************
+ * @Project    KYG Framework for business
+ * @Version    1.0.0
+ *
+ * @Copyright  (C) 2025 Kataev Yaroslav Georgievich
+ * @E-mail     yaroslaw74@gmail.com
+ * @License    GNU General Public License version 3 or later, see LICENSE.md
+ *********************************************************************************/
+namespace App\Modules\Users\Entity;
 
 use App\Modules\Users\Entity\User;
-use App\Repository\ResetPasswordRequestRepository;
+use App\Modules\Users\Repository\ResetPasswordRequestRepository;
 use Doctrine\ORM\Mapping as ORM;
 use SymfonyCasts\Bundle\ResetPassword\Model\ResetPasswordRequestInterface;
 use SymfonyCasts\Bundle\ResetPassword\Model\ResetPasswordRequestTrait;
