@@ -23,3 +23,7 @@ mail:
 controller:
     verified: "Your email address has been verified."
     confirm: "Please Confirm your Email"
+message:
+    terms: "You should agree to our terms."
+    password: "Please enter a password"
+    min: "Your password should be at least {{ limit }} characters"
