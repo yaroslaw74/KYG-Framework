@@ -1,9 +1,18 @@
-<h1>Hi!</h1>
+{##################################################################################
+ #  @Project    KYG Framework for business
+ #  @Version    1.0.0
+ #
+ #  @Copyright  (C) 2025 Kataev Yaroslav Georgievich 
+ #  @E-mail     yaroslaw74@gmail.com
+ #  @License    GNU General Public License version 3 or later, see LICENSE.md
+ ##################################################################################}
+{% trans_default_domain 'reset_password' %}
+<h1>{% trans %}mail.hi{% endtrans %}</h1>
 
-<p>To reset your password, please visit the following link</p>
+<p>{% trans %}mail.visit{% endtrans %}</p>
 
 <a href="{{ url('app_reset_password', {token: resetToken.token}) }}">{{ url('app_reset_password', {token: resetToken.token}) }}</a>
 
-<p>This link will expire in {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p>
+<p>{% trans %}mail.link{% endtrans %} {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p>
 
-<p>Cheers!</p>
+<p>{% trans %}mail.cheers{% endtrans %}</p>
