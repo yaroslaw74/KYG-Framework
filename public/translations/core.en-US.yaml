@@ -16,3 +16,6 @@ menu:
         settings: "Account Settings"
         help: "Need Help?"
         out: "Sign Out"
+    core:
+        home: "Home"
+        admin: "Settings"

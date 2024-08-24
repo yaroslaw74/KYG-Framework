@@ -178,7 +178,22 @@
 
 {% block main %}
 	<div class="d-flex flex-row bg-body-tertiary p-0 main">
-		<div class="d-flex flex-row justify-content-start p-1 col-2 bg-primary-subtle menu">{{ knp_menu_render('core') }}</div>
+		<div class="d-flex flex-row justify-content-start p-1 col-2 bg-primary-subtle flex-shrink-0">
+			<ul class="list-unstyled ps-0">
+				<li class="mb-1">
+					<a href="{{ path('app_home') }}" class="link-body-emphasis d-inline-flex align-items-center text-decoration-none rounded menuitem">
+						<i class="fa-solid fa-house"></i>
+						<span class="ms-1">{% trans %}menu.core.home{% endtrans %}</span>
+					</a>
+				</li>
+				<li class="mb-1">
+					<a href="#" class="link-body-emphasis d-inline-flex align-items-center text-decoration-none rounded menuitem">
+						<i class="fa-solid fa-gear"></i>
+						<span class="ms-1">{% trans %}menu.core.admin{% endtrans %}</span>
+					</a>
+				</li>
+			</ul>
+		</div>
 		<div class="d-flex col-8 p-1 bg-body-secondary text-body-emphasis">
 			{% block content %}{% endblock %}
 		</div>
