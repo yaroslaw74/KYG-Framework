@@ -5,6 +5,11 @@ App_controllers:
     type: attribute
 Users_controllers:
     resource:
-        path: ../modules/users/Controller/
+        path: ../modules/Users/Controller/
         namespace: App\Modules\Users\Controller
+    type: attribute
+Administrations_controllers:
+    resource:
+        path: ../modules/Administrations/Controller/
+        namespace: App\Modules\Administrations\Controller
     type: attribute
