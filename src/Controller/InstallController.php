@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class InstallController extends AbstractController
 {
-    #[Route('/install', name: 'app_install')]
+    #[Route('/install/index', name: 'install_index')]
     public function index(): Response
     {
         return $this->render('install/index.html.twig', [
