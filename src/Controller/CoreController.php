@@ -16,11 +16,12 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class CoreController extends AbstractController
 {
-     #[Route('/', name: 'index')]
+    #[Route('/', name: 'index')]
     public function index(): RedirectResponse
     {
         return $this->redirectToRoute('app_home');
     }
+
     #[Route('/app/home', name: 'app_home')]
     public function home(): Response
     {

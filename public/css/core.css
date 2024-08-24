@@ -13,3 +13,7 @@ img.user {
     border: 0;
     box-shadow: 0 0 0 0;
 }
+div.menu ul {
+	list-style-type: none !important;
+	padding-left: 0;
+}

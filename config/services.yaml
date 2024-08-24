@@ -23,6 +23,11 @@ services:
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
+    app.menu_builder:
+        class: App\Menu\MenuBuilder
+        arguments: ["@knp_menu.factory"]
+        tags:
+            - {name: knp_menu.menu_builder, method: createCoreMenu, alias: core}
     event_subscribers:
         namespace: 'App\EventSubscriber\'
         resource: "../src/EventSubscriber/"
@@ -58,6 +63,6 @@ services:
         tags: [twig.extension]
 
 imports:
-    - { resource: "../public/config/*.yaml", ignore_errors: true }
-    - { resource: "../modules/*/Config/*.yaml" }
-    - { resource: "../public/additions/*/Config/*.yaml" }
+    - {resource: "../public/config/*.yaml", ignore_errors: true}
+    - {resource: "../modules/*/Config/*.yaml"}
+    - {resource: "../public/additions/*/Config/*.yaml"}
