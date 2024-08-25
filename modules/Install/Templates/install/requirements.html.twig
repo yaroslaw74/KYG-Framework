@@ -46,7 +46,7 @@
                         <td>
                             <div class="d-flex flex-row justify-content-center pt-2">
 					            <form action="{{ path('app_install') }}" method="post">
-						            <input type="submit" value="{% trans %}install.button.continue{% endtrans %}">
+						            <button type="submit" class="btn btn-primary">{% trans %}install.button.continue{% endtrans %}</button>
 					            </form>
 				            </div>
                         </td>
@@ -54,7 +54,7 @@
                         <td> 
                             <div class="d-flex flex-row justify-content-center pt-2">
 					            <form action="{{ path('requirements_install') }}" method="post">
-						            <input type="submit" value="{% trans %}install.button.update{% endtrans %}">
+						            <button type="submit" class="btn btn-primary">{% trans %}install.button.update{% endtrans %}</button>
 					            </form>
 				            </div>
                         </td>
@@ -67,7 +67,7 @@
                         <td>
                             <div class="d-flex flex-row justify-content-center pt-2">
 					            <form action="{{ path('requirements_install') }}" method="post">
-						            <input type="submit" value="{% trans %}install.button.update{% endtrans %}">
+						            <button type="submit" class="btn btn-primary">{% trans %}install.button.update{% endtrans %}</button>
 					            </form>
 				            </div>
                         </td>
