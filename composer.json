@@ -46,6 +46,7 @@
         "league/commonmark": "^2.5",
         "league/config": "^1.2",
         "liborm85/composer-vendor-cleaner": "^1.7",
+        "liip/imagine-bundle": "^2.13",
         "lorenzo/pinky": "^1.1",
         "mnsami/composer-custom-directory-installer": "^2.0",
         "monolog/monolog": "^3.7",
