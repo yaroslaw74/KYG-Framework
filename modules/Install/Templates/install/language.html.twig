@@ -3,20 +3,28 @@
 {% block main %}
     <div class="border rounded-3 shadow bg-secondary-subtle d-flex flex-row justify-content-center main p-3 mb-3 ms-2 me-2">
         <form action="{{ path('requirements_install') }}" method="post">
-			<select name="_locale" size="1" required>
-                {% foreach Languages as key => Value %}
-				    {% if key == app.locale %}
-					    <option value="{{ key }}" lang="{{ key }}" dir="{{ Value.dir }}" selected="selected">{{ Value.name }}</option>
-				    {% else %}
-                        {% if key in app.enabled_locales %}
-    					    <option value="{{ key }}" lang="{{ key }}" dir="{{ Value.dir }}">{{ Value.name }}</option>
-                        {% else %}
-                            <option value="{{ key }}" lang="{{ key }}" dir="{{ Value.dir }}" disabled>{{ Value.name }}</option>
-                        {% endif %}
-                    {% endif %}
-			    {% endforeach %}
-		    </select>
-			<button type="submit" class="btn btn-primary">OK</button>
+            <table>
+                <tr>
+                    <td>
+                        <select name="_locale" size="1" required class="form-select" aria-label="Default select example">
+                            {% foreach Languages as key => Value %}
+				                {% if key == app.locale %}
+					                <option value="{{ key }}" lang="{{ key }}" dir="{{ Value.dir }}" selected="selected">{{ Value.name }}</option>
+				                {% else %}
+                                    {% if key in app.enabled_locales %}
+    					                <option value="{{ key }}" lang="{{ key }}" dir="{{ Value.dir }}">{{ Value.name }}</option>
+                                    {% else %}
+                                        <option value="{{ key }}" lang="{{ key }}" dir="{{ Value.dir }}" disabled>{{ Value.name }}</option>
+                                    {% endif %}
+                                {% endif %}
+			                {% endforeach %}
+		                </select>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-primary">OK</button>
+                    </td>
+                </tr>
+            </table>
 		</form>
     </div>
 {% endblock %}
