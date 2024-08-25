@@ -10,6 +10,7 @@ twig:
     file_name_pattern: "*.twig"
     paths:
         "modules/Administrations/Templates": "Administrations"
+        "modules/Install/Templates": "Install"
         "modules/Users/Templates": "Users"
 
     # The default format options used by the date filter

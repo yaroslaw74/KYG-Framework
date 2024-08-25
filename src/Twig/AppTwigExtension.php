@@ -19,7 +19,7 @@ class AppTwigExtension extends AbstractExtension
     public function __construct(private ContainerBagInterface $params) {}
     public function LocaleDirExtension(string $locale): string
     {
-        $languages = Yaml::parseFile($this->params->get('app.modules_dir') . '/languages.yaml');
+        $languages = Yaml::parseFile($this->params->get('app.modules_dir') . '/Install/Resources/languages.yaml');
         return $languages['languages'][$locale]['dir'];
     }
     

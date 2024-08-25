@@ -6,5 +6,6 @@ framework:
         fallbacks: "%app.locale_list%"
         paths:
             - "%app.modules_dir%/Administrations/Translations"
+            - "%app.modules_dir%/Install/Translations"
             - "%app.modules_dir%/Users/Translations"
         providers: null
