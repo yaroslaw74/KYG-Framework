@@ -23,11 +23,6 @@ services:
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
-    app.menu_builder:
-        class: App\Menu\MenuBuilder
-        arguments: ["@knp_menu.factory"]
-        tags:
-            - {name: knp_menu.menu_builder, method: createCoreMenu, alias: core}
     event_subscribers:
         namespace: 'App\EventSubscriber\'
         resource: "../src/EventSubscriber/"
@@ -43,15 +38,15 @@ services:
     App\Modules\:
         resource: "../modules/"
         exclude:
-            - "../modules/*/DependencyInjection/"
-            - "../modules/*/Entity/"
-            - "../modules/*/Service/"
+            - "../modules/**/DependencyInjection/"
+            - "../modules/**/Entity/"
+            - "../modules/**/Service/"
     App\Additions\:
         resource: "../public/additions/"
         exclude:
-            - "../public/additions/*/DependencyInjection/"
-            - "../public/additions/*/Entity/"
-            - "../public/additions/*/Service/"
+            - "../public/additions/**/DependencyInjection/"
+            - "../public/additions/**/Entity/"
+            - "../public/additions/**/Service/"
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

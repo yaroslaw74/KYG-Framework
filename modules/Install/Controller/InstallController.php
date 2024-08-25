@@ -10,7 +10,9 @@
 namespace App\Modules\Install\Controller;
 
 use App\Modules\Install\Service\ArrayAccessService;
+use App\Modules\Install\Service\AppConfService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
@@ -18,12 +20,15 @@ class InstallController extends AbstractController
 {
     public function __construct(
         private ArrayAccessService $ArrayAccess,
+        private AppConfService $AppConf
     ) {}
     
-    #[Route('/install/index', name: 'install_index')]
-    public function index(Request $request): Response
+    #[Route('/install/language', name: 'install_language')]
+    public function language(Request $request): Response
     {
-        return $this->render('@Install/install/index.html.twig', [
+        $this->AppConf->ConsoleComand('importmap:update');
+        $this->AppConf->ConsoleComand('asset-map:compile');
+        return $this->render('@Install/install/language.html.twig', [
             'Languages' => $this->ArrayAccess->getLanguages($request->getLocale()),
         ]);
     }
