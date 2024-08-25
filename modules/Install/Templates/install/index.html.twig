@@ -1,20 +1,22 @@
 {% extends 'add.html.twig' %}
 
-{% block title %}Hello InstallController!{% endblock %}
-
-{% block content %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/inetpub/wwwroot/MyProject/src/Controller/InstallController.php</code></li>
-        <li>Your template at <code>C:/inetpub/wwwroot/MyProject/templates/install/index.html.twig</code></li>
-    </ul>
-</div>
+{% block main %}
+    <div class="border rounded-3 shadow bg-secondary-subtle d-flex flex-row justify-content-center main p-3 mb-3 ms-2 me-2">
+        <form action="#" method="post">
+			<select name="_locale" size="1" required>
+                {% foreach Languages as key => Value %}
+				    {% if key == app.locale %}
+					    <option value="{{ key }}" lang="{{ key }}" dir="{{ Value.dir }}" selected="selected">{{ Value.name }}</option>
+				    {% else %}
+                        {% if key in app.enabled_locales %}
+    					    <option value="{{ key }}" lang="{{ key }}" dir="{{ Value.dir }}">{{ Value.name }}</option>
+                        {% else %}
+                            <option value="{{ key }}" lang="{{ key }}" dir="{{ Value.dir }}" disabled>{{ Value.name }}</option>
+                        {% endif %}
+                    {% endif %}
+			    {% endforeach %}
+		    </select>
+			<input type="submit" value="OK">
+		</form>
+    </div>
 {% endblock %}
