@@ -25,30 +25,32 @@
 				<div class="tab-content text-primary-emphasis" id="nav-tabContent">
   					<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
 						<div class="d-flex justify-content-center">
-							<h3>{% trans %}install.conf.bd.tabs{% endtrans %}</h3>
+							<h3 class="mb-3 font-weight-normal text-primary-emphasis">{% trans %}install.conf.bd.tabs{% endtrans %}</h3>
 						</div>
     					<div class="d-flex justify-content-center">
 							<div class="flex-column">
-								<div class="flex-row d-flex justify-content-between pb-1">
-									<label for="HostDB" class="space pe-2">{% trans %}install.conf.bd.host{% endtrans %}</label>
-									<input type="text" name="HostDB" required size="15" value="{{ HostDB }}" class="space">
-								</div>
-								<div class="flex-row d-flex justify-content-between pb-1">
-									<label for="PortDB" class="space pe-2">{% trans %}install.conf.bd.port{% endtrans %}</label>
-									<input type="text" name="PortDB" required size="15" class="space" value="{{ PortDB }}">
-								</div>
-								<div class="flex-row d-flex justify-content-between pb-1">
-									<label for="NameDB" class="space pe-2">{% trans %}install.conf.bd.name{% endtrans %}</label>
-									<input type="text" name="NameDB" required size="15" class="space" value="{{ NameDB }}">
-								</div>
-								<div class="flex-row d-flex justify-content-between pb-1">
-									<label for="UserDB" class="space pe-2">{% trans %}install.conf.bd.user{% endtrans %}</label>
-									<input type="text" name="UserDB" required size="15" class="space" value="{{ UserDB }}">
-								</div>
-								<div class="flex-row d-flex justify-content-between pb-1">
-									<label for="PassDB" class="space pe-2">{% trans %}install.conf.bd.password{% endtrans %}</label>
-									<input type="text" name="PassDB" required size="15" class="space" value="{{ PassDB }}">
-								</div>
+								<table>
+									<tr>
+										<td><label for="HostDB" class="form-label space pe-2">{% trans %}install.conf.bd.host{% endtrans %}</label></td>
+										<td><input type="text" name="HostDB" required size="15" value="{{ HostDB }}" class="form-control space"></td>
+									</tr>
+									<tr>
+										<td><label for="PortDB" class="form-label space pe-2">{% trans %}install.conf.bd.port{% endtrans %}</label></td>
+										<td><input type="text" name="PortD B" required size="15" class="form-control space" value="{{ PortDB }}"></td>
+									</tr>
+									<tr>
+										<td><label for="NameDB" class="form-label space pe-2">{% trans %}install.conf.bd.name{% endtrans %}</label></td>
+										<td><input type="text" name="NameDB" required size="15" class="form-control space" value="{{ NameDB }}"></td>
+									</tr>
+									<tr>
+										<td><label for="UserDB" class="form-label space pe-2">{% trans %}install.conf.bd.user{% endtrans %}</label></td>
+										<td><input type="text" name="UserDB" required size="15" class="form-control space" value="{{ UserDB }}"></td>
+									</tr>
+									<tr>
+										<td><label for="PassDB" class="form-label space pe-2">{% trans %}install.conf.bd.password{% endtrans %}</label></td>
+										<td><input type="text" name="PassDB" required size="15" class="form-control space" value="{{ PassDB }}"></td>
+									</tr>
+								</table>
 								<div class="flex-row d-flex justify-content-center">
 									<button type="reset" class="btn btn-primary">{% trans %}install.button.reset{% endtrans %}</button>
 								</div>
@@ -57,17 +59,17 @@
 					</div>
   					<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
 						<div class="d-flex justify-content-center">
-							<h3>{% trans %}install.conf.system.tabs{% endtrans %}</h3>
+							<h3 class="mb-3 font-weight-normal text-primary-emphasis">{% trans %}install.conf.system.tabs{% endtrans %}</h3>
 						</div>
     					<div class="d-flex justify-content-center">
 							<div class="flex-column">
 								<div class="flex-row d-flex justify-content-between pb-1">
-									<label for="uri" class="space pe-2">{% trans %}install.conf.system.uri{% endtrans %}</label>
-									<input type="text" name="uri" required value="{{ uri }}" class="space" style="width: 300px">
+									<label for="uri" class="form-label space pe-2">{% trans %}install.conf.system.uri{% endtrans %}</label>
+									<input type="text" name="uri" required value="{{ uri }}" class="form-control space" style="width: 300px">
 								</div>
 								<div class="flex-row d-flex justify-content-between pb-1">
-									<label for="TimeZone" class="space pe-2">{% trans %}install.conf.system.timezone{% endtrans %}</label>
-									<select class="space" size="1" required name="TimeZone" id="TimeZone" style="width: 300px">
+									<label for="TimeZone" class="form-label space pe-2">{% trans %}install.conf.system.timezone{% endtrans %}</label>
+									<select class="form-select" aria-label="Default select example" size="1" required name="TimeZone" id="TimeZone" style="width: 300px">
 										{% foreach TimeZone as Value %}
 											{% if Value == TimeZoneDefault %}
 												<option value="{{ Value }}" lang="en" selected="selected">{{ Value }}</option>
@@ -78,8 +80,8 @@
 									</select>
 								</div>
 								<div class="flex-row d-flex justify-content-between pb-1">
-									<label for="DataFormat" class="space pe-2">{% trans %}install.conf.system.data{% endtrans %}</label>
-									<select class="space" size="1" required name="DataFormat" id="DataFormat" style="width: 300px">
+									<label for="DataFormat" class="form-label space pe-2">{% trans %}install.conf.system.data{% endtrans %}</label>
+									<select class="form-select" aria-label="Default select example" size="1" required name="DataFormat" id="DataFormat" style="width: 300px">
 										{% foreach DataFormat as key => Value %}
 											{% if key == DataFormatDefault %}
 												<option value="{{ key }}" lang="en" selected="selected">{{ key }} - {{ Value.example }}</option>
@@ -90,8 +92,8 @@
 									</select>
 								</div>
 								<div class="flex-row d-flex justify-content-between pb-1">
-									<label for="TimeFormat" class="space pe-2">{% trans %}install.conf.system.time{% endtrans %}</label>
-									<select class="space" size="1" required name="TimeFormat" id="TimeFormat" style="width: 300px">
+									<label for="TimeFormat" class="form-label space pe-2">{% trans %}install.conf.system.time{% endtrans %}</label>
+									<select class="form-select" aria-label="Default select example" size="1" required name="TimeFormat" id="TimeFormat" style="width: 300px">
 										{% foreach TimeFormat as key => Value %}
 											{% if key == TimeFormatDefault %}
 												<option value="{{ key }}" lang="en">{{ key }} - {{ Value.example }}</option>
