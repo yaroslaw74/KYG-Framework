@@ -11,10 +11,13 @@ namespace App\Modules\Install\Controller;
 
 use App\Modules\Install\Service\ArrayAccessService;
 use App\Modules\Install\Service\AppConfService;
+use App\Modules\Users\Entity\User;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Attribute\Route;
 
 class InstallController extends AbstractController
@@ -121,11 +124,18 @@ class InstallController extends AbstractController
         return $this->render('@Install/install/login.html.twig');
     }
     #[Route('/install/install', name: 'install')]
-    public function UserInstall(Request $request): RedirectResponse
+    public function UserInstall(Request $request, UserPasswordHasherInterface $passwordHasher, EntityManagerInterface $entityManager): RedirectResponse
     {
-        $Username = $request->request->getString('User');
-        $Email = $request->request->getString('Email');
-        $Password = $request->request->getString('Password');
+        $this->AppConf->ConsoleComand('make:migration');
+        $this->AppConf->ConsoleComand('doctrine:migrations:migrate');
+        $user = new User;
+        $user->setUsername($request->request->getString('User'));
+        $user->setEmail($request->request->getString('Email'));
+        $user->setRoles(['ROLE_SUPERADMIN']);
+        $hashedPassword = $passwordHasher->hashPassword($user, $request->request->getString('Password'));
+        $user->setPassword($hashedPassword);
+        $entityManager->persist($user);
+        $entityManager->flush();
         return $this->redirectToRoute('index');
     }
 }
