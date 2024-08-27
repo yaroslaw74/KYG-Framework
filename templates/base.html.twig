@@ -29,6 +29,7 @@
         <script src="{{ asset('js/color-modes.js') }}"></script>
         {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% block javascripts %}{% endblock %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
     </head>
     <body>
         {{ include('button.svg.twig') }}
