@@ -1,0 +1,21 @@
+##################################################################################
+#  @Project    KYG Framework for business
+#  @Version    1.0.0
+#  @Domain     login
+#  @Locale     en-US
+#
+#  @Copyright  (C) 2025 Kataev Yaroslav Georgievich
+#  @E-mail     yaroslaw74@gmail.com
+#  @License    GNU General Public License version 3 or later, see LICENSE.md
+##################################################################################
+login:
+    title: "Please sign in"
+    username: "Username"
+    password: "Password"
+    remember: "Remember me"
+    sign: "Sign in"
+    logged: "You are logged in as"
+    logout: "Logout"
+    forgot: "Forgot password"
+    show: "Show password"
+    hide: "Hide password"

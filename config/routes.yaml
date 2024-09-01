@@ -1,0 +1,21 @@
+App_controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+Administrations_controllers:
+    resource:
+        path: ../modules/Administrations/Controller/
+        namespace: App\Modules\Administrations\Controller
+    type: attribute
+Install_controllers:
+    resource:
+        path: ../modules/Install/Controller/
+        namespace: App\Modules\Install\Controller
+    type: attribute
+Users_controllers:
+    resource:
+        path: ../modules/Users/Controller/
+        namespace: App\Modules\Users\Controller
+    type: attribute
+
