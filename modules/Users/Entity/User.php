@@ -61,9 +61,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->id;
     }
 
-    public function getUuid(): ?Uuid
+    public function getUuid(): ?string
     {
-        return $this->uuid;
+        $uuid = Uuid::fromBinary($this->uuid);
+        return $uuid->toString();
     }
 
     public function getUsername(): ?string
