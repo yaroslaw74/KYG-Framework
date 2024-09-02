@@ -1,5 +1,0 @@
-Users_controllers:
-    resource:
-        path: ../modules/Users/Controller/
-        namespace: App\Modules\Users\Controller
-    type: attribute
