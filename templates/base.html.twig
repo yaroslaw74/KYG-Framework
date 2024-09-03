@@ -40,23 +40,25 @@
 	    <main class="container-fluid d-flex flex-column p-0">
 		    {% block main %}{% endblock %}
 	    </main>
-	    <footer class="container-fluid d-flex flex-row justify-content-between bg-body-tertiary p-0 mt-1 mb-1">
-		    <div class="d-flex flex-row ms-3">
-			    <div class="align-self-center me-1">
+	    <footer class="container-fluid d-flex flex-row justify-content-between align-items-center bg-body-tertiary p-0 mt-1 mb-1">
+		    <div class="d-flex flex-row align-items-center ms-3">
+			    <div class="me-1">
 				    {{ include('symfony.svg.twig') }}
 			    </div>
-			    <div class="align-self-center">
+			    <div class="me-1">
 				    {{ include('kyg.svg.twig') }}
 			    </div>
+                <div class="text-nowrap mt-1"><h6><strong>{{ shivas_app_version }}</strong></h6></div>
 		    </div>
-		    <div class="align-self-center text-danger">
+            
+		    <div class="align-self-center text-danger mt-1">
                 <h6>
                     {% for message in app.flashes('footer') %}
                         {{ message }}
                     {% endfor %}
                 </h6>
             </div>
-		    <div class="text-nowrap align-self-center me-3" lang="en"><h6><strong>&copy; 2025 Kataev Yaroslav</strong></h6></div>
+		    <div class="text-nowrap me-3 mt-1" lang="en"><h6><strong>&copy; 2025 Kataev Yaroslav</strong></h6></div>
 	    </footer>
         {% block body_bottom %}{% endblock %}
     </body>
