@@ -129,6 +129,15 @@
                 "twbs/bootstrap",
                 "twbs/bootstrap-icons"
             ]
+        },
+        "dev-files": {
+            "*/*": [
+                ".github/",
+                "tests/",
+                "docs/",
+                ".gitattributes",
+                ".gitignore"
+            ]
         }
     },
     "require-dev": {
