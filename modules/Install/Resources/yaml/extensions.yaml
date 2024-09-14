@@ -10,9 +10,11 @@ extensions:
     required:
         - "ctype"
         - "curl"
+        - "dom"
         - "filter"
         - "iconv"
         - "json"
+        - "libxml"
         - "mbstring"
         - "openssl"
         - "pdo_mysql"
