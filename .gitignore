@@ -29,3 +29,8 @@
 ###> doctrine/migrations ###
 /migrations/*.php
 ###< doctrine/migrations ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
