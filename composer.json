@@ -69,6 +69,7 @@
         "symfony/clock": "7.1.*",
         "symfony/config": "7.1.*",
         "symfony/console": "7.1.*",
+        "symfony/dependency-injection": "7.1.*",
         "symfony/doctrine-messenger": "7.1.*",
         "symfony/dotenv": "7.1.*",
         "symfony/expression-language": "7.1.*",
