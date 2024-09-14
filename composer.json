@@ -158,6 +158,41 @@
                 "css/all.*",
                 "css/svg-with-js.css",
                 "js/all.js"
+            ],
+            "twbs/*": [
+                "build/",
+                ".*",
+                "hugo.yml",
+                "package.js",
+                "package.json",
+                "package-lock.json"
+            ],
+            "twbs/bootstrap": [
+                "nuget/",
+                "scss/",
+                "site/",
+                "*/*.map",
+                "js/dist/",
+                "js/src/",
+                "js/index.*",
+                "dist/css/bootstrap-grid.*",
+                "dist/css/bootstrap-reboot.*",
+                "dist/css/bootstrap-utilities.*",
+                "dist/css/bootstrap.css",
+                "dist/css/bootstrap.rtl.css",
+                "dist/js/bootstrap.esm.*",
+                "dist/js/bootstrap.js",
+                "dist/js/bootstrap.min.js",
+                "dist/js/bootstrap.bundle.js"
+            ],
+            "twbs/bootstrap-icons": [
+                "icons/",
+                "font/*.json",
+                "font/*.scss",
+                "font/bootstrap-icons.css",
+                "bootstrap-icons.svg",
+                "svgo.config.mjs",
+                "svg-sprite.json"
             ]
         }
     },
