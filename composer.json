@@ -137,6 +137,27 @@
                 "docs/",
                 ".gitattributes",
                 ".gitignore"
+            ],
+            "fortawesome/font-awesome": [
+                "js-packages/",
+                "less/",
+                "metadata/",
+                "otfs/",
+                "scss/",
+                "sprites/",
+                "svgs/",
+                "webfonts/",
+                "*/brands.*",
+                "*/fontawesome.*",
+                "*/regular.*",
+                "*/solid.*",
+                "*/v4-font-face.*",
+                "*/v4-shims.*",
+                "*/v5-font-face.*",
+                "*/conflict-detection.*",
+                "css/all.*",
+                "css/svg-with-js.css",
+                "js/all.js"
             ]
         }
     },
