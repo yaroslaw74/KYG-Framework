@@ -78,7 +78,8 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/",
-            "App\\Modules\\": "modules/"
+            "App\\Modules\\": "modules/",
+            "App\\Additions\\": "public/additions/"
         }
     },
     "autoload-dev": {
@@ -117,6 +118,13 @@
         "symfony": {
             "allow-contrib": false,
             "require": "7.1.*"
+        },
+        "installer-paths": {
+            "./public/{$name}": [
+                "fortawesome/font-awesome",
+                "twbs/bootstrap",
+                "twbs/bootstrap-icons"
+            ]
         }
     },
     "require-dev": {
