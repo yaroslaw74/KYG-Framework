@@ -45,6 +45,7 @@
         "doctrine/sql-formatter": "^1.4",
         "egulias/email-validator": "^4.0",
         "fortawesome/font-awesome": "^6.6",
+        "league/commonmark": "^2.5",
         "liborm85/composer-vendor-cleaner": "^1.7",
         "mnsami/composer-custom-directory-installer": "^2.0",
         "monolog/monolog": "^3.7",
@@ -98,7 +99,10 @@
         "symfony/yaml": "7.1.*",
         "twbs/bootstrap": "^5.3",
         "twbs/bootstrap-icons": "^1.11",
+        "twig/cssinliner-extra": "^3.13",
         "twig/extra-bundle": "^3.13",
+        "twig/inky-extra": "^3.13",
+        "twig/markdown-extra": "^3.13",
         "twig/twig": "^3.14"
     },
     "config": {
