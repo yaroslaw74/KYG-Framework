@@ -156,7 +156,11 @@
             "mnsami/composer-custom-directory-installer": true,
             "liborm85/composer-vendor-cleaner": true
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "dev-files": {
+            "match-case": false,
+            "no-dev-only": true
+        }
     },
     "autoload": {
         "psr-4": {
