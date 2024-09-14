@@ -3,7 +3,7 @@
  * @Project    KYG Framework for business
  * @Version    1.0.0
  *
- * @Copyright  (C) 2025 Kataev Yaroslav Georgievich 
+ * @Copyright  (C) 2025 Kataev Yaroslav Georgievich
  * @E-mail     yaroslaw74@gmail.com
  * @License    GNU General Public License version 3 or later; see LICENSE.md
  ********************************************************************************/
@@ -19,10 +19,10 @@ class AppTwigExtension extends AbstractExtension
     public function __construct(private ContainerBagInterface $params) {}
     public function LocaleDirExtension(string $locale): string
     {
-        $languages = Yaml::parseFile($this->params->get('app.modules_dir') . '/Install/Resources/languages.yaml');
+        $languages = Yaml::parseFile($this->params->get('app.modules_dir') . '/Install/Resources/yaml/languages.yaml');
         return $languages['languages'][$locale]['dir'];
     }
-    
+
     public function getFunctions(): array
     {
         return [
