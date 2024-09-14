@@ -25,7 +25,11 @@
 ###< symfony/asset-mapper ###
 
 ###> symfony/public ###
+/public/bootstrap/
+/public/bootstrap-icons/
+/public/font-awesome/
 /public/media/
+/public/*.html
 ###< symfony/public ###
 
 ###> doctrine/migrations ###
