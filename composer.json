@@ -24,10 +24,13 @@
         "php": ">=8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "ext-mbstring": "*",
         "doctrine/dbal": "^4.1",
         "doctrine/doctrine-bundle": "^2.13",
         "doctrine/doctrine-migrations-bundle": "^3.3",
         "doctrine/orm": "^3.2",
+        "liborm85/composer-vendor-cleaner": "^1.7",
+        "mnsami/composer-custom-directory-installer": "^2.0",
         "phpdocumentor/reflection-docblock": "^5.4",
         "phpstan/phpdoc-parser": "^1.30",
         "shivas/versioning-bundle": "^4.1",
@@ -66,7 +69,9 @@
         "allow-plugins": {
             "php-http/discovery": true,
             "symfony/flex": true,
-            "symfony/runtime": true
+            "symfony/runtime": true,
+            "mnsami/composer-custom-directory-installer": true,
+            "liborm85/composer-vendor-cleaner": true
         },
         "sort-packages": true
     },
@@ -84,6 +89,7 @@
     "replace": {
         "symfony/polyfill-ctype": "*",
         "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-mbstring": "*",
         "symfony/polyfill-php72": "*",
         "symfony/polyfill-php73": "*",
         "symfony/polyfill-php74": "*",
