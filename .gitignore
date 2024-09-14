@@ -27,6 +27,7 @@
 ###> symfony/public ###
 /public/bootstrap/
 /public/bootstrap-icons/
+/public/config/
 /public/font-awesome/
 /public/media/
 /public/*.html
