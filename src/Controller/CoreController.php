@@ -19,6 +19,8 @@ class CoreController extends AbstractController
     #[Route('/', name: 'index')]
     public function index(): RedirectResponse
     {
+        $Uri = ((empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        setcookie('APP_URI', $Uri);
         return $this->redirectToRoute('app_home');
     }
 
