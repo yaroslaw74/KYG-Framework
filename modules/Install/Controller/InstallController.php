@@ -94,8 +94,8 @@ class InstallController extends AbstractController
         $UserDB = $request->request->getString('UserDB');
         $PassDB = $request->request->getString('PassDB');
         try {
-            $dbh = new PDO('mysql:host=' . $HostDB . ';dbname=' . $NameDB, $UserDB, $PassDB);
-        } catch (PDOException) {
+            $dbh = new \PDO('mysql:host=' . $HostDB . ';dbname=' . $NameDB, $UserDB, $PassDB);
+        } catch (\PDOException) {
             return $this->render('@/Install/install/app.html.twig', [
                 'error' => $this->trans('install.error.db', domain: 'install'),
                 'uri' => $request->request->getString('uri'),
