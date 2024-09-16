@@ -30,7 +30,6 @@ class InstallController extends AbstractController
     #[Route('/install/language', name: 'install_language')]
     public function language(Request $request): Response
     {
-        $this->AppConf->ConsoleComand('importmap:update');
         $this->AppConf->ConsoleComand('asset-map:compile');
         return $this->render('@Install/install/language.html.twig', [
             'Languages' => $this->ArrayAccess->getLanguages($request->getLocale()),

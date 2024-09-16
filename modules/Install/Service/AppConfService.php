@@ -14,7 +14,6 @@ use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\NullOutput;
 use Symfony\Component\DependencyInjection\ParameterBag\ContainerBagInterface;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Yaml\Yaml;
 
@@ -25,14 +24,13 @@ class AppConfService
         private ContainerBagInterface $params,
         private KernelInterface $kernel
     ) {}
-    public function ConsoleComand(string $comand): Response
+    public function ConsoleComand(string $comand): void
     {
         $application = new Application($this->kernel);
         $application->setAutoExit(false);
         $input = new ArrayInput(['command' => $comand]);
         $output = new NullOutput();
         $application->run($input, $output);
-        return new Response("");
     }
     public function setParametr(string $Parametr, string $ParameterName): void
     {

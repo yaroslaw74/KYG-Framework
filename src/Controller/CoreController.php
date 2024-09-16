@@ -10,6 +10,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -19,9 +20,15 @@ class CoreController extends AbstractController
     #[Route('/', name: 'index')]
     public function index(): RedirectResponse
     {
-        $Uri = ((empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-        setcookie('APP_URI', $Uri);
-        return $this->redirectToRoute('app_home');
+        $filesystem = new Filesystem();
+        if (!$filesystem->exists($this->getParameter('app.var_dir') . '/env.yaml'))
+        {
+            $Uri = ((empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+            setcookie('APP_URI', $Uri);
+            return $this->redirectToRoute('install_language');
+        }
+        else
+            return $this->redirectToRoute('app_home');
     }
 
     #[Route('/core/home', name: 'app_home')]
