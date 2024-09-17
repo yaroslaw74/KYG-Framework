@@ -1,0 +1,5 @@
+twig:
+    paths:
+        "modules/Admin/Templates": "Admin"
+        "modules/Install/Templates": "Install"
+        "modules/User/Templates": "User"

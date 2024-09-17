@@ -46,7 +46,7 @@ class AppConfService
     public function setDateTime(string $DataFormat, string $TimeFormat, string $Separator = ' '): void
     {
         $this->setParametr($DataFormat, 'app.dataformat');
-        $this->setParametr($TimeFormat, ' app.timeformat');
+        $this->setParametr($TimeFormat, 'app.timeformat');
         $this->setParametr($Separator, 'app.separator');
         $DateTimeFormat = $this->ArrayAccess->DataFormat[$DataFormat] . $Separator . $this->ArrayAccess->TimeFormat[$TimeFormat];
         $this->setParametr($DateTimeFormat, 'app.datatimeformat');

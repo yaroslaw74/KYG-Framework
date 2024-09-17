@@ -7,6 +7,7 @@ parameters:
     app.modules_dir: "%kernel.project_dir%/modules"
     app.public_dir: "%kernel.project_dir%/public"
     app.additions_dir: "%app.public_dir%/additions"
+    app.config_dir: "%app.public_dir%/config"
     app.translations_dir: "%app.public_dir%/translations"
     app.media_dir: "%app.public_dir%/media"
     app.var_dir: "%kernel.project_dir%/var"

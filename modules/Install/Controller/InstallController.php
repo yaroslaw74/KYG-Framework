@@ -19,12 +19,17 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Yaml\Yaml;
+use Symfony\Contracts\Translation\TranslatorInterface;
+use PDO;
+use PDOException;
 
 class InstallController extends AbstractController
 {
     public function __construct(
         private ArrayAccessService $ArrayAccess,
-        private AppConfService $AppConf
+        private AppConfService $AppConf,
+        private TranslatorInterface $translator
     ) {}
 
     #[Route('/install/language', name: 'install_language')]
@@ -94,10 +99,10 @@ class InstallController extends AbstractController
         $UserDB = $request->request->getString('UserDB');
         $PassDB = $request->request->getString('PassDB');
         try {
-            $dbh = new \PDO('mysql:host=' . $HostDB . ';dbname=' . $NameDB, $UserDB, $PassDB);
-        } catch (\PDOException) {
+            $dbh = new PDO('mysql:host=' . $HostDB . ';dbname=' . $NameDB, $UserDB, $PassDB);
+        } catch (PDOException) {
             return $this->render('@/Install/install/app.html.twig', [
-                'error' => $this->trans('install.error.db', domain: 'install'),
+                'error' => $this->translator->trans('install.error.db', [], 'install'),
                 'uri' => $request->request->getString('uri'),
                 'HostDB' => $HostDB,
                 'PortDB' => $PortDB,
@@ -112,7 +117,7 @@ class InstallController extends AbstractController
                 'TimeFormatDefault' => $request->request->getString('TimeFormat')
             ]);
         }
-        $serverVersion = PDO::getAttribute(PDO::ATTR_SERVER_VERSION);
+        $serverVersion = $dbh->getAttribute(PDO::ATTR_SERVER_VERSION);
         $env['vars']['DATABASE_URL'] = 'mysql://' . $UserDB . ':' . $PassDB . '@' . $HostDB . ':' . $PortDB . '/' . $NameDB . '?serverVersion=' . $serverVersion . '&charset=utf8mb4';
         $env['vars']['APP_SECRET'] = bin2hex(random_bytes(32));
         $env['vars']['DEFAULT_URI'] = $request->request->getString('uri');
