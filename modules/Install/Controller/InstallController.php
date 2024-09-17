@@ -120,7 +120,7 @@ class InstallController extends AbstractController
         $serverVersion = $dbh->getAttribute(PDO::ATTR_SERVER_VERSION);
         $env['vars']['DATABASE_URL'] = 'mysql://' . $UserDB . ':' . $PassDB . '@' . $HostDB . ':' . $PortDB . '/' . $NameDB . '?serverVersion=' . $serverVersion . '&charset=utf8mb4';
         $env['vars']['APP_SECRET'] = bin2hex(random_bytes(32));
-        $env['vars']['DEFAULT_URI'] = $request->request->getString('uri');
+        $env['vars']['DEFAULT_URI'] = rtrim($request->request->getString('uri'), " \n\r\t\0\v\x00/");
         $yamlenv = Yaml::dump($env, 10);
         file_put_contents($this->getParameter('app.var_dir') . '/env.yaml', $yamlenv);
         $this->AppConf->setParametr($request->request->getString('TimeZone'), 'app.timezone');

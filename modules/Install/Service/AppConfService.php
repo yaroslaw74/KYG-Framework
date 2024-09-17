@@ -48,7 +48,7 @@ class AppConfService
         $this->setParametr($DataFormat, 'app.dataformat');
         $this->setParametr($TimeFormat, 'app.timeformat');
         $this->setParametr($Separator, 'app.separator');
-        $DateTimeFormat = $this->ArrayAccess->DataFormat[$DataFormat] . $Separator . $this->ArrayAccess->TimeFormat[$TimeFormat];
+        $DateTimeFormat = $this->ArrayAccess->DataFormat[$DataFormat]['format'] . $Separator . $this->ArrayAccess->TimeFormat[$TimeFormat]['format'];
         $this->setParametr($DateTimeFormat, 'app.datatimeformat');
     }
 }
