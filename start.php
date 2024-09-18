@@ -24,6 +24,7 @@ if (!file_exists($config)) {
     $file = array_diff(scandir($install), ['..', '.']);
     foreach($file as $name)
     {
-        copy($install . DIRECTORY_SEPARATOR . $name, $config . DIRECTORY_SEPARATOR . $name);
+        if (!file_exists($config . DIRECTORY_SEPARATOR . $name))
+            copy($install . DIRECTORY_SEPARATOR . $name, $config . DIRECTORY_SEPARATOR . $name);
     }
 }
