@@ -194,9 +194,11 @@
             "requirements-checker": "script"
         },
         "post-install-cmd": [
+            "php public/start.php",
             "@auto-scripts"
         ],
         "post-update-cmd": [
+            "php start.php",
             "@auto-scripts"
         ]
     },
