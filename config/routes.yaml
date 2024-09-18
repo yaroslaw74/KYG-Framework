@@ -8,3 +8,8 @@ Install_controllers:
         path: ../modules/Install/Controller/
         namespace: App\Modules\Install\Controller
     type: attribute
+User_controllers:
+    resource:
+        path: ../modules/User/Controller/
+        namespace: App\Modules\User\Controller
+    type: attribute
