@@ -1,7 +1,0 @@
-framework:
-    translator:
-        paths:
-            - "%app.translations_dir%"
-            - "%app.modules_dir%/Admin/Translations"
-            - "%app.modules_dir%/Install/Translations"
-            - "%app.modules_dir%/User/Translations"
