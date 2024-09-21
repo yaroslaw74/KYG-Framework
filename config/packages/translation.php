@@ -7,11 +7,12 @@
 * @E-mail     yaroslaw74@gmail.com
 * @License    GNU General Public License version 3 or later, see LICENSE.md
 *********************************************************************************/
-use Symfony\Config\TwigConfig;
+use Symfony\Config\FrameworkConfig;
 
-return static function (TwigConfig $twig): void
+return static function (FrameworkConfig $framework): void
 {
-    $dir = $dir = dirname(__DIR__, 2);
+    $dir = dirname(__DIR__, 2);
+    $path_list = [];
 
     $list_modules = array_diff(scandir($dir . '/modules'), ['..', '.']);
     $modules = [];
@@ -26,7 +27,8 @@ return static function (TwigConfig $twig): void
     {
         foreach($modules as $name)
         {
-            $twig->path('modules/' . $name . '/Resources/templates', $name);
+            $path = '%kernel.project_dir%/modules/' . $name . '/Resources/translations';
+            $path_list = $path;
         }
     }
 
@@ -43,7 +45,10 @@ return static function (TwigConfig $twig): void
     {
         foreach($additions as $name)
         {
-            $twig->path('public/additions' . $name . '/Resources/templates', $name);
+            $path = '%kernel.project_dir%/public/additions/' . $name . '/Resources/translations';
+            $path_list = $path;
         }
     }
+
+    $framework->translator()->paths($path_list);
 };
