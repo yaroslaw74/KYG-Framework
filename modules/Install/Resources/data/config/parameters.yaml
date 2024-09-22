@@ -1,10 +1,10 @@
 parameters:
     app.name: "KYG Framework for Business"
     app.name.language: en
-    app.locale: ru-RU
+    app.locale: ru
     app.locale_list:
-        - en-US
-        - ru-RU
+        - en
+        - ru
     app.dataformat: null
     app.timeformat: null
     app.separator: " "
