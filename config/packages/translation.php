@@ -12,7 +12,7 @@ use Symfony\Config\FrameworkConfig;
 return static function (FrameworkConfig $framework): void
 {
     $dir = dirname(__DIR__, 2);
-    $path_list = [];
+    $path_list = ['%kernel.project_dir%/public/translations'];
 
     $list_modules = array_diff(scandir($dir . '/modules'), ['..', '.']);
     $modules = [];
@@ -49,6 +49,5 @@ return static function (FrameworkConfig $framework): void
             $path_list = $path;
         }
     }
-
     $framework->translator()->paths($path_list);
 };
