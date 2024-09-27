@@ -14,7 +14,7 @@
         <meta name="autor" content="Kataev Yaroslav Georgievich">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}{{ app_name }}{% endblock %}</title>
-        <link rel="icon" href="favicon.ico">
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.min.css') }}">
             <link rel="stylesheet" href="{{ asset('bootstrap-icons/font/bootstrap-icons.min.css') }}">
