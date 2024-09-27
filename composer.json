@@ -34,6 +34,7 @@
         "mnsami/composer-custom-directory-installer": "^2.0",
         "phpdocumentor/reflection-docblock": "^5.4",
         "phpstan/phpdoc-parser": "^1.30",
+        "shivas/versioning-bundle": "^4.1",
         "squirrelphp/twig-php-syntax": "^1.8",
         "symfony/apache-pack": "^1.0",
         "symfony/asset": "7.1.*",
@@ -88,6 +89,7 @@
             "liborm85/composer-vendor-cleaner": true,
             "mnsami/composer-custom-directory-installer": true
         },
+        "optimize-autoloader": true,
         "sort-packages": true,
         "dev-files": {
             "match-case": false,

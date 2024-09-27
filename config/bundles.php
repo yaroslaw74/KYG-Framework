@@ -17,4 +17,5 @@ return [
     SymfonyCasts\Bundle\VerifyEmail\SymfonyCastsVerifyEmailBundle::class => ['all' => true],
     Symfony\UX\TogglePassword\TogglePasswordBundle::class => ['all' => true],
     Symfony\UX\TwigComponent\TwigComponentBundle::class => ['all' => true],
+    Shivas\VersioningBundle\ShivasVersioningBundle::class => ['all' => true],
 ];

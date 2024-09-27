@@ -40,6 +40,9 @@
             "./tests/bootstrap.php"
         ]
     },
+    "shivas/versioning-bundle": {
+        "version": "4.1.1"
+    },
     "symfony/apache-pack": {
         "version": "1.0",
         "recipe": {
