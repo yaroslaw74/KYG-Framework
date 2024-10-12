@@ -1,0 +1,196 @@
+{##################################################################################
+ #  @Project    KYG Framework for business
+ #  @Version    1.0.0
+ #
+ #  @Copyright  (C) 2026 Kataev Yaroslav Georgievich
+ #  @E-mail     yaroslaw74@gmail.com
+ #  @License    GNU General Public License version 3 or later, see LICENSE.md
+ ##################################################################################}
+{% extends 'base.html.twig' %}
+{% trans_default_domain 'Core' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/core.css') }}">
+{% endblock %}
+
+{% block header %}
+    <div class="d-flex flex-row justify-content-between bg-body-tertiary">
+        <div class="d-flex flex-row align-self-center">
+            <a href="#" class="m-1">
+                {{ ux_icon('kyg', {class: 'kyg'}) }}
+            </a>
+            <div class="d-flex flex-column justify-content-center ps-2">
+                <h5 class="text-primary text-nowrap m-0" lang="{{ app_lang_name }}">{{ app_name }}</h5>
+            </div>
+        </div>
+        <div class='d-flex flex-column justify-content-center ps-2'>
+            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="{% trans %}Search for...{% endtrans %}" aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button"><i class="fas fa-search fa-sm"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="d-flex flex-row justify-content-end">
+            <div class="m-1 ps-2 align-self-center">
+                <a href="#" class="fa-layers fa-2xl" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="fa-layers-counter"><h1>+10</h1></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+                    <li class="dropdown-header">
+                        You have 3 new messages
+                        <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li class="message-item">
+                        <a href="#">
+                            <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                            <div>
+                                <h4>Maria Hudson</h4>
+                                <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                                <p>4 hrs. ago</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li class="message-item">
+                        <a href="#">
+                            <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                            <div>
+                                <h4>Anna Nelson</h4>
+                                <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                                <p>6 hrs. ago</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li class="message-item">
+                        <a href="#">
+                            <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                            <div>
+                                <h4>David Muldon</h4>
+                                <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                                <p>8 hrs. ago</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li class="dropdown-footer">
+                        <a href="#">Show all messages</a>
+                    </li>
+                </ul>
+                <!-- End Messages Dropdown Items -->
+            </div>
+            <div class="m-1 ps-2 align-self-center">
+                <a href="#" class="fa-layers fa-2xl" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="fa-layers-counter"><h1>23</h1></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                    <li class="dropdown-header">
+                        You have 4 new notifications
+                        <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li class="notification-item">
+                        <i class="bi bi-exclamation-circle text-warning"></i>
+                        <div>
+                            <h4>Lorem Ipsum</h4>
+                            <p>Quae dolorem earum veritatis oditseno</p>
+                            <p>30 min. ago</p>
+                        </div>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li class="notification-item">
+                        <i class="bi bi-x-circle text-danger"></i>
+                        <div>
+                            <h4>Atque rerum nesciunt</h4>
+                            <p>Quae dolorem earum veritatis oditseno</p>
+                            <p>1 hr. ago</p>
+                        </div>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li class="notification-item">
+                        <i class="bi bi-check-circle text-success"></i>
+                        <div>
+                            <h4>Sit rerum fuga</h4>
+                            <p>Quae dolorem earum veritatis oditseno</p>
+                            <p>2 hrs. ago</p>
+                        </div>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li class="notification-item">
+                        <i class="bi bi-info-circle text-primary"></i>
+                        <div>
+                            <h4>Dicta reprehenderit</h4>
+                            <p>Quae dolorem earum veritatis oditseno</p>
+                            <p>4 hrs. ago</p>
+                        </div>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li class="dropdown-footer">
+                        <a href="#">Show all notifications</a>
+                    </li>
+                </ul>
+                <!-- End Notification Dropdown Items -->
+            </div>
+            <div class="m-1 ps-2 align-self-center">
+                <a class="d-flex align-items-center dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-circle-user fa-2xl"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                    <li class="dropdown-header">
+                        <h6>Kevin Anderson</h6>
+                        <span>Web Designer</span>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                            <i class="bi bi-person"></i>
+                            <span class="ms-1">{% trans %}My Profile{% endtrans %}</span>
+                        </a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                            <i class="bi bi-gear"></i>
+                            <span class="ms-1">{% trans %}Account Settings{% endtrans %}</span>
+                        </a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                            <i class="bi bi-question-circle"></i>
+                            <span class="ms-1">{% trans %}Need Help?{% endtrans %}</span>
+                        </a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span class="ms-1">{% trans %}Sign Out{% endtrans %}</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- End Profile Dropdo -->
+            </div>
+            <div class="dropdown bd-mode-toggle m-1 ps-2 align-self-center">
+                {{ include('button.html.twig') }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block main %}
+    <div class="d-flex flex-row justify-content-between bg-body-tertiary main">
+        <div class="d-flex flex-row justify-content-start col-2 bg-primary-subtle flex-shrink-0">menu</div>
+        <div class="d-flex col-8 bg-body-secondary text-body-emphasis">
+            {% block body_main %}{% endblock %}
+        </div>
+        <div class="d-flex col-2 bg-info-subtle text-info-emphasis">mesage</div>
+    </div>
+{% endblock %}
