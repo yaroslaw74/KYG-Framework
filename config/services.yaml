@@ -20,13 +20,16 @@ services:
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
+    app_event_subscribers:
+        namespace: 'App\EventSubscriber\'
+        resource: "../src/EventSubscriber/"
+        tags: [event_subscriber]
     App\:
         resource: "../src/"
         exclude:
             - "../src/Command/"
             - "../src/DependencyInjection/"
             - "../src/Entity/"
-            - "../src/EventSubscriber/"
             - "../src/Service/"
             - "../src/Kernel.php"
     App\Modules\:
@@ -35,7 +38,6 @@ services:
             - "../modules/**/Command/"
             - "../modules/**/DependencyInjection/"
             - "../modules/**/Entity/"
-            - "../modules/**/EventSubscriber/"
             - "../modules/**/Service/"
     App\Additions\:
         resource: "../public/additions/"
@@ -43,7 +45,6 @@ services:
             - "../public/additions/**/Command/"
             - "../public/additions/**/DependencyInjection/"
             - "../public/additions/**/Entity/"
-            - "../public/additions/**/EventSubscriber/"
             - "../public/additions/**/Service/"
 
     # add more service definitions when explicit configuration is needed
