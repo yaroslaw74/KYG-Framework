@@ -36,6 +36,9 @@ return [
         'type' => 'css',
     ],
     'chart.js' => [
-        'version' => '3.9.1',
+        'version' => '4.4.4',
+    ],
+    '@kurkle/color' => [
+        'version' => '0.3.2',
     ],
 ];
