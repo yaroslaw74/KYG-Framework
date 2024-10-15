@@ -94,6 +94,7 @@
         "symfony/twig-bundle": "7.1.*",
         "symfony/type-info": "7.1.*",
         "symfony/uid": "7.1.*",
+        "symfony/ux-chartjs": "^2",
         "symfony/ux-cropperjs": "^2",
         "symfony/ux-dropzone": "^2",
         "symfony/ux-icons": "^2",
