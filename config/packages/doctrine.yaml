@@ -29,3 +29,37 @@ doctrine:
                 alias: App
         controller_resolver:
             auto_mapping: false
+        entity_managers:
+            default:
+                mappings:
+                    gedmo_loggable:
+                        type: annotation
+                        is_bundle: false
+                        dir: "%kernel.project_dir%/vendor/gedmo/doctrine-extensions/src/Loggable/Entity"
+                        prefix: 'Gedmo\Loggable\Entity'
+                        alias: GedmoLoggable # (optional) it will default to the name set for the mapping
+                    gedmo_sortable:
+                        type: annotation
+                        is_bundle: false
+                        dir: "%kernel.project_dir%/vendor/gedmo/doctrine-extensions/src/Sortable/Entity"
+                        prefix: 'Gedmo\Sortable\Entity'
+                        alias: GedmoSortable # (optional) it will default to the name set for the mapping
+                    gedmo_translatable:
+                        type: annotation
+                        is_bundle: false
+                        dir: "%kernel.project_dir%/vendor/gedmo/doctrine-extensions/src/Translatable/Entity"
+                        prefix: 'Gedmo\Translatable\Entity'
+                        alias: GedmoTranslatable # (optional) it will default to the name set for the mapping
+                    gedmo_translator:
+                        type: annotation
+                        is_bundle: false
+                        dir: "%kernel.project_dir%/vendor/gedmo/doctrine-extensions/src/Translator/Entity"
+                        prefix: 'Gedmo\Translator\Entity'
+                        alias: GedmoTranslator # (optional) it will default to the name set for the mapping
+                    gedmo_tree:
+                        type: annotation
+                        is_bundle: false
+                        dir: "%kernel.project_dir%/vendor/gedmo/doctrine-extensions/src/Tree/Entity"
+                        prefix: 'Gedmo\Tree\Entity'
+                        alias: GedmoTree # (optional) it will default to the name set for the mapping
+
