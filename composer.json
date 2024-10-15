@@ -251,6 +251,7 @@
         "symfony/dom-crawler": "7.1.*",
         "symfony/maker-bundle": "^1",
         "symfony/phpunit-bridge": "7.1.*",
-        "symfony/web-profiler-bundle": "7.1.*"
+        "symfony/web-profiler-bundle": "7.1.*",
+        "zenstruck/foundry": "^2.1"
     }
 }
