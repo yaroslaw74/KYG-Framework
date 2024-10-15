@@ -29,6 +29,7 @@
         "doctrine/doctrine-migrations-bundle": "^3",
         "doctrine/orm": "^3",
         "fortawesome/font-awesome": "^6",
+        "friendsofsymfony/ckeditor-bundle": "^2.5",
         "league/commonmark": "^2",
         "liborm85/composer-vendor-cleaner": "^1.7",
         "mnsami/composer-custom-directory-installer": "^2.0",
@@ -150,7 +151,8 @@
             "assets:install %PUBLIC_DIR%": "symfony-cmd",
             "importmap:install": "symfony-cmd",
             "importmap:update": "symfony-cmd",
-            "asset-map:compile": "symfony-cmd"
+            "asset-map:compile": "symfony-cmd",
+            "ckeditor:install": "symfony-cmd"
         },
         "post-install-cmd": [
             "php -f composer.php",
