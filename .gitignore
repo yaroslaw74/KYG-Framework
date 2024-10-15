@@ -36,3 +36,7 @@
 ###> doctrine/migrations ###
 /migrations/
 ###< doctrine/migrations ###
+
+###> liip/imagine-bundle ###
+/public/media/cache/
+###< liip/imagine-bundle ###
