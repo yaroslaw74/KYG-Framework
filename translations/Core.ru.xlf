@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file original="file.ext" source-language="en" target-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="1">
+                <source>Search for...</source>
+                <target>Искать...</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>My Profile</source>
+                <target>Мой профиль</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>Account Settings</source>
+                <target>Настройки аккаунта</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>Need Help?</source>
+                <target>Нужна помощь?</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>Sign Out</source>
+                <target>Выйти</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
