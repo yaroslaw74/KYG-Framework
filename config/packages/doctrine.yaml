@@ -62,4 +62,7 @@ doctrine:
                         dir: "%kernel.project_dir%/vendor/gedmo/doctrine-extensions/src/Tree/Entity"
                         prefix: 'Gedmo\Tree\Entity'
                         alias: GedmoTree # (optional) it will default to the name set for the mapping
-
+                filters:
+                    softdeleteable:
+                        class: Gedmo\SoftDeleteable\Filter\SoftDeleteableFilter
+                        enabled: true

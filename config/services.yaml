@@ -51,6 +51,157 @@ services:
     Squirrel\TwigPhpSyntax\PhpSyntaxExtension:
         tags: [twig.extension]
 
+    # Attribute mapping driver for the Doctrine Extension listeners
+    gedmo.mapping.driver.attribute:
+        class: Gedmo\Mapping\Driver\AttributeReader
+
+    # Gedmo Blameable Extension Listener
+    gedmo.listener.blameable:
+        class: Gedmo\Blameable\BlameableListener
+        tags:
+            - { name: doctrine.event_listener, event: "prePersist" }
+            - { name: doctrine.event_listener, event: "onFlush" }
+            - { name: doctrine.event_listener, event: "loadClassMetadata" }
+        calls:
+            # Uncomment the below call if using attributes, and comment the call for the annotation reader
+            - [setAnnotationReader, ["@gedmo.mapping.driver.attribute"]]
+            # The `annotation_reader` service was deprecated in Symfony 6.4 and removed in Symfony 7.0
+            # - [ setAnnotationReader, [ '@annotation_reader' ] ]
+
+    # Gedmo IP Traceable Extension Listener
+    gedmo.listener.ip_traceable:
+        class: Gedmo\IpTraceable\IpTraceableListener
+        tags:
+            - { name: doctrine.event_listener, event: "prePersist" }
+            - { name: doctrine.event_listener, event: "onFlush" }
+            - { name: doctrine.event_listener, event: "loadClassMetadata" }
+        calls:
+            # Uncomment the below call if using attributes, and comment the call for the annotation reader
+            - [setAnnotationReader, ["@gedmo.mapping.driver.attribute"]]
+            # The `annotation_reader` service was deprecated in Symfony 6.4 and removed in Symfony 7.0
+            # - [ setAnnotationReader, [ '@annotation_reader' ] ]
+
+    # Gedmo Loggable Extension Listener
+    gedmo.listener.loggable:
+        class: Gedmo\Loggable\LoggableListener
+        tags:
+            - { name: doctrine.event_listener, event: "onFlush" }
+            - { name: doctrine.event_listener, event: "loadClassMetadata" }
+            - { name: doctrine.event_listener, event: "postPersist" }
+        calls:
+            # Uncomment the below call if using attributes, and comment the call for the annotation reader
+            - [setAnnotationReader, ["@gedmo.mapping.driver.attribute"]]
+            # The `annotation_reader` service was deprecated in Symfony 6.4 and removed in Symfony 7.0
+            # - [ setAnnotationReader, [ '@annotation_reader' ] ]
+
+    # Gedmo Sluggable Extension Listener
+    gedmo.listener.sluggable:
+        class: Gedmo\Sluggable\SluggableListener
+        tags:
+            - { name: doctrine.event_listener, event: "onFlush" }
+            - { name: doctrine.event_listener, event: "loadClassMetadata" }
+            - { name: doctrine.event_listener, event: "prePersist" }
+        calls:
+            # Uncomment the below call if using attributes, and comment the call for the annotation reader
+            - [setAnnotationReader, ["@gedmo.mapping.driver.attribute"]]
+            # The `annotation_reader` service was deprecated in Symfony 6.4 and removed in Symfony 7.0
+            # - [ setAnnotationReader, [ '@annotation_reader' ] ]
+
+    # Gedmo Soft Deleteable Extension listener
+    gedmo.listener.soft_deleteable:
+        class: Gedmo\SoftDeleteable\SoftDeleteableListener
+        tags:
+            - { name: doctrine.event_listener, event: "loadClassMetadata" }
+            - { name: doctrine.event_listener, event: "onFlush" }
+        calls:
+            # Uncomment the below call if using attributes, and comment the call for the annotation reader
+            - [setAnnotationReader, ["@gedmo.mapping.driver.attribute"]]
+            # The `annotation_reader` service was deprecated in Symfony 6.4 and removed in Symfony 7.0
+            # - [ setAnnotationReader, [ '@annotation_reader' ] ]
+            # The `clock` service was introduced in Symfony 6.2; if using an older Symfony version, you can either comment this call or provide your own PSR-20 Clock implementation
+            - [setClock, ["@clock"]]
+
+    # Gedmo Sortable Extension listener
+    gedmo.listener.sortable:
+        class: Gedmo\Sortable\SortableListener
+        tags:
+            - { name: doctrine.event_listener, event: "onFlush" }
+            - { name: doctrine.event_listener, event: "loadClassMetadata" }
+            - { name: doctrine.event_listener, event: "prePersist" }
+            - { name: doctrine.event_listener, event: "postPersist" }
+            - { name: doctrine.event_listener, event: "preUpdate" }
+            - { name: doctrine.event_listener, event: "postRemove" }
+            - { name: doctrine.event_listener, event: "postFlush" }
+        calls:
+            # Uncomment the below call if using attributes, and comment the call for the annotation reader
+            - [setAnnotationReader, ["@gedmo.mapping.driver.attribute"]]
+            # The `annotation_reader` service was deprecated in Symfony 6.4 and removed in Symfony 7.0
+            # - [ setAnnotationReader, [ '@annotation_reader' ] ]
+
+    # Gedmo Timestampable Extension Listener
+    gedmo.listener.timestampable:
+        class: Gedmo\Timestampable\TimestampableListener
+        tags:
+            - { name: doctrine.event_listener, event: "prePersist" }
+            - { name: doctrine.event_listener, event: "onFlush" }
+            - { name: doctrine.event_listener, event: "loadClassMetadata" }
+        calls:
+            # Uncomment the below call if using attributes, and comment the call for the annotation reader
+            - [setAnnotationReader, ["@gedmo.mapping.driver.attribute"]]
+            # The `annotation_reader` service was deprecated in Symfony 6.4 and removed in Symfony 7.0
+            # - [ setAnnotationReader, [ '@annotation_reader' ] ]
+            # The `clock` service was introduced in Symfony 6.2; if using an older Symfony version, you can either comment this call or provide your own PSR-20 Clock implementation
+            - [setClock, ["@clock"]]
+
+    # Gedmo Translatable Extension Listener
+    gedmo.listener.translatable:
+        class: Gedmo\Translatable\TranslatableListener
+        tags:
+            - { name: doctrine.event_listener, event: "postLoad" }
+            - { name: doctrine.event_listener, event: "postPersist" }
+            - { name: doctrine.event_listener, event: "preFlush" }
+            - { name: doctrine.event_listener, event: "onFlush" }
+            - { name: doctrine.event_listener, event: "loadClassMetadata" }
+        calls:
+            # Uncomment the below call if using attributes, and comment the call for the annotation reader
+            - [setAnnotationReader, ["@gedmo.mapping.driver.attribute"]]
+            # The `annotation_reader` service was deprecated in Symfony 6.4 and removed in Symfony 7.0
+            # - [ setAnnotationReader, [ '@annotation_reader' ] ]
+            # The Kernel's `locale` parameter is used to configure the default locale for the extension
+            - [setDefaultLocale, ["%locale%"]]
+
+    # Gedmo Tree Extension Listener
+    gedmo.listener.tree:
+        class: Gedmo\Tree\TreeListener
+        tags:
+            - { name: doctrine.event_listener, event: "prePersist" }
+            - { name: doctrine.event_listener, event: "preUpdate" }
+            - { name: doctrine.event_listener, event: "preRemove" }
+            - { name: doctrine.event_listener, event: "onFlush" }
+            - { name: doctrine.event_listener, event: "loadClassMetadata" }
+            - { name: doctrine.event_listener, event: "postPersist" }
+            - { name: doctrine.event_listener, event: "postUpdate" }
+            - { name: doctrine.event_listener, event: "postRemove" }
+        calls:
+            # Uncomment the below call if using attributes, and comment the call for the annotation reader
+            - [setAnnotationReader, ["@gedmo.mapping.driver.attribute"]]
+            # The `annotation_reader` service was deprecated in Symfony 6.4 and removed in Symfony 7.0
+            # - [ setAnnotationReader, [ '@annotation_reader' ] ]
+
+    # Gedmo Uploadable Extension Listener
+    gedmo.listener.uploadable:
+        class: Gedmo\Uploadable\UploadableListener
+        tags:
+            - { name: doctrine.event_listener, event: "loadClassMetadata" }
+            - { name: doctrine.event_listener, event: "preFlush" }
+            - { name: doctrine.event_listener, event: "onFlush" }
+            - { name: doctrine.event_listener, event: "postFlush" }
+        calls:
+            # Uncomment the below call if using attributes, and comment the call for the annotation reader
+            - [setAnnotationReader, ["@gedmo.mapping.driver.attribute"]]
+            # The `annotation_reader` service was deprecated in Symfony 6.4 and removed in Symfony 7.0
+            # - [ setAnnotationReader, [ '@annotation_reader' ] ]
+
 imports:
     - { resource: "../modules/*/Resources/config/*.yaml" }
     - { resource: "../public/additions/*/Resources/config/*.yaml" }
