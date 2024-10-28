@@ -29,7 +29,7 @@ return [
         'version' => '8.0.12',
     ],
     'chart.js' => [
-        'version' => '4.4.5',
+        'version' => '4.4.6',
     ],
     'cropperjs' => [
         'version' => '1.6.2',

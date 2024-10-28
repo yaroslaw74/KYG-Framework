@@ -13,9 +13,8 @@
         <table>
             <tr>
                 <td>
-                    {{ Languages.ru.name }}
-                    {#<select name="_locale" size="1" required class="form-select" aria-label="Default select example">
-                        {% foreach Languages as key => value %}
+                    <select name="_locale" size="1" required class="form-select" aria-label="Default select example">
+                        {% for key, value in Languages %}
                             {% if value.full %}
                                 {% if key in app.enabled_locales %}
                                     <option value="{{ key }}" lang="{{ key }}" dir="{{ value.dir }}">{{ value.name }}</option>
@@ -23,8 +22,8 @@
                                     <option value="{{ key }}" lang="{{ key }}" dir="{{ value.dir }}" disabled>{{ value.name }}</option>
                                 {% endif %}
                             {% endif %}
-                        {% endforeach %}
-                    </select>#}
+                        {% endfor %}
+                    </select>
                 </td>
                 <td>
                     <button type="submit" class="btn btn-primary">OK</button>

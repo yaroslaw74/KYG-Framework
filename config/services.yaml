@@ -40,8 +40,6 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
-    Squirrel\TwigPhpSyntax\PhpSyntaxExtension:
-        tags: [twig.extension]
 
 imports:
     - { resource: "../modules/*/Resources/config/*.*" }
