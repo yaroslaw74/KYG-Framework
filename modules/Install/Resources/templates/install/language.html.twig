@@ -14,12 +14,12 @@
             <tr>
                 <td>
                     <select name="_locale" size="1" required class="form-select" aria-label="Default select example">
-                        {% foreach Languages as key => value %}
-                            {% if value.full %}
-                                {% if key in app.enabled_locales %}
-                                    <option value="{{ key }}" lang="{{ key }}" dir="{{ value.dir }}">{{ value.name }}</option>
+                        {% foreach Languages as Key => Value %}
+                            {% if Value.full %}
+                                {% if Key in app.enabled_locales %}
+                                    <option value="{{ Key }}" lang="{{ Key }}" dir="{{ Value.dir }}">{{ Value.name }}</option>
                                 {% else %}
-                                    <option value="{{ key }}" lang="{{ key }}" dir="{{ value.dir }}" disabled>{{ value.name }}</option>
+                                    <option value="{{ Key }}" lang="{{ Key }}" dir="{{ Value.dir }}" disabled>{{ Value.name }}</option>
                                 {% endif %}
                             {% endif %}
                         {% endforeach %}
