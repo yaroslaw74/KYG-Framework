@@ -37,7 +37,7 @@ class InstallController extends AbstractController
     public function language(): Response
     {
         return $this->render('@Install/install/language.html.twig', [
-            'Languages' => $this->ArrayAccess->getLanguages(),
+            'languages_list' => $this->ArrayAccess->getLanguages(),
         ]);
     }
     /*#[Route('/install/requirements', name: 'requirements_install')]

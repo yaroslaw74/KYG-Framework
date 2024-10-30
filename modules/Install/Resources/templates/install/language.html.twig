@@ -14,7 +14,7 @@
             <tr>
                 <td>
                     <select name="_locale" size="1" required class="form-select" aria-label="Default select example">
-                        {% for key, value in Languages %}
+                        {% for key, value in languages_list %}
                             {% if value.full %}
                                 {% if key in app.enabled_locales %}
                                     <option value="{{ key }}" lang="{{ key }}" dir="{{ value.dir }}">{{ value.name }}</option>
