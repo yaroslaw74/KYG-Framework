@@ -4,11 +4,11 @@ App_controllers:
         namespace: App\Controller
     type: attribute
 
-Install_controllers:
-    resource:
-        path: ../modules/Install/Controller/
-        namespace: App\Modules\Install\Controller
-    type: attribute
+#Install_controllers:
+#    resource:
+#        path: ../modules/Install/Controller/
+#        namespace: App\Modules\Install\Controller
+#    type: attribute
 
 Users_controllers:
     resource:
