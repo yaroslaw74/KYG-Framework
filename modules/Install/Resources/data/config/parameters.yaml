@@ -1,0 +1,11 @@
+#################################################################################
+#  @Project    KYG Framework for business
+#  @Version    1.0.0
+#
+#  @Copyright  (C) 2027 Kataev Yaroslav Georgievich
+#  @E_mail     yaroslaw74@gmail.com
+#  @License    GNU General Public License version 3 or later, see LICENSE.md
+#################################################################################
+parameters:
+    app.email: mailer@your-domain.com
+    app.email.user: "Acme Mail Bot"
