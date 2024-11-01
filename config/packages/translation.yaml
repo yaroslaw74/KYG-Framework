@@ -2,7 +2,7 @@ framework:
     translator:
         default_path: "%kernel.project_dir%/translations"
         paths:
-            - "%app.translations_dir%"
+            - "%kernel.project_dir%/public/translations"
         fallbacks:
             - "af"
             - "ar"

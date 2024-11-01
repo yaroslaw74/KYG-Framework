@@ -28,15 +28,15 @@ return [
     '@hotwired/turbo' => [
         'version' => '8.0.12',
     ],
-    'chart.js' => [
-        'version' => '4.4.6',
-    ],
     'cropperjs' => [
         'version' => '1.6.2',
     ],
     'cropperjs/dist/cropper.min.css' => [
         'version' => '1.6.2',
         'type' => 'css',
+    ],
+    'chart.js' => [
+        'version' => '4.4.6',
     ],
     '@kurkle/color' => [
         'version' => '0.3.2',
