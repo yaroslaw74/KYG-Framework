@@ -3,7 +3,7 @@
  * @Project    KYG Framework for business
  * @Version    1.0.0
  *
- * @Copyright  (C) 2026 Kataev Yaroslav Georgievich
+ * @Copyright  (C) 2027 Kataev Yaroslav Georgievich
  * @E-mail     yaroslaw74@gmail.com
  * @License    GNU General Public License version 3 or later, see LICENSE.md
  *********************************************************************************/
@@ -19,8 +19,7 @@ class LocaleSubscriber implements EventSubscriberInterface
     {
         $request = $event->getRequest();
         $locale = $request->request->getString('_locale');
-        if ($locale != '')
-        {
+        if ($locale != '') {
             $request->setLocale($locale);
         }
     }

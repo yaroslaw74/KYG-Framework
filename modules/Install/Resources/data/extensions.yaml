@@ -23,9 +23,11 @@ extensions:
         - "pcre"
         - "session"
         - "SimpleXML"
+        - "sodium"
         - "tokenizer"
         - "xml"
         - "xsl"
         - "zip"
     optional:
         - "apcu"
+        - "opcache"

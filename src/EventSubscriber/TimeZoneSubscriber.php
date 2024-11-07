@@ -22,7 +22,7 @@ class TimeZoneSubscriber implements EventSubscriberInterface
     }
     public function onKernelController(ControllerEvent $event): void
     {
-        $file = Yaml::parseFile($this->params->get('app.config_dir') . '/twig.yaml');
+        $file = Yaml::parseFile($this->params->get('kernel.project_dir') . '/public/config/twig.yaml');
         $TimeZone = $file['twig']['date']['timezone'];
         if ((!is_null($TimeZone)) and ($TimeZone != date_default_timezone_get())) {
             date_default_timezone_set($TimeZone);

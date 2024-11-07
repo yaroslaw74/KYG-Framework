@@ -4,12 +4,6 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
-    app.modules_dir: "%kernel.project_dir%/modules"
-    app.public_dir: "%kernel.project_dir%/public"
-    app.additions_dir: "%app.public_dir%/additions"
-    app.config_dir: "%app.public_dir%/config"
-    app.translations_dir: "%app.public_dir%/translations"
-    app.media_dir: "%app.public_dir%/media"
 
 services:
     # default configuration for services in *this* file
