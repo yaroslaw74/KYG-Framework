@@ -40,3 +40,7 @@
 /public/media/
 /public/*.html
 ###< symfony/public ###
+
+###> lexik/jwt-authentication-bundle ###
+/config/jwt/*.pem
+###< lexik/jwt-authentication-bundle ###
