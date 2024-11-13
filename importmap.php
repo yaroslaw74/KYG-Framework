@@ -48,30 +48,30 @@ return [
         'version' => '2.1.0',
     ],
     '@swup/fade-theme' => [
-        'version' => '2.0.1',
+        'version' => '1.0.5',
     ],
     '@swup/slide-theme' => [
-        'version' => '2.0.1',
+        'version' => '1.0.5',
     ],
     '@swup/forms-plugin' => [
-        'version' => '3.6.0',
+        'version' => '2.0.1',
     ],
     '@swup/plugin' => [
-        'version' => '4.0.0',
+        'version' => '2.0.3',
     ],
     'swup' => [
-        'version' => '4.8.1',
+        'version' => '3.1.1',
     ],
     'delegate-it' => [
-        'version' => '6.2.1',
+        'version' => '6.0.1',
     ],
     '@swup/debug-plugin' => [
-        'version' => '4.1.0',
+        'version' => '3.0.0',
     ],
     '@swup/theme' => [
         'version' => '2.1.0',
     ],
     'path-to-regexp' => [
-        'version' => '6.3.0',
+        'version' => '8.2.0',
     ],
 ];

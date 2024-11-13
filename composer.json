@@ -180,7 +180,6 @@
             "ckeditor:install --release=full --clear=drop": "symfony-cmd",
             "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
             "importmap:install": "symfony-cmd",
-            "importmap:update": "symfony-cmd",
             "lexik:jwt:generate-keypair --skip-if-exists": "symfony-cmd"
         },
         "post-install-cmd": [
