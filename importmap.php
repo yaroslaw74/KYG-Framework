@@ -44,4 +44,7 @@ return [
     'tom-select' => [
         'version' => '2.3.1',
     ],
+    'typed.js' => [
+        'version' => '2.1.0',
+    ],
 ];

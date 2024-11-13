@@ -519,6 +519,9 @@
             "./config/routes/ux_live_component.yaml"
         ]
     },
+    "symfony/ux-swup": {
+        "version": "v2.21.0"
+    },
     "symfony/ux-toggle-password": {
         "version": "v2.21.0"
     },
@@ -536,6 +539,9 @@
         "files": [
             "./config/packages/twig_component.yaml"
         ]
+    },
+    "symfony/ux-typed": {
+        "version": "v2.21.0"
     },
     "symfony/validator": {
         "version": "7.1",
