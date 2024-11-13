@@ -109,6 +109,7 @@
         "symfony/twig-bundle": "7.1.*",
         "symfony/type-info": "7.1.*",
         "symfony/uid": "7.1.*",
+        "symfony/ux-autocomplete": "^2.21",
         "symfony/ux-chartjs": "^2.21",
         "symfony/ux-cropperjs": "^2.21",
         "symfony/ux-dropzone": "^2.21",

@@ -41,4 +41,7 @@ return [
     '@kurkle/color' => [
         'version' => '0.3.2',
     ],
+    'tom-select' => [
+        'version' => '2.3.1',
+    ],
 ];
