@@ -33,7 +33,6 @@
 
 ###> symfony/public ###
 /public/additions/
-/public/bootstrap/
 /public/bootstrap-icons/
 /public/config/
 /public/font-awesome/

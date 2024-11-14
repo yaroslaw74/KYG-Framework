@@ -16,18 +16,12 @@
         <title>{% block title %}{{ app_name }}{% endblock %}</title>
         <link rel="icon" href="{{ asset('favicon.ico') }}">
         {% block stylesheets %}
-            {% if (locale_dir(app.locale) == 'ltr') %}
-                <link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.min.css') }}">
-            {% else %}
-                <link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.rtl.min.css') }}">
-            {% endif %}
             <link rel="stylesheet" href="{{ asset('bootstrap-icons/font/bootstrap-icons.min.css') }}">
             <link rel="stylesheet" href="{{ asset('font-awesome/css/svg-with-js.min.css') }}">
             <link rel="stylesheet" href="{{ asset('css/button.css') }}">
         {% endblock %}
         {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-            <script src="{{ asset('bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+            {% block importmap %}{{ importmap(['app', locale_dir(app.locale)]) }}{% endblock %}
             <script src="{{ asset('font-awesome/js/all.min.js') }}"></script>
             <script src="{{ asset('js/color-modes.js') }}"></script>
         {% endblock %}

@@ -125,9 +125,8 @@
         "symfony/var-exporter": "7.1.*",
         "symfony/web-link": "7.1.*",
         "symfony/yaml": "7.1.*",
-        "symfonycasts/reset-password-bundle": "^1.22",
+        "symfonycasts/reset-password-bundle": "^1.23",
         "symfonycasts/verify-email-bundle": "^1.17",
-        "twbs/bootstrap": "^5.3",
         "twbs/bootstrap-icons": "^1.11",
         "twig/cssinliner-extra": "^2.12|^3.0|^4.0",
         "twig/extra-bundle": "^2.12|^3.0|^4.0",
@@ -203,7 +202,6 @@
         "installer-paths": {
             "./public/{$name}": [
                 "fortawesome/font-awesome",
-                "twbs/bootstrap",
                 "twbs/bootstrap-icons"
             ]
         },
@@ -236,33 +234,13 @@
                 "css/svg-with-js.css",
                 "js/all.js"
             ],
-            "twbs/*": [
+            "twbs/bootstrap-icons": [
                 "build/",
                 ".*",
                 "hugo.yml",
                 "package.js",
                 "package.json",
-                "package-lock.json"
-            ],
-            "twbs/bootstrap": [
-                "nuget/",
-                "scss/",
-                "site/",
-                "*/*.map",
-                "js/dist/",
-                "js/src/",
-                "js/index.*",
-                "dist/css/bootstrap-grid.*",
-                "dist/css/bootstrap-reboot.*",
-                "dist/css/bootstrap-utilities.*",
-                "dist/css/bootstrap.css",
-                "dist/css/bootstrap.rtl.css",
-                "dist/js/bootstrap.esm.*",
-                "dist/js/bootstrap.js",
-                "dist/js/bootstrap.min.js",
-                "dist/js/bootstrap.bundle.js"
-            ],
-            "twbs/bootstrap-icons": [
+                "package-lock.json",
                 "icons/",
                 "font/*.json",
                 "font/*.scss",
