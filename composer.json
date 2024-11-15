@@ -52,7 +52,7 @@
         "scheb/2fa-totp": "^7.6",
         "scheb/2fa-trusted-device": "^7.6",
         "shivas/versioning-bundle": "^4.1",
-        "sonata-project/admin-bundle": "*",
+        "sonata-project/admin-bundle": "^4.32",
         "stof/doctrine-extensions-bundle": "^1.12",
         "symfony/apache-pack": "^1.0",
         "symfony/asset": "7.1.*",
