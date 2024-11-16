@@ -1,0 +1,66 @@
+{##################################################################################
+ #  @Project    KYG Framework for business
+ #  @Version    1.0.0
+ #
+ #  @Copyright  (C) 2027 Kataev Yaroslav Georgievich
+ #  @E-mail     yaroslaw74@gmail.com
+ #  @License    GNU General Public License version 3 or later, see LICENSE.md
+ ##################################################################################}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ include('button.svg.twig') }}
+    <main>
+        <div class="container">
+            <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 col-md-6 d-flex flex-column align-items-center justify-content-center">
+                            <div class="d-flex justify-content-center py-4">
+                                <div class="logo d-flex align-items-center w-auto">
+                                    {% if app_logo %}
+                                        <img src="{{ asset('images/' ~ app_logo) }}" alt="">
+                                    {% else %}
+                                        {{ ux_icon('kyg', {height: '52px', width: '52px'}) }}
+                                    {% endif %}
+                                    <span class="ms-2 d-none d-lg-block" lang="{{ app_lang_name }}">{{ app_name }}</span>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    {% block content %}{% endblock %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <div class="d-flex flex-row justify-content-between">
+        <div class="d-flex flex-row">
+            <div class="m-1">
+                {{ ux_icon('symfony', {class: 'svg_footer'}) }}
+            </div>
+            <div class="m-1">
+                {{ ux_icon('kyg', {class: 'svg_footer'}) }}
+            </div>
+            <div class="d-flex flex-column justify-content-center">
+                <h6 class="text-nowrap m-0"><strong>{{ shivas_app_version }}</strong></h6>
+            </div>
+        </div>
+        <div class="credits d-flex flex-row justify-content-between">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+        <div class="d-flex flex-column justify-content-center pe-1"><h6 class="text-nowrap m-0" lang="en" dir="ltr">
+            <strong>&copy; 2027 Kataev Yaroslav</strong></h6>
+        </div>
+    </div>
+    <div class="dropdown position-fixed top-0 end-0 mb-3 me-3 bd-mode-toggle">
+        {{ include('button.html.twig') }}
+    </div>
+{% endblock %}

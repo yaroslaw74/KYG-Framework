@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file original="file.ext" source-language="en" target-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="1">
+                <source>Login to Your Account</source>
+                <target>Login to Your Account</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>Enter your username and password to login</source>
+                <target>Enter your username and password to login</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>You are logged in as</source>
+                <target>You are logged in as</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>Logout</source>
+                <target>Logout</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>Username</source>
+                <target>Username</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>Please enter your username!</source>
+                <target>Please enter your username!</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>Password</source>
+                <target>Password</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>Show password</source>
+                <target>Show password</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>Hide password</source>
+                <target>Hide password</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>Please enter your password!</source>
+                <target>Please enter your password!</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>Remember me</source>
+                <target>Remember me</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>Forgot password?</source>
+                <target>Forgot password?</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>Login</source>
+                <target>Login</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

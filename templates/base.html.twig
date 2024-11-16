@@ -9,6 +9,13 @@
 <!DOCTYPE html>
 <html lang="{{ app.locale }}" data-bs-theme="auto" dir="{{ locale_dir(app.locale) }}>
     <head>
+        <!-- =======================================================
+        * Template Name: NiceAdmin
+        * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+        * Updated: Apr 20 2024 with Bootstrap v5.3.3
+        * Author: BootstrapMade.com
+        * License: https://bootstrapmade.com/license/
+        ======================================================== -->
         <meta charset="UTF-8">
         <meta name="robots" content="noindex, nofollow">
         <meta name="autor" content="Kataev Yaroslav Georgievich">
@@ -31,11 +38,13 @@
             <link rel="stylesheet" href="{{ asset('bootstrap-icons/font/bootstrap-icons.min.css') }}">
             <link rel="stylesheet" href="{{ asset('font-awesome/css/svg-with-js.min.css') }}">
             <link rel="stylesheet" href="{{ asset('css/button.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         {% endblock %}
         {% block javascripts %}
             {% block importmap %}{{ importmap(['app', locale_dir(app.locale)]) }}{% endblock %}
             <script src="{{ asset('font-awesome/js/all.min.js') }}"></script>
             <script src="{{ asset('js/color-modes.js') }}"></script>
+            <script src="{{ asset('js/main.js') }}"></script>
         {% endblock %}
     </head>
     <body>

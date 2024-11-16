@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file original="file.ext" source-language="en" target-language="ua" datatype="plaintext">
+        <body>
+            <trans-unit id="1">
+                <source>Login to Your Account</source>
+                <target>Увійдіть до свого облікового запису</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>Enter your username and password to login</source>
+                <target>Введіть ім'я користувача та пароль для входу</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>You are logged in as</source>
+                <target>Ви увійшли до системи як</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>Logout</source>
+                <target>Вийти</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>Username</source>
+                <target>Ім'я користувача</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>Please enter your username!</source>
+                <target>Будь ласка, введіть своє ім'я користувача!</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>Password</source>
+                <target>Пароль</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>Show password</source>
+                <target>Показати пароль</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>Hide password</source>
+                <target>Приховати пароль</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>Please enter your password!</source>
+                <target>Будь ласка, введіть свій пароль!</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>Remember me</source>
+                <target>Запам'ятати мене</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>Forgot password?</source>
+                <target>Забули свій пароль?</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>Login</source>
+                <target>Увійти</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
