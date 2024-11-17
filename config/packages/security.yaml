@@ -19,11 +19,15 @@ security:
             form_login:
                 login_path: app_login
                 check_path: app_login
+                default_target_path: index
                 enable_csrf: true
             logout:
                 path: app_logout
-                # where to redirect after logout
-                # target: app_any_route
+                target: index
+            remember_me:
+                secret: "%kernel.secret%"
+            login_throttling:
+                max_attempts: 5
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall

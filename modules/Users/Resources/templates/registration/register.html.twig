@@ -1,0 +1,46 @@
+{##################################################################################
+ #  @Project    KYG Framework for business
+ #  @Version    1.0.0
+ #
+ #  @Copyright  (C) 2027 Kataev Yaroslav Georgievich
+ #  @E-mail     yaroslaw74@gmail.com
+ #  @License    GNU General Public License version 3 or later, see LICENSE.md
+ ##################################################################################}
+{% extends '@Users/base.html.twig' %}
+{% trans_default_domain 'Users' %}
+
+{% block title %}
+    {{ parent() }}
+    Registration
+{% endblock %}
+
+{% block content %}
+    <div class="card-body">
+        <div class="pt-4 pb-2">
+            <h5 class="card-title text-center pb-0 fs-4">{% trans %}Registration{% endtrans %}</h5>
+            <p class="text-center small">{% trans %}Enter username and password{% endtrans %}</p>
+        </div>
+        {{ form_start(registrationForm, {'attr': {'novalidate': 'novalidate', 'class': 'row g-3 needs-validation'}}) }}
+            {% for flash_error in app.flashes('verify_email_error') %}
+                <div class="alert alert-danger col-12" role="alert">{{ flash_error }}</div>
+            {% endfor %}
+            <div class="col-12 mb-3 d-flex flex-row justify-content-center">
+                {{ form_errors(registrationForm) }}
+            </div>
+            <div class="col-12">
+                {{ form_row(registrationForm.username) }}
+            </div>
+            <div class="col-12">
+                {{ form_row(registrationForm.plainPassword) }}
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    {{ form_row(registrationForm.agreeTerms) }}
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary w-100" type="submit">{% trans %}Register{% endtrans %}</button>
+            </div>
+        {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}

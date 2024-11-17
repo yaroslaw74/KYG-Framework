@@ -1,0 +1,31 @@
+{##################################################################################
+ #  @Project    KYG Framework for business
+ #  @Version    1.0.0
+ #
+ #  @Copyright  (C) 2027 Kataev Yaroslav Georgievich
+ #  @E-mail     yaroslaw74@gmail.com
+ #  @License    GNU General Public License version 3 or later, see LICENSE.md
+ ##################################################################################}
+{% extends '@?Users/base.html.twig' %}
+{% trans_default_domain 'Users' %}
+
+{% block title %}
+    {{ parent() }}
+    Reset your password
+{% endblock %}
+
+{% block content %}
+    <div class="card-body">
+        <div class="pt-4 pb-2">
+            <h5 class="card-title text-center pb-0 fs-4">{% trans %}Reset your password{% endtrans %}</h5>
+        </div>
+        {{ form_start(resetForm, {'attr': {'novalidate': 'novalidate', 'class': 'row g-3 needs-validation'}}) }}
+            <div class="col-12">
+                {{ form_row(resetForm.plainPassword) }}
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary w-100">{% trans %}Reset password{% endtrans %}</button>
+            </div>
+        {{ form_end(resetForm) }}
+    </div>
+{% endblock %}
