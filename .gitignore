@@ -23,10 +23,6 @@
 /assets/vendor/
 ###< symfony/asset-mapper ###
 
-###> liip/imagine-bundle ###
-/public/media/cache/
-###< liip/imagine-bundle ###
-
 ###> doctrine/migrations ###
 /migrations/
 ###< doctrine/migrations ###
@@ -37,9 +33,10 @@
 /public/config/
 /public/font-awesome/
 /public/media/
+/public/translations/
 /public/*.html
 ###< symfony/public ###
 
-###> lexik/jwt-authentication-bundle ###
-/config/jwt/*.pem
-###< lexik/jwt-authentication-bundle ###
+###> liip/imagine-bundle ###
+/public/media/cache/
+###< liip/imagine-bundle ###

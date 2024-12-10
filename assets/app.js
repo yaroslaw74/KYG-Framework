@@ -1,6 +1,4 @@
 import './bootstrap.js';
-import './vendor/bootstrap/bootstrap.index.js';
-import { Alert } from 'bootstrap';
 /*
  * Welcome to your app's main JavaScript file!
  *

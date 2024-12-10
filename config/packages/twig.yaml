@@ -1,6 +1,6 @@
 twig:
     # The default path used to load templates
-    default_path: "%kernel.project_dir%/templates"
+    default_path: '%kernel.project_dir%/templates'
 
     # Pattern of file name used for cache warmer and linter
-    file_name_pattern: "*.twig"
+    file_name_pattern: '*.twig'

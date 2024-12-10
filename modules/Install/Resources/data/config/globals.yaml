@@ -8,5 +8,5 @@
 #################################################################################
 twig:
     globals:
-        app_name: "KYG Framework for Business"
-        app_lang_name: "en"
+        app_name: 'KYG Framework for Business'
+        app_lang_name: 'en'

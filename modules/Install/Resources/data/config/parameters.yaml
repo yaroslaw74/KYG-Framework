@@ -8,4 +8,4 @@
 #################################################################################
 parameters:
     app.email: mailer@your-domain.com
-    app.email.user: "Acme Mail Bot"
+    app.email.user: 'Acme Mail Bot'

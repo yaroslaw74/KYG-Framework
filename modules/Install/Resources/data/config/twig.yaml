@@ -9,8 +9,8 @@
 twig:
     # The default format options used by the date filter
     date:
-        format: "F j, Y H:i"
-        interval_format: "%d days"
+        format: 'F j, Y H:i'
+        interval_format: '%d days'
 
         # The timezone used when formatting dates, when set to null, the timezone returned by date_default_timezone_get() is used
         timezone: null
@@ -19,4 +19,4 @@ twig:
     number_format:
         decimals: 0
         decimal_point: .
-        thousands_separator: ","
+        thousands_separator: ','

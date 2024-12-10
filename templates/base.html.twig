@@ -1,51 +1,15 @@
-{##################################################################################
- #  @Project    KYG Framework for business
- #  @Version    1.0.0
- #
- #  @Copyright  (C) 2027 Kataev Yaroslav Georgievich
- #  @E-mail     yaroslaw74@gmail.com
- #  @License    GNU General Public License version 3 or later, see LICENSE.md
- ##################################################################################}
 <!DOCTYPE html>
-<html lang="{{ app.locale }}" data-bs-theme="auto" dir="{{ locale_dir(app.locale) }}>
+<html>
     <head>
         <meta charset="UTF-8">
-        <meta name="robots" content="noindex, nofollow">
-        <meta name="autor" content="Kataev Yaroslav Georgievich">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="msapplication-TileColor" content="#526cf7">
-        <meta name="msapplication-TileImage" content="{{ asset ('images/ico/kyg-270X270.png')}}">
-        <title>{% block title %}{{ app_name }}{% endblock %}</title>
-        <link rel="icon" href="{{ asset('favicon.ico') }}">
-        <link rel="icon" sizes="96x96" href="{{ asset('images/ico/kyg-96X96.png') }}">
-        <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/ico/kyg-57X57.png') }}">
-        <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('images/ico/kyg-60X60.png') }}">
-        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/ico/kyg-72X72.png') }}">
-        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images/ico/kyg-76X76.png') }}">
-        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/ico/kyg-114X114.png') }}">
-        <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('images/ico/kyg-120X120.png') }}">
-        <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('images/ico/kyg-144X144.png') }}">
-        <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('images/ico/kyg-152X152.png') }}">
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/ico/kyg-180X180.png') }}">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('bootstrap-icons/font/bootstrap-icons.min.css') }}">
-            <link rel="stylesheet" href="{{ asset('font-awesome/css/svg-with-js.min.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/button.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         {% endblock %}
+
         {% block javascripts %}
-            {% block importmap %}{{ importmap(['app', locale_dir(app.locale)]) }}{% endblock %}
-            <script src="{{ asset('font-awesome/js/all.min.js') }}"></script>
-            <script src="{{ asset('js/color-modes.js') }}"></script>
-            <script src="{{ asset('js/main.js') }}"></script>
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
-        <!-- =======================================================
-        * Template Name: NiceAdmin
-        * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-        * Updated: Apr 20 2024 with Bootstrap v5.3.3
-        * Author: BootstrapMade.com
-        * License: https://bootstrapmade.com/license/
-        ======================================================== -->
     </head>
     <body>
         {% block body %}{% endblock %}

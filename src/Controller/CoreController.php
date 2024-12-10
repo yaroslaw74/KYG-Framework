@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-class HomeController extends AbstractController
+class CoreController extends AbstractController
 {
     #[Route('/', name: 'index')]
     public function index(): RedirectResponse
@@ -25,6 +25,8 @@ class HomeController extends AbstractController
     #[Route('/app/home', name: 'app_home')]
     public function home(): Response
     {
-        return $this->render('home/index.html.twig', []);
+        return $this->render('core/index.html.twig', [
+            'controller_name' => 'CoreController',
+        ]);
     }
 }

@@ -1,12 +1,12 @@
 @charset "utf-8";
 /* CSS Document */
 
-.bi {
+.color_mode_toggler .bi {
 	vertical-align: -.125em;
 	fill: currentColor;
 }
 
-.btn-bd-primary {
+.color_mode_toggler .btn-bd-primary {
 	--bd-violet-bg: #712cf9;
 	--bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 	--bs-btn-font-weight: 600;
@@ -22,10 +22,10 @@
 	--bs-btn-active-border-color: #5a23c8;
 }
 
-.bd-mode-toggle {
+.color_mode_toggler .bd-mode-toggle {
 	z-index: 1500;
 }
 
-.bd-mode-toggle .dropdown-menu .active .bi {
+.color_mode_toggler .bd-mode-toggle .dropdown-menu .active .bi {
 	display: block !important;
 }

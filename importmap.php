@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Returns the importmap for this application.
  *
@@ -24,45 +23,25 @@ return [
         'path' => './assets/rtl.js',
         'entrypoint' => true,
     ],
-    '@symfony/stimulus-bundle' => [
-        'path' => './vendor/symfony/stimulus-bundle/assets/dist/loader.js',
-    ],
-    '@symfony/ux-live-component' => [
-        'path' => './vendor/symfony/ux-live-component/assets/dist/live_controller.js',
-    ],
     '@hotwired/stimulus' => [
         'version' => '3.2.2',
     ],
     '@hotwired/turbo' => [
-        'version' => '8.0.12',
+        'version' => '7.3.0',
     ],
-    'chart.js' => [
-        'version' => '4.4.6',
+    '@orchidjs/sifter' => [
+        'version' => '1.1.0',
     ],
-    'cropperjs' => [
-        'version' => '1.6.2',
+    '@orchidjs/unicode-variants' => [
+        'version' => '1.1.2',
     ],
-    'cropperjs/dist/cropper.min.css' => [
-        'version' => '1.6.2',
-        'type' => 'css',
+    '@popperjs/core' => [
+        'version' => '2.11.8',
     ],
-    '@kurkle/color' => [
-        'version' => '0.3.2',
-    ],
-    'tom-select' => [
-        'version' => '2.3.1',
-    ],
-    'tom-select/dist/css/tom-select.default.css' => [
-        'version' => '2.3.1',
-        'type' => 'css',
-    ],
-    'typed.js' => [
-        'version' => '2.1.0',
+    '@swup/debug-plugin' => [
+        'version' => '3.0.0',
     ],
     '@swup/fade-theme' => [
-        'version' => '1.0.5',
-    ],
-    '@swup/slide-theme' => [
         'version' => '1.0.5',
     ],
     '@swup/forms-plugin' => [
@@ -71,26 +50,17 @@ return [
     '@swup/plugin' => [
         'version' => '2.0.3',
     ],
-    'swup' => [
-        'version' => '3.1.1',
+    '@swup/slide-theme' => [
+        'version' => '1.0.5',
     ],
-    'delegate-it' => [
-        'version' => '6.0.1',
+    '@symfony/stimulus-bundle' => [
+        'path' => './vendor/symfony/stimulus-bundle/assets/dist/loader.js',
     ],
-    '@swup/debug-plugin' => [
-        'version' => '3.0.0',
-    ],
-    '@swup/theme' => [
-        'version' => '2.1.0',
-    ],
-    'path-to-regexp' => [
-        'version' => '8.2.0',
+    '@symfony/ux-live-component' => [
+        'path' => './vendor/symfony/ux-live-component/assets/dist/live_controller.js',
     ],
     'bootstrap' => [
         'version' => '5.3.3',
-    ],
-    '@popperjs/core' => [
-        'version' => '2.11.8',
     ],
     'bootstrap/dist/css/bootstrap.min.css' => [
         'version' => '5.3.3',
@@ -99,5 +69,31 @@ return [
     'bootstrap/dist/css/bootstrap.rtl.min.css' => [
         'version' => '5.3.3',
         'type' => 'css',
+    ],
+    'chart.js' => [
+        'version' => '3.9.1',
+    ],
+    'cropperjs' => [
+        'version' => '1.6.2',
+    ],
+    'cropperjs/dist/cropper.min.css' => [
+        'version' => '1.6.2',
+        'type' => 'css',
+    ],
+    'delegate-it' => [
+        'version' => '6.0.1',
+    ],
+    'swup' => [
+        'version' => '3.1.1',
+    ],
+    'tom-select' => [
+        'version' => '2.4.1',
+    ],
+    'tom-select/dist/css/tom-select.default.css' => [
+        'version' => '2.4.1',
+        'type' => 'css',
+    ],
+    'typed.js' => [
+        'version' => '2.1.0',
     ],
 ];
