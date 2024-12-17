@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file original="file.ext" source-language="en" target-language="ru" datatype="plaintext">
+        <body>
+            <trans-unit id="1">
+                <source>Toggle theme (auto)</source>
+                <target>Переключить тему (авто)</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>Toggle theme</source>
+                <target>Переключить тему</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>Light</source>
+                <target>Светлая</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>Dark</source>
+                <target>Темная</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>Auto</source>
+                <target>Авто</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
