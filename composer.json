@@ -1,0 +1,274 @@
+{
+    "name": "yaroslaw74/kyg-framework",
+    "description": "KYG Framework for Business",
+    "type": "project",
+    "license": [
+        "GPL-3.0-or-later",
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "Kataev Yaroslav Georgievich",
+            "email": "yaroslaw74@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "yaroslaw74@gmail.com",
+        "issues": "https://github.com/yaroslaw74/KYG-Framework/issues",
+        "forum": "https://github.com/yaroslaw74/KYG-Framework/discussions",
+        "wiki": "https://github.com/yaroslaw74/KYG-Framework/wiki",
+        "source": "https://github.com/yaroslaw74/KYG-Framework",
+        "security": "https://github.com/yaroslaw74/KYG-Framework/security"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.2",
+        "ext-ctype": "*",
+        "ext-curl": "*",
+        "ext-dom": "*",
+        "ext-fileinfo": "*",
+        "ext-filter": "*",
+        "ext-iconv": "*",
+        "ext-intl": "*",
+        "ext-json": "*",
+        "ext-libxml": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "ext-simplexml": "*",
+        "ext-sodium": "*",
+        "ext-xml": "*",
+        "ext-xsl": "*",
+        "ext-zip": "*",
+        "doctrine/dbal": "^3.9.3",
+        "doctrine/doctrine-bundle": "^2.13.1",
+        "doctrine/doctrine-migrations-bundle": "^3.3.1",
+        "doctrine/orm": "^3.3.1",
+        "fortawesome/font-awesome": "^6.7.2",
+        "liborm85/composer-vendor-cleaner": "^1.7.1",
+        "liip/imagine-bundle": "^2.13.3",
+        "mnsami/composer-custom-directory-installer": "^2.0",
+        "phpdocumentor/reflection-docblock": "^5.6.1",
+        "phpstan/phpdoc-parser": "^2.0",
+        "shivas/versioning-bundle": "^4.1.1",
+        "stof/doctrine-extensions-bundle": "^1.12",
+        "symfony/apache-pack": "^1.0.1",
+        "symfony/asset": "7.2.*",
+        "symfony/asset-mapper": "7.2.*",
+        "symfony/cache": "7.2.*",
+        "symfony/clock": "7.2.*",
+        "symfony/config": "7.2.*",
+        "symfony/console": "7.2.*",
+        "symfony/css-selector": "7.2.*",
+        "symfony/dependency-injection": "7.2.*",
+        "symfony/doctrine-bridge": "7.2.*",
+        "symfony/doctrine-messenger": "7.2.*",
+        "symfony/dotenv": "7.2.*",
+        "symfony/emoji": "7.2.*",
+        "symfony/error-handler": "7.2.*",
+        "symfony/event-dispatcher": "7.2.*",
+        "symfony/expression-language": "7.2.*",
+        "symfony/filesystem": "7.2.*",
+        "symfony/finder": "7.2.*",
+        "symfony/flex": "^2.4.7",
+        "symfony/form": "7.2.*",
+        "symfony/framework-bundle": "7.2.*",
+        "symfony/http-client": "7.2.*",
+        "symfony/http-foundation": "7.2.*",
+        "symfony/http-kernel": "7.2.*",
+        "symfony/intl": "7.2.*",
+        "symfony/lock": "7.2.*",
+        "symfony/mailer": "7.2.*",
+        "symfony/messenger": "7.2.*",
+        "symfony/mime": "7.2.*",
+        "symfony/monolog-bridge": "7.2.*",
+        "symfony/monolog-bundle": "^3.10",
+        "symfony/notifier": "7.2.*",
+        "symfony/options-resolver": "7.2.*",
+        "symfony/password-hasher": "7.2.*",
+        "symfony/process": "7.2.*",
+        "symfony/property-access": "7.2.*",
+        "symfony/property-info": "7.2.*",
+        "symfony/rate-limiter": "7.2.*",
+        "symfony/routing": "7.2.*",
+        "symfony/runtime": "7.2.*",
+        "symfony/scheduler": "7.2.*",
+        "symfony/security-bundle": "7.2.*",
+        "symfony/security-core": "7.2.*",
+        "symfony/security-csrf": "7.2.*",
+        "symfony/security-http": "7.2.*",
+        "symfony/serializer": "7.2.*",
+        "symfony/stimulus-bundle": "^2.22.1",
+        "symfony/stopwatch": "7.2.*",
+        "symfony/string": "7.2.*",
+        "symfony/thanks": "^1.4",
+        "symfony/translation": "7.2.*",
+        "symfony/twig-bridge": "7.2.*",
+        "symfony/twig-bundle": "7.2.*",
+        "symfony/type-info": "7.2.*",
+        "symfony/uid": "7.2.*",
+        "symfony/ux-icons": "^2.22.1",
+        "symfony/ux-toggle-password": "^2.22.1",
+        "symfony/ux-turbo": "^2.22.1",
+        "symfony/ux-twig-component": "^2.22.1",
+        "symfony/validator": "7.2.*",
+        "symfony/var-dumper": "7.2.*",
+        "symfony/var-exporter": "7.2.*",
+        "symfony/web-link": "7.2.*",
+        "symfony/webhook": "7.2.*",
+        "symfony/workflow": "7.2.*",
+        "symfony/yaml": "7.2.*",
+        "symfonycasts/reset-password-bundle": "^1.23.1",
+        "symfonycasts/verify-email-bundle": "^1.17.3",
+        "twbs/bootstrap-icons": "^1.11.3",
+        "twig/cssinliner-extra": "^3.17",
+        "twig/extra-bundle": "^3.17",
+        "twig/inky-extra": "^3.17",
+        "twig/markdown-extra": "^3.17",
+        "twig/twig": "^3.17.1",
+        "vich/uploader-bundle": "^2.5"
+    },
+    "config": {
+        "allow-plugins": {
+            "liborm85/composer-vendor-cleaner": true,
+            "mnsami/composer-custom-directory-installer": true,
+            "php-http/discovery": true,
+            "symfony/flex": true,
+            "symfony/runtime": true,
+            "symfony/thanks": true
+        },
+        "bump-after-update": true,
+        "sort-packages": true,
+        "dev-files": {
+            "match-case": false,
+            "no-dev-only": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "App\\Modules\\": "modules/",
+            "App\\Additions\\": "public/additions/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php72": "*",
+        "symfony/polyfill-php73": "*",
+        "symfony/polyfill-php74": "*",
+        "symfony/polyfill-php80": "*",
+        "symfony/polyfill-php81": "*",
+        "symfony/polyfill-php82": "*"
+    },
+    "suggest": {
+        "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+        "ext-exif": "to read EXIF metadata",
+        "ext-gd": "to use the GD implementation",
+        "ext-gmagick": "to use the Gmagick implementation",
+        "ext-imagick": "to use the Imagick implementation",
+        "ext-pcov": "PHP extension that provides line coverage",
+        "ext-sockets": "Allow sending log messages to a Syslog server (via UDP driver)",
+        "ext-xdebug": "PHP extension that provides line coverage as well as branch and path coverage",
+        "ext-uuid": "For best performance"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "cache:warmup": "symfony-cmd",
+            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
+            "importmap:install": "symfony-cmd",
+            "importmap:update": "symfony-cmd"
+        },
+        "post-install-cmd": [
+            "@php composer.php",
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@php composer.php",
+            "@auto-scripts"
+        ]
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "7.2.*"
+        },
+        "installer-paths": {
+            "./public/{$name}": [
+                "fortawesome/font-awesome",
+                "twbs/bootstrap-icons"
+            ]
+        },
+        "dev-files": {
+            "*/*": [
+                ".github/",
+                "tests/",
+                "docs/",
+                ".gitattributes",
+                ".gitignore"
+            ],
+            "fortawesome/font-awesome": [
+                "js-packages/",
+                "less/",
+                "metadata/",
+                "otfs/",
+                "scss/",
+                "sprites/",
+                "svgs/",
+                "webfonts/",
+                "*/brands.*",
+                "*/fontawesome.*",
+                "*/regular.*",
+                "*/solid.*",
+                "*/v4-font-face.*",
+                "*/v4-shims.*",
+                "*/v5-font-face.*",
+                "*/conflict-detection.*",
+                "css/all.*",
+                "css/svg-with-js.css",
+                "js/all.js"
+            ],
+            "twbs/bootstrap-icons": [
+                "build/",
+                ".*",
+                "hugo.yml",
+                "package.js",
+                "package.json",
+                "package-lock.json",
+                "icons/",
+                "font/*.json",
+                "font/*.scss",
+                "font/bootstrap-icons.css",
+                "bootstrap-icons.svg",
+                "svgo.config.mjs",
+                "svg-sprite.json"
+            ]
+        }
+    },
+    "require-dev": {
+        "ext-tokenizer": "*",
+        "ext-xmlwriter": "*",
+        "erusev/parsedown": "^1.7.4",
+        "friendsofphp/php-cs-fixer": "^3.65",
+        "league/commonmark": "^2.6",
+        "michelf/php-markdown": "^2.0",
+        "nikic/php-parser": "^5.3.1",
+        "phpunit/phpunit": "^11.5.2",
+        "symfony/browser-kit": "7.2.*",
+        "symfony/debug-bundle": "7.2.*",
+        "symfony/dom-crawler": "7.2.*",
+        "symfony/maker-bundle": "^1.61",
+        "symfony/phpunit-bridge": "^7.2",
+        "symfony/web-profiler-bundle": "7.2.*"
+    }
+}
