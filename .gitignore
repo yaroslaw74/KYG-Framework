@@ -33,9 +33,7 @@
 
 ###> symfony/public ###
 /public/additions/
-/public/bootstrap-icons/
 /public/config/
-/public/font-awesome/
 /public/media/
 /public/translations/
 /public/uploads/

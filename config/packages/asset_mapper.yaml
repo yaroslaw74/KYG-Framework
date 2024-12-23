@@ -4,3 +4,4 @@ framework:
         paths:
             - assets/
         missing_import_mode: strict
+        importmap_polyfill: 'es-module-shims'

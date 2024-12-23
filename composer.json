@@ -45,10 +45,7 @@
         "doctrine/doctrine-bundle": "^2.13.1",
         "doctrine/doctrine-migrations-bundle": "^3.3.1",
         "doctrine/orm": "^3.3.1",
-        "fortawesome/font-awesome": "^6.7.2",
-        "liborm85/composer-vendor-cleaner": "^1.7.1",
         "liip/imagine-bundle": "^2.13.3",
-        "mnsami/composer-custom-directory-installer": "^2.0",
         "phpdocumentor/reflection-docblock": "^5.6.1",
         "phpstan/phpdoc-parser": "^2.0",
         "shivas/versioning-bundle": "^4.1.1",
@@ -121,7 +118,6 @@
         "symfony/yaml": "7.2.*",
         "symfonycasts/reset-password-bundle": "^1.23.1",
         "symfonycasts/verify-email-bundle": "^1.17.3",
-        "twbs/bootstrap-icons": "^1.11.3",
         "twig/cssinliner-extra": "^3.17",
         "twig/extra-bundle": "^3.17",
         "twig/inky-extra": "^3.17",
@@ -131,19 +127,15 @@
     },
     "config": {
         "allow-plugins": {
-            "liborm85/composer-vendor-cleaner": true,
-            "mnsami/composer-custom-directory-installer": true,
             "php-http/discovery": true,
             "symfony/flex": true,
             "symfony/runtime": true,
             "symfony/thanks": true
         },
+        "apcu-autoloader": true,
+        "optimize-autoloader": true,
         "bump-after-update": true,
-        "sort-packages": true,
-        "dev-files": {
-            "match-case": false,
-            "no-dev-only": true
-        }
+        "sort-packages": true
     },
     "autoload": {
         "psr-4": {
@@ -184,7 +176,8 @@
             "cache:warmup": "symfony-cmd",
             "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
             "importmap:install": "symfony-cmd",
-            "importmap:update": "symfony-cmd"
+            "importmap:update": "symfony-cmd",
+            "asset-map:compile": "symfony-cmd"
         },
         "post-install-cmd": [
             "@php composer.php",
@@ -202,57 +195,6 @@
         "symfony": {
             "allow-contrib": false,
             "require": "7.2.*"
-        },
-        "installer-paths": {
-            "./public/{$name}": [
-                "fortawesome/font-awesome",
-                "twbs/bootstrap-icons"
-            ]
-        },
-        "dev-files": {
-            "*/*": [
-                ".github/",
-                "tests/",
-                "docs/",
-                ".gitattributes",
-                ".gitignore"
-            ],
-            "fortawesome/font-awesome": [
-                "js-packages/",
-                "less/",
-                "metadata/",
-                "otfs/",
-                "scss/",
-                "sprites/",
-                "svgs/",
-                "webfonts/",
-                "*/brands.*",
-                "*/fontawesome.*",
-                "*/regular.*",
-                "*/solid.*",
-                "*/v4-font-face.*",
-                "*/v4-shims.*",
-                "*/v5-font-face.*",
-                "*/conflict-detection.*",
-                "css/all.*",
-                "css/svg-with-js.css",
-                "js/all.js"
-            ],
-            "twbs/bootstrap-icons": [
-                "build/",
-                ".*",
-                "hugo.yml",
-                "package.js",
-                "package.json",
-                "package-lock.json",
-                "icons/",
-                "font/*.json",
-                "font/*.scss",
-                "font/bootstrap-icons.css",
-                "bootstrap-icons.svg",
-                "svgo.config.mjs",
-                "svg-sprite.json"
-            ]
         }
     },
     "require-dev": {
