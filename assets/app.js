@@ -16,7 +16,7 @@ import './vendor/bootstrap-icons/font/bootstrap-icons.min.css';
 /*
 * Font Awesome
 */
-import './vendor/@fortawesome/fontawesome-free/css/svg-with-js.css';
+import './vendor/@fortawesome/fontawesome-free/css/svg-with-js.min.css';
 import './vendor/@fortawesome/fontawesome-free/js/all.min.js';
 
 console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');

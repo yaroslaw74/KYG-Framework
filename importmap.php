@@ -57,7 +57,7 @@ return [
     '@fortawesome/fontawesome-free/js/all.min.js' => [
         'version' => '6.7.2',
     ],
-    '@fortawesome/fontawesome-free/css/svg-with-js.css' => [
+    '@fortawesome/fontawesome-free/css/svg-with-js.min.css' => [
         'version' => '6.7.2',
         'type' => 'css',
     ],
