@@ -105,6 +105,9 @@
         "symfony/twig-bundle": "7.2.*",
         "symfony/type-info": "7.2.*",
         "symfony/uid": "7.2.*",
+        "symfony/ux-autocomplete": "^2.22.1",
+        "symfony/ux-cropperjs": "^2.22.1",
+        "symfony/ux-dropzone": "^2.22.1",
         "symfony/ux-icons": "^2.22.1",
         "symfony/ux-toggle-password": "^2.22.1",
         "symfony/ux-turbo": "^2.22.1",
@@ -176,8 +179,7 @@
             "cache:warmup": "symfony-cmd",
             "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
             "importmap:install": "symfony-cmd",
-            "importmap:update": "symfony-cmd",
-            "asset-map:compile": "symfony-cmd"
+            "importmap:update": "symfony-cmd"
         },
         "post-install-cmd": [
             "@php composer.php",
