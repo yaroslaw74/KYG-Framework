@@ -34,6 +34,50 @@
                 <source>Hide password</source>
                 <target>Hide password</target>
             </trans-unit>
+            <trans-unit id="9">
+                <source>Reset your password</source>
+                <target>Reset your password</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>Reset password</source>
+                <target>Reset password</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>Enter your email address, and we will send you a link to reset your password.</source>
+                <target>Enter your email address, and we will send you a link to reset your password.</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>Send password reset email</source>
+                <target>Send password reset email</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.</source>
+                <target>If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>This link will expire in</source>
+                <target>This link will expire in</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>If you don't receive an email please check your spam folder or</source>
+                <target>If you don't receive an email please check your spam folder or</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>try again</source>
+                <target>try again</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>Hi!</source>
+                <target>Hi!</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>To reset your password, please visit the following link</source>
+                <target>To reset your password, please visit the following link</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>Cheers!</source>
+                <target>Cheers!</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
