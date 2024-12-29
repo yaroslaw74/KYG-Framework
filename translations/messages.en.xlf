@@ -30,6 +30,30 @@
                 <source>The password fields must match.</source>
                 <target>The password fields must match.</target>
             </trans-unit>
+            <trans-unit id="8">
+                <source>Username</source>
+                <target>Username</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>Password</source>
+                <target>Password</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>Show password</source>
+                <target>Show password</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>Hide password</source>
+                <target>Hide password</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>Agree terms</source>
+                <target>Agree terms</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>You should agree to our terms.</source>
+                <target>You should agree to our terms.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
