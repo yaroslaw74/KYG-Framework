@@ -17,11 +17,3 @@
 /public/assets/
 /assets/vendor/
 ###< symfony/asset-mapper ###
-
-###> symfony/migrations ###
-/migrations/*.php
-###< symfony/migrations ###
-
-###> public/additions ###
-/public/additions/*/*
-###< public/additions ###
