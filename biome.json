@@ -3,6 +3,9 @@
         "includes": [
             "**",
             "!assets/controllers/csrf_protection_controller.js",
+            "!assets/fonts/*",
+            "!assets/icon-fonts/*",
+            "!assets/images/*",
             "!assets/vendor/*",
             "!assets/controllers.json",
             "!public/assets/*",
