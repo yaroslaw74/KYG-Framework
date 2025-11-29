@@ -16,4 +16,5 @@ return [
     Kocal\BiomeJsBundle\KocalBiomeJsBundle::class => ['dev' => true],
     Jawira\DoctrineDiagramBundle\DoctrineDiagramBundle::class => ['dev' => true, 'test' => true],
     DAMA\DoctrineTestBundle\DAMADoctrineTestBundle::class => ['test' => true],
+    Spatie\SymfonyIgnitionBundle\IgnitionBundle::class => ['dev' => true],
 ];
