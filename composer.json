@@ -142,6 +142,7 @@
         }
     },
     "require-dev": {
+        "dama/doctrine-test-bundle": "^8.4",
         "friendsofphp/php-cs-fixer": "^3.91",
         "jawira/doctrine-diagram-bundle": "^1.1",
         "kocal/biome-js-bundle": "^2.1.1",
