@@ -123,9 +123,11 @@
             "importmap:install": "symfony-cmd"
         },
         "post-install-cmd": [
+            "@php composer.php",
             "@auto-scripts"
         ],
         "post-update-cmd": [
+            "@php composer.php",
             "@auto-scripts"
         ]
     },
@@ -139,7 +141,8 @@
         }
     },
     "require-dev": {
-        "kocal/biome-js-bundle": "^2.1",
+        "friendsofphp/php-cs-fixer": "^3.91",
+        "kocal/biome-js-bundle": "^2.1.1",
         "phpunit/phpunit": "^12.4.4",
         "symfony/browser-kit": "7.4.*",
         "symfony/css-selector": "7.4.*",
