@@ -64,6 +64,20 @@ opacity
 typography
 */
 
+/* FONT */
+/* Roboto */
+@font-face {
+    font-family: Roboto;
+    src: url("../fonts/Roboto-VariableFont.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../fonts/Roboto-Italic-VariableFont.ttf");
+    font-style: italic;
+}
+
 @import "variables";
 @import "switcher";
 
