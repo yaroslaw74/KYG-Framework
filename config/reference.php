@@ -1489,6 +1489,12 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *         server?: scalar|null, // Default: "http://www.plantuml.com/plantuml"
  *     },
  * }
+ * @psalm-type IgnitionConfig = array{
+ *     application_path?: scalar|null, // When setting the application path, Ignition will trim the given value from all paths. This will make the error page look cleaner. // Default: ""
+ *     dark_mode?: bool, // By default, Ignition uses a nice white based theme. If this is too bright for your eyes, you can use dark mode. // Default: false
+ *     should_display_exception?: bool, // Avoid rendering Ignition, for example in production environments. // Default: "%kernel.debug%"
+ *     openai_key?: scalar|null, // if you want AI solutions to your app's errors. // Default: ""
+ * }
  * @psalm-type DamaDoctrineTestConfig = array{
  *     enable_static_connection?: mixed, // Default: true
  *     enable_static_meta_data_cache?: bool, // Default: true
@@ -1528,6 +1534,7 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *         maker?: MakerConfig,
  *         kocal_biome_js?: KocalBiomeJsConfig,
  *         doctrine_diagram?: DoctrineDiagramConfig,
+ *         ignition?: IgnitionConfig,
  *     },
  *     "when@test"?: array{
  *         imports?: ImportsConfig,
