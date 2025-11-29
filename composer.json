@@ -139,6 +139,7 @@
         }
     },
     "require-dev": {
+        "kocal/biome-js-bundle": "^2.1",
         "phpunit/phpunit": "^12.4.4",
         "symfony/browser-kit": "7.4.*",
         "symfony/css-selector": "7.4.*",
