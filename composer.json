@@ -65,6 +65,7 @@
         "symfony/validator": "7.4.*",
         "symfony/web-link": "7.4.*",
         "symfony/yaml": "7.4.*",
+        "symfonycasts/sass-bundle": "^0.8.3",
         "twig/cssinliner-extra": "^3.22",
         "twig/extra-bundle": "^3.22.1",
         "twig/inky-extra": "^3.22",
