@@ -21,7 +21,8 @@
                     }
                     .desktop-dark,
                     .desktop-logo,
-                    .desktop-white,.toggle-white {
+                    .desktop-white,
+                    .toggle-white {
                         display: none !important;
                     }
                 }
@@ -55,7 +56,6 @@
             }
             .simplebar-mask {
                 position: inherit;
-                
             }
             .simplebar-placeholder {
                 height: auto !important;
@@ -109,7 +109,8 @@
                     inset-block-start: 0.65rem;
                 }
             }
-            &.child2,&.child3 {
+            &.child2,
+            &.child3 {
                 min-width: 10rem;
             }
             &.child2 .side-menu__item {
@@ -152,8 +153,10 @@
             &[data-menu-styles="dark"] {
                 .app-sidebar .main-sidebar-header {
                     .header-logo {
-                        .desktop-logo,.desktop-dark,.toggle-logo {
-                            display:none !important;
+                        .desktop-logo,
+                        .desktop-dark,
+                        .toggle-logo {
+                            display: none !important;
                         }
                         .toggle-white {
                             display: block !important;
@@ -161,11 +164,15 @@
                     }
                 }
             }
-            &[data-menu-styles="color"],&[data-menu-styles="gradient"] {
+            &[data-menu-styles="color"],
+            &[data-menu-styles="gradient"] {
                 .app-sidebar .main-sidebar-header {
                     .header-logo {
-                        .desktop-logo,.desktop-dark,.toggle-logo,.desktop-white {
-                            display:none !important;
+                        .desktop-logo,
+                        .desktop-dark,
+                        .toggle-logo,
+                        .desktop-white {
+                            display: none !important;
                         }
                         .toggle-white {
                             display: block !important;
@@ -177,7 +184,10 @@
         &[data-theme-mode="dark"] {
             .app-sidebar .main-sidebar-header {
                 .header-logo {
-                    .desktop-logo,.desktop-dark,.toggle-logo,.desktop-white {
+                    .desktop-logo,
+                    .desktop-dark,
+                    .toggle-logo,
+                    .desktop-white {
                         display: none !important;
                     }
                     .toggle-white {
@@ -188,14 +198,17 @@
             &[data-menu-styles="light"] {
                 .app-sidebar .main-sidebar-header {
                     .header-logo {
-                        .desktop-logo,.desktop-dark,.desktop-white,.toggle-white {
+                        .desktop-logo,
+                        .desktop-dark,
+                        .desktop-white,
+                        .toggle-white {
                             display: none !important;
                         }
                         .toggle-logo {
                             display: block !important;
                         }
                     }
-                }   
+                }
             }
             &[data-page-style="classic"] {
                 .slide.has-sub .slide-menu {
@@ -204,7 +217,7 @@
             }
         }
         &[data-toggled="double-menu-close"] {
-            .app-header{
+            .app-header {
                 padding-inline-start: 5rem;
             }
             .app-content {
