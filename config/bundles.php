@@ -19,4 +19,5 @@ return [
     Spatie\SymfonyIgnitionBundle\IgnitionBundle::class => ['dev' => true],
     Symfonycasts\SassBundle\SymfonycastsSassBundle::class => ['all' => true],
     Symfony\UX\Icons\UXIconsBundle::class => ['all' => true],
+    Symfony\UX\TogglePassword\TogglePasswordBundle::class => ['all' => true],
 ];
