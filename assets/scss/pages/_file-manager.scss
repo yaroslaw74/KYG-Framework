@@ -24,9 +24,10 @@
             position: relative;
             color: $primary !important;
         }
-        &.active, &:hover {
+        &.active,
+        &:hover {
             background-color: transparent;
-          }
+        }
         padding: 0;
         height: 38px;
         color: $gray-7;
@@ -64,7 +65,7 @@
     width: 70px;
     height: 70px;
 }
-[dir="rtl"]{
+[dir="rtl"] {
     .file-details-card {
         direction: rtl;
     }
