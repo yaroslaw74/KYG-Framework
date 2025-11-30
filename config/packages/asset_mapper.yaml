@@ -3,7 +3,7 @@ framework:
         # The paths to make available to the asset mapper.
         paths:
             - assets/
-            - public/storage/theme/
+            - public/theme/
         missing_import_mode: strict
         excluded_patterns:
             - '**/assets/scss/_*.scss'
