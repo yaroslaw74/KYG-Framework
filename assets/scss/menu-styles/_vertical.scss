@@ -30,7 +30,7 @@
     inset-block-start: 0;
     inset-inline-start: 0;
     z-index: 103;
-    transition: all .05s ease;
+    transition: all 0.05s ease;
     .main-sidebar-header {
         width: 15rem;
         height: 4rem;
@@ -43,7 +43,7 @@
         padding: 0.9375rem 1.25rem;
         border-inline-end: 1px solid $menu-border-color;
         border-block-end: 1px solid $menu-border-color;
-        transition: all .05s ease;
+        transition: all 0.05s ease;
         .header-logo {
             img {
                 height: 2rem;
@@ -53,7 +53,9 @@
                 display: block;
             }
             .desktop-dark,
-            .toggle-logo,.desktop-white,.toggle-white {
+            .toggle-logo,
+            .desktop-white,
+            .toggle-white {
                 display: none;
             }
         }
@@ -89,7 +91,8 @@
         &.active,
         &:hover {
             color: $primary;
-            .side-menu__label,.side-menu__angle {
+            .side-menu__label,
+            .side-menu__angle {
                 color: $primary;
             }
             .side-menu__icon {
@@ -104,10 +107,12 @@
             background: $primary;
             position: absolute;
             inset-inline-start: 0;
-          }
+        }
     }
     .slide-menu {
-        &.child1,&.child2,&.child3 {
+        &.child1,
+        &.child2,
+        &.child3 {
             .side-menu__item.active {
                 background-color: transparent;
             }
@@ -199,7 +204,7 @@
         inset-inline-end: 1.2rem;
         font-size: 0.85rem;
         color: $menu-prime-color;
-        transition: all .05s ease;
+        transition: all 0.05s ease;
     }
     .slide.side-menu__label1 {
         display: none;
@@ -234,7 +239,7 @@
         }
     }
 }
-@media (min-width:992px) {
+@media (min-width: 992px) {
     [data-toggled="open"] {
         .page {
             position: absolute;
@@ -247,7 +252,10 @@
 @media (max-width: 991.98px) {
     .horizontal-logo {
         .header-logo {
-            .desktop-logo,.desktop-dark,.desktop-white,.toggle-white {
+            .desktop-logo,
+            .desktop-dark,
+            .desktop-white,
+            .toggle-white {
                 display: none;
             }
             .toggle-logo {
@@ -273,7 +281,7 @@
 .slide-right {
     display: none;
 }
-[data-nav-layout = "vertical"] {
+[data-nav-layout="vertical"] {
     .slide.has-sub {
         &.active {
             > .side-menu__item {
@@ -282,7 +290,7 @@
         }
     }
 }
-@media (min-width:992px) {
+@media (min-width: 992px) {
     .horizontal-logo {
         display: none;
     }
@@ -308,15 +316,15 @@
 }
 /* Responsive Overlay End */
 @media (min-width: 992px) {
-[data-toggled=icon-click-closed],
-[data-toggled=icon-hover-closed],
-[data-toggled=icon-text-close], 
-[data-toggled=menu-click-closed],
-[data-toggled=menu-hover-closed] {
+    [data-toggled="icon-click-closed"],
+    [data-toggled="icon-hover-closed"],
+    [data-toggled="icon-text-close"],
+    [data-toggled="menu-click-closed"],
+    [data-toggled="menu-hover-closed"] {
         .app-content {
             min-height: calc(100vh + 50rem);
         }
-    } 
+    }
 }
 
 .app-sidebar .slide-menu.child2 .side-menu__item {
@@ -326,7 +334,9 @@
 }
 [dir="rtl"] {
     .app-sidebar .slide-menu {
-        &.child1, &.child2, &.child3 {
+        &.child1,
+        &.child2,
+        &.child3 {
             .side-menu__item:before {
                 content: "\e92e";
             }
@@ -336,7 +346,7 @@
 
 @media (max-width: 991.98px) {
     .main-menu {
-        margin: 0!important;
+        margin: 0 !important;
     }
 }
 /* End:: vertical */
