@@ -11,7 +11,6 @@
 }
 /* End::basic sizes */
 
-
 /* Start::font sizes */
 // (1px-30px are linear, above 30px are step increment of 1)
 .fs-1 {
@@ -148,65 +147,65 @@
     color: $secondary !important;
     opacity: 1;
     &.text-opacity-75 {
-        color: rgba(var(--secondary-rgb),0.75) !important;
+        color: rgba(var(--secondary-rgb), 0.75) !important;
     }
     &.text-opacity-25 {
-        color: rgba(var(--secondary-rgb),0.25) !important;
+        color: rgba(var(--secondary-rgb), 0.25) !important;
     }
     &.text-opacity-50 {
-        color: rgba(var(--secondary-rgb),0.50) !important;
+        color: rgba(var(--secondary-rgb), 0.5) !important;
     }
 }
 .text-info {
     color: $info !important;
     opacity: 1;
     &.text-opacity-75 {
-        color: rgba(var(--info-rgb),0.75) !important;
+        color: rgba(var(--info-rgb), 0.75) !important;
     }
     &.text-opacity-25 {
-        color: rgba(var(--info-rgb),0.25) !important;
+        color: rgba(var(--info-rgb), 0.25) !important;
     }
     &.text-opacity-50 {
-        color: rgba(var(--info-rgb),0.50) !important;
+        color: rgba(var(--info-rgb), 0.5) !important;
     }
 }
 .text-success {
     color: $success !important;
     opacity: 1;
     &.text-opacity-75 {
-        color: rgba(var(--success-rgb),0.75) !important;
+        color: rgba(var(--success-rgb), 0.75) !important;
     }
     &.text-opacity-25 {
-        color: rgba(var(--success-rgb),0.25) !important;
+        color: rgba(var(--success-rgb), 0.25) !important;
     }
     &.text-opacity-50 {
-        color: rgba(var(--success-rgb),0.50) !important;
+        color: rgba(var(--success-rgb), 0.5) !important;
     }
 }
 .text-warning {
     color: $warning !important;
     opacity: 1;
     &.text-opacity-75 {
-        color: rgba(var(--warning-rgb),0.75) !important;
+        color: rgba(var(--warning-rgb), 0.75) !important;
     }
     &.text-opacity-25 {
-        color: rgba(var(--warning-rgb),0.25) !important;
+        color: rgba(var(--warning-rgb), 0.25) !important;
     }
     &.text-opacity-50 {
-        color: rgba(var(--warning-rgb),0.50) !important;
+        color: rgba(var(--warning-rgb), 0.5) !important;
     }
 }
 .text-danger {
     color: $danger !important;
     opacity: 1;
     &.text-opacity-75 {
-        color: rgba(var(--danger-rgb),0.75) !important;
+        color: rgba(var(--danger-rgb), 0.75) !important;
     }
     &.text-opacity-25 {
-        color: rgba(var(--danger-rgb),0.25) !important;
+        color: rgba(var(--danger-rgb), 0.25) !important;
     }
     &.text-opacity-50 {
-        color: rgba(var(--danger-rgb),0.50) !important;
+        color: rgba(var(--danger-rgb), 0.5) !important;
     }
 }
 .text-blue {
@@ -283,7 +282,6 @@
 //gray set ends
 /* End::text colors */
 
-
 /* Start::links */
 a {
     text-decoration: none;
@@ -300,49 +298,65 @@ a {
 /* Start::Colored Links */
 .link-primary {
     color: $primary !important;
-    &:hover,&:focus,&:active {
+    &:hover,
+    &:focus,
+    &:active {
         color: $primary !important;
     }
 }
 .link-secondary {
     color: $secondary !important;
-    &:hover,&:focus,&:active {
+    &:hover,
+    &:focus,
+    &:active {
         color: $secondary !important;
     }
 }
 .link-success {
     color: $success !important;
-    &:hover,&:focus,&:active {
+    &:hover,
+    &:focus,
+    &:active {
         color: $success !important;
     }
 }
 .link-danger {
     color: $danger !important;
-    &:hover,&:focus,&:active {
+    &:hover,
+    &:focus,
+    &:active {
         color: $danger !important;
     }
 }
 .link-warning {
     color: $warning !important;
-    &:hover,&:focus,&:active {
+    &:hover,
+    &:focus,
+    &:active {
         color: $warning !important;
     }
 }
 .link-info {
     color: $info !important;
-    &:hover,&:focus,&:active {
+    &:hover,
+    &:focus,
+    &:active {
         color: $info !important;
     }
 }
 .link-light {
     color: $light !important;
-    &:hover,&:focus,&:active {
+    &:hover,
+    &:focus,
+    &:active {
         color: $light !important;
     }
 }
 .link-dark {
     color: $dark !important;
-    &:hover,&:focus,&:active {
+    &:hover,
+    &:focus,
+    &:active {
         color: $dark !important;
     }
 }
@@ -356,150 +370,149 @@ a {
     border-radius: $default-radius;
     position: relative;
     &:before {
-      position: absolute;
-      content: "\f6b0";
-      font-family: bootstrap-icons !important;
-      width: 1.5rem;
-      height: 1.5rem;
-      font-size: 0.813rem;
-      font-weight: 600;
-      border: 1px solid $default-border;
-      background-color: $custom-white;
-      top: -0.875rem;
-      align-items: center;
-      display: flex;
-      padding: 0px;
-      justify-content: center;
-      border-radius: 3.125rem;
-      inset-inline-start: 50%;
-      box-shadow: 0px 0.25rem 1rem rgba(0, 0, 0, 0.1);
+        position: absolute;
+        content: "\f6b0";
+        font-family: bootstrap-icons !important;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.813rem;
+        font-weight: 600;
+        border: 1px solid $default-border;
+        background-color: $custom-white;
+        top: -0.875rem;
+        align-items: center;
+        display: flex;
+        padding: 0px;
+        justify-content: center;
+        border-radius: 3.125rem;
+        inset-inline-start: 50%;
+        box-shadow: 0px 0.25rem 1rem rgba(0, 0, 0, 0.1);
     }
-  }
-  .blockquote.custom-blockquote {
+}
+.blockquote.custom-blockquote {
     font-size: 0.85rem;
     font-weight: 600;
     padding: 1rem;
     border-radius: $default-radius;
     position: relative;
     &:before {
-      content: "\f6b0";
-      font-family: bootstrap-icons !important;
-      z-index: 0;
-      font-size: 4rem;
-      position: absolute;
-      inset-block-start: -1.5rem;
-      inset-inline-start: -0.25rem;
+        content: "\f6b0";
+        font-family: bootstrap-icons !important;
+        z-index: 0;
+        font-size: 4rem;
+        position: absolute;
+        inset-block-start: -1.5rem;
+        inset-inline-start: -0.25rem;
     }
-    .quote-icon{
-      width: 2.5rem;
-      height: 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 3.125rem;
-      position: absolute;
-      inset-block-start: -1rem;
-      inset-inline-end: -1rem;
-      background-color: $custom-white;
-      i {
-        font-size: 1.75rem;
-        font-weight: 500;
-      }
+    .quote-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3.125rem;
+        position: absolute;
+        inset-block-start: -1rem;
+        inset-inline-end: -1rem;
+        background-color: $custom-white;
+        i {
+            font-size: 1.75rem;
+            font-weight: 500;
+        }
     }
     &.primary {
-      background-color: $primary-01;
-      border-inline-start: 2px solid $primary;
-      border-block-start: 2px solid $primary;
-      .quote-icon i {
-        color: $primary;
-      } 
-      &:before {
-        color: $primary-01;
-      }
+        background-color: $primary-01;
+        border-inline-start: 2px solid $primary;
+        border-block-start: 2px solid $primary;
+        .quote-icon i {
+            color: $primary;
+        }
+        &:before {
+            color: $primary-01;
+        }
     }
     &.secondary {
-      background-color: rgba(var(--secondary-rgb),0.1);
-      border-inline-start: 2px solid $secondary;
-      border-block-start: 2px solid $secondary;
-      .quote-icon i {
-        color: $secondary;
-      } 
-      &:before {
-        color: rgba(var(--secondary-rgb),0.1);
-      }
+        background-color: rgba(var(--secondary-rgb), 0.1);
+        border-inline-start: 2px solid $secondary;
+        border-block-start: 2px solid $secondary;
+        .quote-icon i {
+            color: $secondary;
+        }
+        &:before {
+            color: rgba(var(--secondary-rgb), 0.1);
+        }
     }
     &.info {
-      background-color: rgba(var(--info-rgb),0.1);
-      border-inline-start: 2px solid $info;
-      border-block-start: 2px solid $info;
-      .quote-icon i {
-        color: $info;
-      } 
-      &:before {
-        color: rgba(var(--info-rgb),0.1);
-      }
+        background-color: rgba(var(--info-rgb), 0.1);
+        border-inline-start: 2px solid $info;
+        border-block-start: 2px solid $info;
+        .quote-icon i {
+            color: $info;
+        }
+        &:before {
+            color: rgba(var(--info-rgb), 0.1);
+        }
     }
     &.warning {
-      background-color: rgba(var(--warning-rgb),0.1);
-      border-inline-start: 2px solid $warning;
-      border-block-start: 2px solid $warning;
-      .quote-icon i {
-        color: $warning;
-      } 
-      &:before {
-        color: rgba(var(--warning-rgb),0.1);
-      }
+        background-color: rgba(var(--warning-rgb), 0.1);
+        border-inline-start: 2px solid $warning;
+        border-block-start: 2px solid $warning;
+        .quote-icon i {
+            color: $warning;
+        }
+        &:before {
+            color: rgba(var(--warning-rgb), 0.1);
+        }
     }
     &.success {
-      background-color: rgba(var(--success-rgb),0.1);
-      border-inline-start: 2px solid $success;
-      border-block-start: 2px solid $success;
-      .quote-icon i {
-        color: $success;
-      } 
-      &:before {
-        color: rgba(var(--success-rgb),0.1);
-      }
+        background-color: rgba(var(--success-rgb), 0.1);
+        border-inline-start: 2px solid $success;
+        border-block-start: 2px solid $success;
+        .quote-icon i {
+            color: $success;
+        }
+        &:before {
+            color: rgba(var(--success-rgb), 0.1);
+        }
     }
     &.danger {
-      background-color: rgba(var(--danger-rgb),0.1);
-      border-inline-start: 2px solid $danger;
-      border-block-start: 2px solid $danger;
-      .quote-icon i {
-        color: $danger;
-      } 
-      &:before {
-        color: rgba(var(--danger-rgb),0.1);
-      }
+        background-color: rgba(var(--danger-rgb), 0.1);
+        border-inline-start: 2px solid $danger;
+        border-block-start: 2px solid $danger;
+        .quote-icon i {
+            color: $danger;
+        }
+        &:before {
+            color: rgba(var(--danger-rgb), 0.1);
+        }
     }
-  }
-  /* End::Blockquote */
+}
+/* End::Blockquote */
 
-  /* Start::Shadows */
-  [data-theme-mode="dark"] {
+/* Start::Shadows */
+[data-theme-mode="dark"] {
     .shadow-sm {
-        box-shadow: 0 0.125rem 0.25rem rgba(33,37,41,0.3)!important;
+        box-shadow: 0 0.125rem 0.25rem rgba(33, 37, 41, 0.3) !important;
     }
     .shadow {
-        box-shadow: 0 0.5rem 1rem rgba(33,37,41,0.3)!important;
+        box-shadow: 0 0.5rem 1rem rgba(33, 37, 41, 0.3) !important;
     }
     .shadow-lg {
-        box-shadow: 0 1rem 3rem rgba(33,37,41,0.3)!important;
+        box-shadow: 0 1rem 3rem rgba(33, 37, 41, 0.3) !important;
     }
-  }
-  /* End::Shadows */
+}
+/* End::Shadows */
 
-  
-@media screen and (min-width:576px) {
+@media screen and (min-width: 576px) {
     .w-sm-auto {
-      width:auto !important;
+        width: auto !important;
     }
 }
 /* Start::Text Break */
 [dir="rtl"] {
     .text-break {
-        word-wrap: break-word!important;
-        word-break: break-word!important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
     }
 }
 /* End::Text Break */
