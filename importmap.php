@@ -102,4 +102,34 @@ return [
         'version' => '5.3.8',
         'type' => 'css',
     ],
+    '@symfony/ux-swup' => [
+        'version' => '2.31.0',
+    ],
+    '@swup/plugin' => [
+        'version' => '4.0.0',
+    ],
+    '@swup/debug-plugin' => [
+        'version' => '4.1.0',
+    ],
+    '@swup/fade-theme' => [
+        'version' => '2.0.2',
+    ],
+    '@swup/forms-plugin' => [
+        'version' => '3.6.0',
+    ],
+    '@swup/slide-theme' => [
+        'version' => '2.0.2',
+    ],
+    'swup' => [
+        'version' => '4.8.2',
+    ],
+    '@swup/theme' => [
+        'version' => '2.1.0',
+    ],
+    'delegate-it' => [
+        'version' => '6.3.0',
+    ],
+    'path-to-regexp' => [
+        'version' => '8.3.0',
+    ],
 ];
