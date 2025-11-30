@@ -8,7 +8,6 @@
     }
 }
 .custom-page {
-
     .header-logo {
         img {
             height: 2rem;
@@ -25,12 +24,14 @@
     color: $primary;
     letter-spacing: -1px;
 }
-.login, .image {
+.login,
+.image {
     min-height: 100vh;
 }
 
 @media (max-width: 767px) {
-    .main-signup-header, .main-card-signin {
+    .main-signup-header,
+    .main-card-signin {
         padding: 0;
         border: 1px solid $default-border;
         border-radius: 6px;
@@ -44,7 +45,7 @@
     color: $white;
     line-height: 1.75;
     border-radius: 3px;
-    vertical-align: middle!important;
+    vertical-align: middle !important;
 }
 
 .construction .btn.btn-icon {
