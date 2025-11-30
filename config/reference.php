@@ -1543,11 +1543,13 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *     doctrine?: DoctrineConfig,
  *     doctrine_migrations?: DoctrineMigrationsConfig,
  *     twig?: TwigConfig,
+ *     web_profiler?: WebProfilerConfig,
  *     stimulus?: StimulusConfig,
  *     turbo?: TurboConfig,
  *     twig_extra?: TwigExtraConfig,
  *     security?: SecurityConfig,
  *     monolog?: MonologConfig,
+ *     doctrine_diagram?: DoctrineDiagramConfig,
  *     symfonycasts_sass?: SymfonycastsSassConfig,
  *     ux_icons?: UxIconsConfig,
  *     "when@dev"?: array{
@@ -1569,22 +1571,6 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *         kocal_biome_js?: KocalBiomeJsConfig,
  *         doctrine_diagram?: DoctrineDiagramConfig,
  *         ignition?: IgnitionConfig,
- *         symfonycasts_sass?: SymfonycastsSassConfig,
- *         ux_icons?: UxIconsConfig,
- *     },
- *     "when@prod"?: array{
- *         imports?: ImportsConfig,
- *         parameters?: ParametersConfig,
- *         services?: ServicesConfig,
- *         framework?: FrameworkConfig,
- *         doctrine?: DoctrineConfig,
- *         doctrine_migrations?: DoctrineMigrationsConfig,
- *         twig?: TwigConfig,
- *         stimulus?: StimulusConfig,
- *         turbo?: TurboConfig,
- *         twig_extra?: TwigExtraConfig,
- *         security?: SecurityConfig,
- *         monolog?: MonologConfig,
  *         symfonycasts_sass?: SymfonycastsSassConfig,
  *         ux_icons?: UxIconsConfig,
  *     },
@@ -1687,7 +1673,6 @@ namespace Symfony\Component\Routing\Loader\Configurator;
  * }
  * @psalm-type RoutesConfig = array{
  *     "when@dev"?: array<string, RouteConfig|ImportConfig|AliasConfig>,
- *     "when@prod"?: array<string, RouteConfig|ImportConfig|AliasConfig>,
  *     "when@test"?: array<string, RouteConfig|ImportConfig|AliasConfig>,
  *     ...<string, RouteConfig|ImportConfig|AliasConfig>
  * }
