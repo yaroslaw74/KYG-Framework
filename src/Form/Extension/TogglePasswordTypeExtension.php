@@ -48,7 +48,7 @@ final class TogglePasswordTypeExtension extends AbstractTypeExtension
 
         $resolver->setNormalizer(
             'toggle_translation_domain',
-            static fn (Options $options, $labelTranslationDomain) => $labelTranslationDomain ?? $options['translation_domain']
+            static fn (Options $options, $labelTranslationDomain) => $labelTranslationDomain ?? $options['translation_domain'],
         );
 
         $resolver->setAllowedTypes('toggle', ['bool']);
