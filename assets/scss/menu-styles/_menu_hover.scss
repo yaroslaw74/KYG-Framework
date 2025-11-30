@@ -52,18 +52,22 @@
         }
         .app-sidebar {
             .slide .slide-menu {
-                &.child1,&.child2,&.child3 {
+                &.child1,
+                &.child2,
+                &.child3 {
                     border-radius: 0 0.5rem 0.5rem 0;
                 }
-            } 
+            }
         }
         &[dir="rtl"] {
             .app-sidebar {
                 .slide .slide-menu {
-                    &.child1,&.child2,&.child3 {
+                    &.child1,
+                    &.child2,
+                    &.child3 {
                         border-radius: 0.5rem 0 0 0.5rem;
                     }
-                } 
+                }
             }
         }
         /* logo */
@@ -80,7 +84,9 @@
                 .toggle-white {
                     display: block;
                 }
-                .toggle-logo, .desktop-logo, .desktop-white {
+                .toggle-logo,
+                .desktop-logo,
+                .desktop-white {
                     display: none;
                 }
             }
@@ -122,7 +128,8 @@
                             }
                         }
                     }
-                    .slide.has-sub,.slide {
+                    .slide.has-sub,
+                    .slide {
                         &.side-menu__label1 {
                             display: none;
                         }
@@ -145,7 +152,8 @@
                 }
             }
             .slide__category,
-            .side-menu__angle, .menu-badge {
+            .side-menu__angle,
+            .menu-badge {
                 display: none;
             }
             .slide-menu {
