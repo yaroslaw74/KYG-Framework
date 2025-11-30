@@ -42,7 +42,8 @@
         align-items: center;
         justify-content: center;
     }
-    &.online,&.offline {
+    &.online,
+    &.offline {
         &:before {
             position: absolute;
             content: "";
@@ -67,7 +68,7 @@
         font-size: 0.65rem;
         .avatar-badge {
             padding: 0.25rem;
-            width:  1rem;
+            width: 1rem;
             height: 1rem;
             line-height: 1rem;
             font-size: 0.5rem;
@@ -85,16 +86,17 @@
             width: 1.15rem;
             height: 1.15rem;
             line-height: 1.15rem;
-            font-size: .5rem;
+            font-size: 0.5rem;
             inset-block-start: -36%;
             inset-inline-end: -0.5rem;
         }
-        &.online,&.offline {
+        &.online,
+        &.offline {
             &:before {
                 width: 0.5rem;
                 height: 0.5rem;
             }
-        }    
+        }
     }
     &.avatar-md {
         width: 2.5rem;
@@ -103,19 +105,20 @@
         font-size: 0.8rem;
         .avatar-badge {
             padding: 0.4rem;
-            width:  1.2rem;
+            width: 1.2rem;
             height: 1.2rem;
             line-height: 1.2rem;
             font-size: 0.65rem;
             inset-block-start: -6%;
             inset-inline-end: -13%;
         }
-        &.online,&.offline {
+        &.online,
+        &.offline {
             &:before {
                 width: 0.75rem;
                 height: 0.75rem;
             }
-        }    
+        }
         svg {
             width: 1.5rem;
             height: 1.5rem;
@@ -130,12 +133,13 @@
             inset-block-start: -15%;
             inset-inline-end: -0.25%;
         }
-        &.online,&.offline {
+        &.online,
+        &.offline {
             &:before {
                 width: 0.8rem;
                 height: 0.8rem;
             }
-        }    
+        }
         svg {
             width: 1.8rem;
             height: 1.8rem;
@@ -150,12 +154,13 @@
             inset-block-start: -8%;
             inset-inline-end: -0.2%;
         }
-        &.online,&.offline {
+        &.online,
+        &.offline {
             &:before {
                 width: 0.95rem;
                 height: 0.95rem;
             }
-        }    
+        }
     }
     &.avatar-xxl {
         width: 5rem;
@@ -166,20 +171,21 @@
             inset-block-start: -4%;
             inset-inline-end: 0rem;
         }
-        &.online,&.offline {
+        &.online,
+        &.offline {
             &:before {
                 width: 1.05rem;
                 height: 1.05rem;
                 inset-block-end: 0.25rem;
             }
-        }    
+        }
     }
 }
 .avatar-list-stacked {
     padding: 0;
     .avatar {
         margin-inline-end: -0.65rem !important;
-        border: 1px solid rgba(0,0,0,0.05);
+        border: 1px solid rgba(0, 0, 0, 0.05);
         vertical-align: middle;
         transition: transform ease 200ms;
         &:last-child {
