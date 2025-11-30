@@ -1513,6 +1513,22 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *     },
  *     embed_sourcemap?: bool|null, // Deprecated: Option "embed_sourcemap" at "symfonycasts_sass.embed_sourcemap" is deprecated. Use "sass_options.embed_source_map" instead". // Default: null
  * }
+ * @psalm-type UxIconsConfig = array{
+ *     icon_dir?: scalar|null, // The local directory where icons are stored. // Default: "%kernel.project_dir%/assets/icons"
+ *     default_icon_attributes?: mixed, // Default attributes to add to all icons. // Default: {"fill":"currentColor"}
+ *     icon_sets?: array<string, array{ // the icon set prefix (e.g. "acme") // Default: []
+ *         path?: scalar|null, // The local icon set directory path. (cannot be used with 'alias')
+ *         alias?: scalar|null, // The remote icon set identifier. (cannot be used with 'path')
+ *         icon_attributes?: list<mixed>,
+ *     }>,
+ *     aliases?: list<scalar|null>,
+ *     iconify?: bool|array{ // Configuration for the remote icon service.
+ *         enabled?: bool, // Default: true
+ *         on_demand?: bool, // Whether to download icons "on demand". // Default: true
+ *         endpoint?: scalar|null, // The endpoint for the Iconify icons API. // Default: "https://api.iconify.design"
+ *     },
+ *     ignore_not_found?: bool, // Ignore error when an icon is not found. Set to 'true' to fail silently. // Default: false
+ * }
  * @psalm-type DamaDoctrineTestConfig = array{
  *     enable_static_connection?: mixed, // Default: true
  *     enable_static_meta_data_cache?: bool, // Default: true
@@ -1527,14 +1543,13 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *     doctrine?: DoctrineConfig,
  *     doctrine_migrations?: DoctrineMigrationsConfig,
  *     twig?: TwigConfig,
- *     web_profiler?: WebProfilerConfig,
  *     stimulus?: StimulusConfig,
  *     turbo?: TurboConfig,
  *     twig_extra?: TwigExtraConfig,
  *     security?: SecurityConfig,
  *     monolog?: MonologConfig,
- *     doctrine_diagram?: DoctrineDiagramConfig,
  *     symfonycasts_sass?: SymfonycastsSassConfig,
+ *     ux_icons?: UxIconsConfig,
  *     "when@dev"?: array{
  *         imports?: ImportsConfig,
  *         parameters?: ParametersConfig,
@@ -1555,6 +1570,23 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *         doctrine_diagram?: DoctrineDiagramConfig,
  *         ignition?: IgnitionConfig,
  *         symfonycasts_sass?: SymfonycastsSassConfig,
+ *         ux_icons?: UxIconsConfig,
+ *     },
+ *     "when@prod"?: array{
+ *         imports?: ImportsConfig,
+ *         parameters?: ParametersConfig,
+ *         services?: ServicesConfig,
+ *         framework?: FrameworkConfig,
+ *         doctrine?: DoctrineConfig,
+ *         doctrine_migrations?: DoctrineMigrationsConfig,
+ *         twig?: TwigConfig,
+ *         stimulus?: StimulusConfig,
+ *         turbo?: TurboConfig,
+ *         twig_extra?: TwigExtraConfig,
+ *         security?: SecurityConfig,
+ *         monolog?: MonologConfig,
+ *         symfonycasts_sass?: SymfonycastsSassConfig,
+ *         ux_icons?: UxIconsConfig,
  *     },
  *     "when@test"?: array{
  *         imports?: ImportsConfig,
@@ -1573,6 +1605,7 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *         doctrine_diagram?: DoctrineDiagramConfig,
  *         dama_doctrine_test?: DamaDoctrineTestConfig,
  *         symfonycasts_sass?: SymfonycastsSassConfig,
+ *         ux_icons?: UxIconsConfig,
  *     },
  *     ...<string, ExtensionType|array{ // extra keys must follow the when@%env% pattern or match an extension alias
  *         imports?: ImportsConfig,
@@ -1654,6 +1687,7 @@ namespace Symfony\Component\Routing\Loader\Configurator;
  * }
  * @psalm-type RoutesConfig = array{
  *     "when@dev"?: array<string, RouteConfig|ImportConfig|AliasConfig>,
+ *     "when@prod"?: array<string, RouteConfig|ImportConfig|AliasConfig>,
  *     "when@test"?: array<string, RouteConfig|ImportConfig|AliasConfig>,
  *     ...<string, RouteConfig|ImportConfig|AliasConfig>
  * }
