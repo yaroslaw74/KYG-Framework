@@ -1,6 +1,6 @@
 /* Start:: icon_overlay */
 [data-vertical-style="overlay"][data-toggled="icon-overlay-close"] {
-    @media(min-width: 992px) {
+    @media (min-width: 992px) {
         &:not([data-icon-overlay="open"]) {
             .app-sidebar {
                 width: 5rem;
@@ -11,7 +11,9 @@
                             display: block;
                         }
                         .desktop-dark,
-                        .desktop-logo,.desktop-white,.toggle-white {
+                        .desktop-logo,
+                        .desktop-white,
+                        .toggle-white {
                             display: none;
                         }
                     }
@@ -29,7 +31,7 @@
                 .side-menu__icon {
                     margin-inline-end: 0;
                 }
-                
+
                 .main-menu {
                     padding-block-start: 22px;
                 }
@@ -61,7 +63,9 @@
                             display: block;
                         }
                         .desktop-dark,
-                        .toggle-logo,.desktop-white,.toggle-white {
+                        .toggle-logo,
+                        .desktop-white,
+                        .toggle-white {
                             display: none;
                         }
                     }
@@ -83,7 +87,7 @@
                 }
             }
         }
-        
+
         &[data-theme-mode="dark"] {
             .main-sidebar-header {
                 .header-logo {
@@ -92,7 +96,8 @@
                     }
                     .desktop-dark,
                     .desktop-logo,
-                    .toggle-logo,.desktop-white {
+                    .toggle-logo,
+                    .desktop-white {
                         display: none;
                     }
                 }
@@ -104,7 +109,9 @@
                             display: block;
                         }
                         .desktop-logo,
-                        .toggle-logo,.desktop-white,.toggle-white {
+                        .toggle-logo,
+                        .desktop-white,
+                        .toggle-white {
                             display: none;
                         }
                     }
@@ -116,7 +123,9 @@
                                 display: block;
                             }
                             .desktop-white,
-                            .toggle-logo,.desktop-dark,.toggle-white {
+                            .toggle-logo,
+                            .desktop-dark,
+                            .toggle-white {
                                 display: none;
                             }
                         }
