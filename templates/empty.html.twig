@@ -35,12 +35,12 @@
     {{ include('partials/switcher.html.twig')}}
     {{ include('partials/loader.html.twig') }}
 
-    <main class="page">
+    <div class="page" >
         {{ include('partials/header.html.twig') }}
         {{ include('partials/sidebar.html.twig')}}
 
         <!-- Start::app-content -->
-        <div class="main-content app-content">
+        <main class="main-content app-content" id="swup">
             <div class="container-fluid">
 
                 {% block page_header %}
@@ -50,12 +50,12 @@
                 {% block app_content %}{% endblock %}
 
             </div>
-        </div>
+        </main>
         <!-- End::app-content -->
 
         {{ include('partials/footer.html.twig') }}
 
-    </main>
+    </div>
 
     {{ include('partials/commonjs.html.twig') }}
 
