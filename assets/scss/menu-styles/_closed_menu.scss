@@ -11,8 +11,8 @@
             .app-header {
                 padding-inline-start: 0;
             }
-        }    
-    }    
+        }
+    }
     &[data-toggled="close-menu-open"] {
         .app-sidebar {
             display: block;
@@ -24,7 +24,7 @@
             .app-header {
                 padding-inline-start: 15rem;
             }
-        }    
-    }    
+        }
+    }
 }
 /* End:: closed_menu */
