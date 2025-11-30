@@ -34,7 +34,10 @@
             &[data-header-styles="dark"] {
                 .horizontal-logo {
                     .header-logo {
-                        .desktop-logo,.toggle-logo,.desktop-white,.toggle-white {
+                        .desktop-logo,
+                        .toggle-logo,
+                        .desktop-white,
+                        .toggle-white {
                             display: none;
                         }
                         .desktop-dark {
@@ -43,10 +46,14 @@
                     }
                 }
             }
-            &[data-header-styles="color"],&[data-header-styles="gradient"] {
+            &[data-header-styles="color"],
+            &[data-header-styles="gradient"] {
                 .horizontal-logo {
                     .header-logo {
-                        .desktop-logo,.toggle-logo,.desktop-dark,.toggle-white {
+                        .desktop-logo,
+                        .toggle-logo,
+                        .desktop-dark,
+                        .toggle-white {
                             display: none;
                         }
                         .desktop-white {
@@ -59,7 +66,10 @@
         &[data-theme-mode="dark"] {
             .horizontal-logo {
                 .header-logo {
-                    .desktop-logo,.toggle-logo,.desktop-white,.toggle-white {
+                    .desktop-logo,
+                    .toggle-logo,
+                    .desktop-white,
+                    .toggle-white {
                         display: none;
                     }
                     .desktop-dark {
@@ -70,7 +80,10 @@
             &[data-header-styles="light"] {
                 .horizontal-logo {
                     .header-logo {
-                        .desktop-dark,.toggle-logo,.desktop-white,.toggle-white {
+                        .desktop-dark,
+                        .toggle-logo,
+                        .desktop-white,
+                        .toggle-white {
                             display: none;
                         }
                         .desktop-logo {
@@ -87,13 +100,14 @@
                     .side-menu__label,
                     .side-menu__angle,
                     .category-name,
-                    .slide-menu,.side-menu__item .badge {
+                    .slide-menu,
+                    .side-menu__item .badge {
                         display: none !important;
                     }
                     .side-menu__item {
                         justify-content: center;
                         .side-menu__icon {
-                            margin-inline-end: 0;    
+                            margin-inline-end: 0;
                         }
                     }
                     .main-menu {
@@ -158,7 +172,10 @@
                 .desktop-logo {
                     display: block;
                 }
-                .desktop-dark,.toggle-logo,.desktop-white,.toggle-white {
+                .desktop-dark,
+                .toggle-logo,
+                .desktop-white,
+                .toggle-white {
                     display: none;
                 }
             }
@@ -169,7 +186,10 @@
                     .desktop-white {
                         display: block;
                     }
-                    .desktop-dark,.toggle-logo,.desktop-logo,.toggle-white {
+                    .desktop-dark,
+                    .toggle-logo,
+                    .desktop-logo,
+                    .toggle-white {
                         display: none;
                     }
                 }
@@ -184,7 +204,11 @@
                 z-index: 99;
             }
         }
-        &[data-bg-img="bgimg1"], &[data-bg-img="bgimg2"], &[data-bg-img="bgimg3"], &[data-bg-img="bgimg4"], &[data-bg-img="bgimg5"] {
+        &[data-bg-img="bgimg1"],
+        &[data-bg-img="bgimg2"],
+        &[data-bg-img="bgimg3"],
+        &[data-bg-img="bgimg4"],
+        &[data-bg-img="bgimg5"] {
             .app-sidebar {
                 border: 0 !important;
             }
