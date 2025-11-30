@@ -102,41 +102,4 @@ return [
         'version' => '5.3.8',
         'type' => 'css',
     ],
-    'swup' => [
-        'version' => '4.8.2',
-    ],
-    '@swup/fade-theme' => [
-        'version' => '2.0.2',
-    ],
-    '@swup/slide-theme' => [
-        'version' => '2.0.2',
-    ],
-    '@swup/forms-plugin' => [
-        'version' => '3.6.0',
-    ],
-    '@swup/debug-plugin' => [
-        'version' => '4.1.0',
-    ],
-    '@swup/theme' => [
-        'version' => '2.1.0',
-    ],
-    '@swup/plugin' => [
-        'version' => '4.0.0',
-    ],
-    '@symfony/ux-swup' => [
-        'version' => '2.31.0',
-    ],
-    'delegate-it' => [
-        'version' => '6.3.0',
-    ],
-    'path-to-regexp' => [
-        'version' => '8.3.0',
-    ],
-    '@symfony/ux-toggle-password' => [
-        'version' => '2.31.0',
-    ],
-    '@symfony/ux-toggle-password/dist/style.min.css' => [
-        'version' => '2.31.0',
-        'type' => 'css',
-    ],
 ];
