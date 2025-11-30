@@ -132,4 +132,11 @@ return [
     'path-to-regexp' => [
         'version' => '8.3.0',
     ],
+    '@symfony/ux-toggle-password' => [
+        'version' => '2.31.0',
+    ],
+    '@symfony/ux-toggle-password/dist/style.min.css' => [
+        'version' => '2.31.0',
+        'type' => 'css',
+    ],
 ];
