@@ -51,7 +51,7 @@
         "symfony/process": "7.4.*",
         "symfony/property-access": "7.4.*",
         "symfony/property-info": "7.4.*",
-        "symfony/requirements-checker": "^2.0",
+        "symfony/requirements-checker": "^2.0.3",
         "symfony/runtime": "7.4.*",
         "symfony/security-bundle": "7.4.*",
         "symfony/serializer": "7.4.*",
@@ -76,7 +76,7 @@
     },
     "require-dev": {
         "dama/doctrine-test-bundle": "^8.4",
-        "ergebnis/composer-normalize": "^2.48",
+        "ergebnis/composer-normalize": "^2.48.2",
         "friendsofphp/php-cs-fixer": "^3.91",
         "jawira/doctrine-diagram-bundle": "^1.1",
         "kocal/biome-js-bundle": "^2.1.1",
