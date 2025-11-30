@@ -21,7 +21,9 @@
                         display: block;
                     }
                     .desktop-dark,
-                    .desktop-logo,.desktop-white,.toggle-white {
+                    .desktop-logo,
+                    .desktop-white,
+                    .toggle-white {
                         display: none;
                     }
                 }
@@ -121,10 +123,12 @@
         &[data-toggled="icon-hover-closed"] {
             .app-sidebar {
                 .slide .slide-menu {
-                    &.child1,&.child2,&.child3 {
+                    &.child1,
+                    &.child2,
+                    &.child3 {
                         border-radius: 0 0.5rem 0.5rem 0;
                     }
-                } 
+                }
                 .side-menu__item {
                     padding-inline-start: 28px;
                     padding-inline-end: 29px;
@@ -133,10 +137,12 @@
             &[dir="rtl"] {
                 .app-sidebar {
                     .slide .slide-menu {
-                        &.child1,&.child2,&.child3 {
+                        &.child1,
+                        &.child2,
+                        &.child3 {
                             border-radius: 0.5rem 0 0 0.5rem;
                         }
-                    } 
+                    }
                 }
             }
             &[data-theme-mode="dark"] {
@@ -148,7 +154,8 @@
                             }
                             .desktop-dark,
                             .desktop-logo,
-                            .toggle-logo,.desktop-white {
+                            .toggle-logo,
+                            .desktop-white {
                                 display: none;
                             }
                         }
@@ -163,7 +170,8 @@
                                 }
                                 .desktop-dark,
                                 .desktop-logo,
-                                .toggle-white,.desktop-white {
+                                .toggle-white,
+                                .desktop-white {
                                     display: none;
                                 }
                             }
@@ -178,7 +186,7 @@
                 &.child1,
                 &.child2,
                 &.child3 {
-                    padding: .1875rem 0;
+                    padding: 0.1875rem 0;
                     li.slide {
                         padding-inline-start: 0;
                         a {
