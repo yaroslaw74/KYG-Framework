@@ -2,5 +2,4 @@ twig:
     file_name_pattern: '*.twig'
 
     form_themes:
-        - 'form/form_theme.html.twig'
         - 'bootstrap_5_layout.html.twig'
