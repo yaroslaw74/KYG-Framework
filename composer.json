@@ -21,8 +21,6 @@
         "source": "https://github.com/yaroslaw74/KYG-Framework",
         "security": "https://github.com/yaroslaw74/KYG-Framework/security"
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true,
     "require": {
         "php": ">=8.4",
         "ext-ctype": "*",
@@ -53,6 +51,7 @@
         "symfony/process": "7.4.*",
         "symfony/property-access": "7.4.*",
         "symfony/property-info": "7.4.*",
+        "symfony/requirements-checker": "^2.0",
         "symfony/runtime": "7.4.*",
         "symfony/security-bundle": "7.4.*",
         "symfony/serializer": "7.4.*",
@@ -75,31 +74,27 @@
         "twig/string-extra": "^3.22.1",
         "twig/twig": "^3.22.1"
     },
-    "config": {
-        "allow-plugins": {
-            "php-http/discovery": true,
-            "phpstan/extension-installer": true,
-            "symfony/flex": true,
-            "symfony/runtime": true,
-            "symfony/thanks": true
-        },
-        "apcu-autoloader": true,
-        "bump-after-update": true,
-        "optimize-autoloader": true,
-        "process-timeout": 1200,
-        "sort-packages": true
-    },
-    "autoload": {
-        "psr-4": {
-            "App\\": "src/",
-            "App\\Additions\\": "public/additions/",
-            "App\\Modules\\": "modules/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "App\\Tests\\": "tests/"
-        }
+    "require-dev": {
+        "dama/doctrine-test-bundle": "^8.4",
+        "ergebnis/composer-normalize": "^2.48",
+        "friendsofphp/php-cs-fixer": "^3.91",
+        "jawira/doctrine-diagram-bundle": "^1.1",
+        "kocal/biome-js-bundle": "^2.1.1",
+        "phpstan/extension-installer": "^1.4.3",
+        "phpstan/phpstan": "^2.1.32",
+        "phpstan/phpstan-phpunit": "^2.0.8",
+        "phpstan/phpstan-strict-rules": "^2.0.7",
+        "phpstan/phpstan-symfony": "^2.0.9",
+        "phpunit/phpunit": "^12.4.4",
+        "rector/cleaning-packages": "^0.1.4",
+        "spatie/symfony-ignition-bundle": "^1.2",
+        "symfony/browser-kit": "7.4.*",
+        "symfony/css-selector": "7.4.*",
+        "symfony/debug-bundle": "7.4.*",
+        "symfony/maker-bundle": "^1.65",
+        "symfony/stopwatch": "7.4.*",
+        "symfony/web-profiler-bundle": "7.4.*",
+        "symplify/config-transformer": "^12.4.3"
     },
     "replace": {
         "symfony/polyfill-ctype": "*",
@@ -119,24 +114,37 @@
         "symfony/polyfill-php83": "*",
         "symfony/polyfill-php84": "*"
     },
-    "scripts": {
-        "auto-scripts": {
-            "cache:clear": "symfony-cmd",
-            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
-            "importmap:install": "symfony-cmd",
-            "sass:build": "symfony-cmd"
-        },
-        "post-install-cmd": [
-            "@php composer.php",
-            "@auto-scripts"
-        ],
-        "post-update-cmd": [
-            "@php composer.php",
-            "@auto-scripts"
-        ]
-    },
     "conflict": {
         "symfony/symfony": "*"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "App\\Additions\\": "public/additions/",
+            "App\\Modules\\": "modules/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true,
+            "symfony/flex": true,
+            "symfony/runtime": true,
+            "symfony/thanks": true
+        },
+        "apcu-autoloader": true,
+        "bump-after-update": true,
+        "optimize-autoloader": true,
+        "process-timeout": 1200,
+        "sort-packages": true
     },
     "extra": {
         "symfony": {
@@ -144,25 +152,23 @@
             "require": "7.4.*"
         }
     },
-    "require-dev": {
-        "dama/doctrine-test-bundle": "^8.4",
-        "friendsofphp/php-cs-fixer": "^3.91",
-        "jawira/doctrine-diagram-bundle": "^1.1",
-        "kocal/biome-js-bundle": "^2.1.1",
-        "phpstan/extension-installer": "^1.4.3",
-        "phpstan/phpstan": "^2.1.32",
-        "phpstan/phpstan-phpunit": "^2.0.8",
-        "phpstan/phpstan-strict-rules": "^2.0.7",
-        "phpstan/phpstan-symfony": "^2.0.9",
-        "phpunit/phpunit": "^12.4.4",
-        "rector/cleaning-packages": "^0.1.4",
-        "spatie/symfony-ignition-bundle": "^1.2",
-        "symfony/browser-kit": "7.4.*",
-        "symfony/css-selector": "7.4.*",
-        "symfony/debug-bundle": "7.4.*",
-        "symfony/maker-bundle": "^1.65",
-        "symfony/stopwatch": "7.4.*",
-        "symfony/web-profiler-bundle": "7.4.*",
-        "symplify/config-transformer": "^12.4.3"
+    "scripts": {
+        "post-install-cmd": [
+            "@php composer.php",
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@php composer.php",
+            "@auto-scripts"
+        ],
+        "auto-scripts": {
+            "requirements-checker": "script",
+            "cache:clear": "symfony-cmd",
+            "cache:warmup": "symfony-cmd",
+            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
+            "importmap:install": "symfony-cmd",
+            "sass:build": "symfony-cmd",
+            "asset-map:compile": "symfony-cmd"
+        }
     }
 }
