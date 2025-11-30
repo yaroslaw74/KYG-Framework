@@ -27,7 +27,7 @@ class AppTwigExtension extends AbstractExtension
 
     public function getLocales(): array
     {
-        return $this->param('app.locales');
+        return $this->params->get('app.locales');
     }
 
     public function LocaleDirExtension(string $locale): string
