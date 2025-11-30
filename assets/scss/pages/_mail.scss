@@ -52,25 +52,25 @@
     padding: 0 20px;
 }
 @media (min-width: 768px) {
-    .main-content-body-mail .main-mail-header>div:last-child {
+    .main-content-body-mail .main-mail-header > div:last-child {
         display: flex;
         align-items: center;
     }
 }
-.main-mail-header>div:last-child {
+.main-mail-header > div:last-child {
     display: none;
 }
-.main-mail-header>div:last-child>span {
+.main-mail-header > div:last-child > span {
     font-size: 12px;
     margin-inline-end: 10px;
 }
-.main-mail-header .btn-group .btn.disabled, 
+.main-mail-header .btn-group .btn.disabled,
 .main-mail-header .btn-group .sp-container button.disabled {
     color: $default-border;
     border-color: $default-border;
     z-index: 0;
 }
-.main-mail-header .btn-group .btn, 
+.main-mail-header .btn-group .btn,
 .main-mail-header .btn-group .sp-container button {
     font-size: 21px;
     display: flex;
@@ -105,7 +105,8 @@
         inset-inline-start: 0;
         border-radius: 0.25rem;
     }
-    span:before, span:after {
+    span:before,
+    span:after {
         line-height: 18px;
         position: absolute;
     }
@@ -114,7 +115,7 @@
         inset-inline-start: 0;
         width: 16px;
         height: 16px;
-        content: '';
+        content: "";
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
         background-size: 55%;
         background-repeat: no-repeat;
@@ -123,14 +124,14 @@
         line-height: 17px;
         display: none;
         border-radius: 0.25rem;
-      }
+    }
 }
-.ckbox input[type=checkbox] {
+.ckbox input[type="checkbox"] {
     opacity: 0;
     margin: 0;
 }
 .main-mail-options {
-    .btn, 
+    .btn,
     .sp-container button {
         font-size: 19px;
         display: flex;
@@ -141,7 +142,8 @@
         background-color: transparent;
         border-width: 0;
     }
-    .btn.disabled, .sp-container button.disabled {
+    .btn.disabled,
+    .sp-container button.disabled {
         background-color: transparent;
         color: $gray-7;
     }
@@ -160,7 +162,6 @@
     .main-mail-list .main-mail-body {
         max-width: 640px;
     }
-
 }
 .main-mail-attachment {
     margin-inline-end: 15px;
@@ -219,7 +220,8 @@
 .main-mail-item.unread {
     background-color: $custom-white;
 }
-.main-mail-item:hover, .main-mail-item:focus {
+.main-mail-item:hover,
+.main-mail-item:focus {
     background-color: $custom-bg-color;
 }
 .main-mail-item:first-child {
@@ -244,7 +246,8 @@
     inset-inline-end: 0;
 }
 .main-mail-item {
-    .main-img-user, .main-avatar {
+    .main-img-user,
+    .main-avatar {
         flex-shrink: 0;
         margin-inline-end: 15px;
     }
@@ -259,11 +262,11 @@
 }
 .main-img-user {
     img {
-    object-fit: cover;
-    border-radius: 100%;
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100%;
+        object-fit: cover;
+        border-radius: 100%;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100%;
     }
 }
 .main-mail-item {
@@ -295,11 +298,11 @@
 .main-mail-star.active {
     color: $warning;
 }
-.ckbox input[type=checkbox]:checked+span:after {
+.ckbox input[type="checkbox"]:checked + span:after {
     display: block;
 }
 
-.main-mail-header>div:first-child p {
+.main-mail-header > div:first-child p {
     font-size: 13px;
     margin-block-end: 0;
 }
@@ -347,7 +350,8 @@
     border-inline-start: 1px solid $primary;
     z-index: 2;
 }
-.main-chat-list .media:hover, .main-chat-list .media:focus {
+.main-chat-list .media:hover,
+.main-chat-list .media:focus {
     background-color: $default-background;
 }
 [data-theme-mode="dark"] {
@@ -356,7 +360,8 @@
             color: rgba(255, 255, 255, 0.6);
         }
     }
-    .main-mail-options .btn.disabled, .main-mail-options .sp-container button.disabled {
+    .main-mail-options .btn.disabled,
+    .main-mail-options .sp-container button.disabled {
         color: rgba(255, 255, 255, 0.6);
     }
 }
