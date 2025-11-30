@@ -1529,6 +1529,21 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *     },
  *     ignore_not_found?: bool, // Ignore error when an icon is not found. Set to 'true' to fail silently. // Default: false
  * }
+ * @psalm-type FlysystemConfig = array{
+ *     storages?: array<string, array{ // Default: []
+ *         adapter: scalar|null,
+ *         options?: list<mixed>,
+ *         visibility?: scalar|null, // Default: null
+ *         directory_visibility?: scalar|null, // Default: null
+ *         case_sensitive?: bool, // Default: true
+ *         disable_asserts?: bool, // Default: false
+ *         public_url?: list<scalar|null>,
+ *         path_normalizer?: scalar|null, // Default: null
+ *         public_url_generator?: scalar|null, // Default: null
+ *         temporary_url_generator?: scalar|null, // Default: null
+ *         read_only?: bool, // Default: false
+ *     }>,
+ * }
  * @psalm-type DamaDoctrineTestConfig = array{
  *     enable_static_connection?: mixed, // Default: true
  *     enable_static_meta_data_cache?: bool, // Default: true
@@ -1552,6 +1567,7 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *     doctrine_diagram?: DoctrineDiagramConfig,
  *     symfonycasts_sass?: SymfonycastsSassConfig,
  *     ux_icons?: UxIconsConfig,
+ *     flysystem?: FlysystemConfig,
  *     "when@dev"?: array{
  *         imports?: ImportsConfig,
  *         parameters?: ParametersConfig,
@@ -1573,6 +1589,7 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *         ignition?: IgnitionConfig,
  *         symfonycasts_sass?: SymfonycastsSassConfig,
  *         ux_icons?: UxIconsConfig,
+ *         flysystem?: FlysystemConfig,
  *     },
  *     "when@test"?: array{
  *         imports?: ImportsConfig,
@@ -1592,6 +1609,7 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *         dama_doctrine_test?: DamaDoctrineTestConfig,
  *         symfonycasts_sass?: SymfonycastsSassConfig,
  *         ux_icons?: UxIconsConfig,
+ *         flysystem?: FlysystemConfig,
  *     },
  *     ...<string, ExtensionType|array{ // extra keys must follow the when@%env% pattern or match an extension alias
  *         imports?: ImportsConfig,
