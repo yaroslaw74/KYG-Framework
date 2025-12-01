@@ -4,8 +4,6 @@
 /.env.*.local
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
-/public/storage/
-/public/theme/
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
@@ -32,3 +30,14 @@
 ###> phpstan/phpstan ###
 phpstan.neon
 ###< phpstan/phpstan ###
+
+###> doctrine/migrations ###
+/migrations/*.php
+###< doctrine/migrations ###
+
+###> symfony/public ###
+/public/additions/*/*
+/assets/vendor/
+/public/storage/
+/public/theme/
+###< symfony/public ###
