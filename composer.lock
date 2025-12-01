@@ -9386,16 +9386,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.91.0",
+            "version": "v3.91.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "c4a25f20390337789c26b693ae46faa125040352"
+                "reference": "b075d845594a90763c480589174f7f90b3aec15f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/c4a25f20390337789c26b693ae46faa125040352",
-                "reference": "c4a25f20390337789c26b693ae46faa125040352",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/b075d845594a90763c480589174f7f90b3aec15f",
+                "reference": "b075d845594a90763c480589174f7f90b3aec15f",
                 "shasum": ""
             },
             "require": {
@@ -9477,7 +9477,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.91.0"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.91.1"
             },
             "funding": [
                 {
@@ -9485,7 +9485,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-28T22:07:42+00:00"
+            "time": "2025-12-01T11:09:57+00:00"
         },
         {
             "name": "illuminate/collections",
@@ -9881,16 +9881,16 @@
         },
         {
             "name": "jawira/doctrine-diagram-bundle",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jawira/doctrine-diagram-bundle.git",
-                "reference": "5827f20977bc474c712edcb19c06852c582e1484"
+                "reference": "46840aef3bf860ad48bab4047aec5418e5f7129b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jawira/doctrine-diagram-bundle/zipball/5827f20977bc474c712edcb19c06852c582e1484",
-                "reference": "5827f20977bc474c712edcb19c06852c582e1484",
+                "url": "https://api.github.com/repos/jawira/doctrine-diagram-bundle/zipball/46840aef3bf860ad48bab4047aec5418e5f7129b",
+                "reference": "46840aef3bf860ad48bab4047aec5418e5f7129b",
                 "shasum": ""
             },
             "require": {
@@ -9902,11 +9902,11 @@
                 "jawira/plantuml-client": "^1.0",
                 "jawira/plantuml-to-image": "^1.1",
                 "php": "^8.1",
-                "symfony/config": "^6.0 || ^7.0",
-                "symfony/console": "^6.0 || ^7.0",
-                "symfony/dependency-injection": "^6.0 || ^7.0",
-                "symfony/filesystem": "^6.0 || ^7.0",
-                "symfony/http-kernel": "^6.0 || ^7.0"
+                "symfony/config": "^6.0 || ^7.0 || ^8.0",
+                "symfony/console": "^6.0 || ^7.0 || ^8.0",
+                "symfony/dependency-injection": "^6.0 || ^7.0 || ^8.0",
+                "symfony/filesystem": "^6.0 || ^7.0 || ^8.0",
+                "symfony/http-kernel": "^6.0 || ^7.0 || ^8.0"
             },
             "require-dev": {
                 "ergebnis/composer-normalize": "^2.42",
@@ -9949,9 +9949,9 @@
             "support": {
                 "docs": "https://jawira.github.io/doctrine-diagram-bundle",
                 "issues": "https://github.com/jawira/doctrine-diagram-bundle/issues",
-                "source": "https://github.com/jawira/doctrine-diagram-bundle/tree/v1.1.0"
+                "source": "https://github.com/jawira/doctrine-diagram-bundle/tree/v1.2.0"
             },
-            "time": "2025-10-13T17:45:02+00:00"
+            "time": "2025-11-30T21:12:29+00:00"
         },
         {
             "name": "jawira/doctrine-diagram-contracts",
@@ -10154,32 +10154,31 @@
         },
         {
             "name": "jawira/plantuml-to-image",
-            "version": "v1.1.2",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jawira/plantuml-to-image.git",
-                "reference": "26eea37a474df81b8891d583e876217916926973"
+                "reference": "0e99749b330c5203dbb6f3b63c0147bd56ff6039"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jawira/plantuml-to-image/zipball/26eea37a474df81b8891d583e876217916926973",
-                "reference": "26eea37a474df81b8891d583e876217916926973",
+                "url": "https://api.github.com/repos/jawira/plantuml-to-image/zipball/0e99749b330c5203dbb6f3b63c0147bd56ff6039",
+                "reference": "0e99749b330c5203dbb6f3b63c0147bd56ff6039",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.4 || ^8.0",
-                "symfony/process": "^5.4 || ^6.0 || ^7.0"
+                "php": "^8.1",
+                "symfony/process": "^6.0 || ^7.0 || ^8.0"
             },
             "require-dev": {
-                "ergebnis/composer-normalize": "^2.28",
                 "ext-libxml": "*",
                 "ext-simplexml": "*",
                 "friendsofphp/php-cs-fixer": "^3.68",
                 "jawira/plantuml": "^1.2022",
                 "jawira/skeleton": "^2.16",
                 "jawira/the-lost-functions": "^1.5.0",
-                "phpunit/phpunit": "^9.6.17",
-                "vimeo/psalm": "^5.26.1"
+                "phpunit/phpunit": "^10",
+                "vimeo/psalm": "^6.0"
             },
             "suggest": {
                 "jawira/plantuml": "Provides PlantUml (jar and executable)"
@@ -10203,9 +10202,9 @@
             "description": "PlantUml wrapper to convert puml diagrams to images.",
             "support": {
                 "issues": "https://github.com/jawira/plantuml-to-image/issues",
-                "source": "https://github.com/jawira/plantuml-to-image/tree/v1.1.2"
+                "source": "https://github.com/jawira/plantuml-to-image/tree/v1.2.0"
             },
-            "time": "2025-01-25T11:29:31+00:00"
+            "time": "2025-11-30T23:59:51+00:00"
         },
         {
             "name": "jawira/the-lost-functions",
@@ -10753,20 +10752,20 @@
         },
         {
             "name": "nette/utils",
-            "version": "v4.0.9",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "505a30ad386daa5211f08a318e47015b501cad30"
+                "reference": "fa1f0b8261ed150447979eb22e373b7b7ad5a8e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/505a30ad386daa5211f08a318e47015b501cad30",
-                "reference": "505a30ad386daa5211f08a318e47015b501cad30",
+                "url": "https://api.github.com/repos/nette/utils/zipball/fa1f0b8261ed150447979eb22e373b7b7ad5a8e0",
+                "reference": "fa1f0b8261ed150447979eb22e373b7b7ad5a8e0",
                 "shasum": ""
             },
             "require": {
-                "php": "8.0 - 8.5"
+                "php": "8.2 - 8.5"
             },
             "conflict": {
                 "nette/finder": "<3",
@@ -10789,7 +10788,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -10836,9 +10835,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.0.9"
+                "source": "https://github.com/nette/utils/tree/v4.1.0"
             },
-            "time": "2025-10-31T00:45:47+00:00"
+            "time": "2025-12-01T17:49:23+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -11210,16 +11209,16 @@
         },
         {
             "name": "phpstan/phpstan-doctrine",
-            "version": "2.0.11",
+            "version": "2.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-doctrine.git",
-                "reference": "368ad1c713a6d95763890bc2292694a603ece7c8"
+                "reference": "d20ee0373d22735271f1eb4d631856b5f847d399"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-doctrine/zipball/368ad1c713a6d95763890bc2292694a603ece7c8",
-                "reference": "368ad1c713a6d95763890bc2292694a603ece7c8",
+                "url": "https://api.github.com/repos/phpstan/phpstan-doctrine/zipball/d20ee0373d22735271f1eb4d631856b5f847d399",
+                "reference": "d20ee0373d22735271f1eb4d631856b5f847d399",
                 "shasum": ""
             },
             "require": {
@@ -11277,9 +11276,9 @@
             "description": "Doctrine extensions for PHPStan",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-doctrine/issues",
-                "source": "https://github.com/phpstan/phpstan-doctrine/tree/2.0.11"
+                "source": "https://github.com/phpstan/phpstan-doctrine/tree/2.0.12"
             },
-            "time": "2025-11-04T09:55:35+00:00"
+            "time": "2025-12-01T11:34:02+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
@@ -11789,16 +11788,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "12.4.4",
+            "version": "12.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "9253ec75a672e39fcc9d85bdb61448215b8162c7"
+                "reference": "5af317802efd27d5b9cbe048e3760d4a2f687f45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9253ec75a672e39fcc9d85bdb61448215b8162c7",
-                "reference": "9253ec75a672e39fcc9d85bdb61448215b8162c7",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5af317802efd27d5b9cbe048e3760d4a2f687f45",
+                "reference": "5af317802efd27d5b9cbe048e3760d4a2f687f45",
                 "shasum": ""
             },
             "require": {
@@ -11866,7 +11865,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.4.4"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.4.5"
             },
             "funding": [
                 {
@@ -11890,7 +11889,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-11-21T07:39:11+00:00"
+            "time": "2025-12-01T07:40:15+00:00"
         },
         {
             "name": "psr/simple-cache",
