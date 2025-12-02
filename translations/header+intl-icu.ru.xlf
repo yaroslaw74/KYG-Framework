@@ -7,7 +7,7 @@
     <body>
       <trans-unit id="4s5Nig2" resname="Account Settings">
         <source>Account Settings</source>
-        <target>Настройки учетной записи</target>
+        <target>Настройки Учетной записи</target>
       </trans-unit>
       <trans-unit id="3MWRMJ2" resname="Add friends">
         <source>Add friends</source>
@@ -31,7 +31,7 @@
       </trans-unit>
       <trans-unit id="Iwl9wtn" resname="Edit Profile">
         <source>Edit Profile</source>
-        <target>Редактировать профиль</target>
+        <target>Редактировать Профиль</target>
       </trans-unit>
       <trans-unit id="1cbWG5k" resname="Friends">
         <source>Friends</source>
@@ -43,7 +43,7 @@
       </trans-unit>
       <trans-unit id="8cdUoH8" resname="Mark All Read">
         <source>Mark All Read</source>
-        <target>Пометить все как прочитанные</target>
+        <target>Пометить Все как Прочитанные</target>
       </trans-unit>
       <trans-unit id="1Z8uBHi" resname="Messages">
         <source>Messages</source>
