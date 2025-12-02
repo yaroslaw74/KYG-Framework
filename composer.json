@@ -79,9 +79,9 @@
     "require-dev": {
         "dama/doctrine-test-bundle": "^8.4",
         "ergebnis/composer-normalize": "^2.48.2",
-        "friendsofphp/php-cs-fixer": "^3.91.1",
+        "friendsofphp/php-cs-fixer": "^3.91.2",
         "jawira/doctrine-diagram-bundle": "^1.2",
-        "kocal/biome-js-bundle": "^2.1.1",
+        "kocal/biome-js-bundle": "^2.1.2",
         "phpstan/extension-installer": "^1.4.3",
         "phpstan/phpstan": "^2.1.32",
         "phpstan/phpstan-phpunit": "^2.0.8",
@@ -93,7 +93,7 @@
         "symfony/browser-kit": "7.4.*",
         "symfony/css-selector": "7.4.*",
         "symfony/debug-bundle": "7.4.*",
-        "symfony/maker-bundle": "^1.65",
+        "symfony/maker-bundle": "^1.65.1",
         "symfony/stopwatch": "7.4.*",
         "symfony/web-profiler-bundle": "7.4.*",
         "symplify/config-transformer": "^12.4.3"
