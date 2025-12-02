@@ -100,7 +100,7 @@
                             <h6 class="mb-0 fs-15 fw-semibold text-fixed-white">{% trans %}Messages{% endtrans %}</h6>
                             <span class="badge rounded-pill bg-warning pt-1 text-fixed-black">{% trans %}Mark All Read{% endtrans %}</span>
                         </div>
-                        <p class="dropdown-title-text subtext mb-0 text-fixed-white op-6 pb-0 fs-12 ">{% trans %}You have %messages% unread messages{% endtrans %}</p>
+                        <p class="dropdown-title-text subtext mb-0 text-fixed-white op-6 pb-0 fs-12 ">{% trans with {'%messages%': 0} %}You have %messages% unread messages{% endtrans %}</p>
                     </div>
                     <div><hr class="dropdown-divider"></div>
                     <ul class="list-unstyled mb-0" id="header-cart-items-scroll">
@@ -198,7 +198,7 @@
                             <h6 class="mb-0 fs-15 fw-semibold text-fixed-white">{% trans %}Notifications{% endtrans %}</h6>
                             <span class="badge rounded-pill bg-warning pt-1 text-fixed-black">{% trans %}Mark All Read{% endtrans %}</span>
                         </div>
-                        <p class="dropdown-title-text subtext mb-0 text-fixed-white op-6 pb-0 fs-12 ">{% trans %}You have %notifications% unread Notifications{% endtrans %}</p>
+                        <p class="dropdown-title-text subtext mb-0 text-fixed-white op-6 pb-0 fs-12 ">{% trans with {'%notifications%': 0} %}You have %notifications% unread Notifications{% endtrans %}</p>
                     </div>
                     <div><hr class="dropdown-divider"></div>
                     <ul class="list-unstyled mb-0" id="header-notification-scroll">
