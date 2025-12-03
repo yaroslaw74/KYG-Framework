@@ -3,7 +3,7 @@
     const $rootElement = document.documentElement;
     const _$body = document.body;
     window.onscroll = () => {
-        const scrollTop = window.scrollY || window.pageYOffset;
+        const _scrollTop = window.scrollY || window.pageYOffset;
         const _clientHt = $rootElement.scrollHeight - $rootElement.clientHeight;
         if (window.scrollY > 100) {
             scrollToTop.style.display = "flex";
