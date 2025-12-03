@@ -16,3 +16,6 @@ import "./scss/styles.scss";
 /*
  * Modules
  */
+
+// Page Loader JS
+import "./js/page-loader.js";
