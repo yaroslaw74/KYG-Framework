@@ -1,7 +1,5 @@
 (() => {
-
     /* page loader */
-
     function hideLoader() {
         const loader = document.getElementById("loader");
         loader.classList.add("d-none")
@@ -72,8 +70,8 @@
             nanoPickr = new Pickr(
                 Object.assign(
                     {
-                        el,
-                        theme,
+                        el: el,
+                        theme: theme,
                         default: "#0162e8",
                     },
                     config
@@ -144,8 +142,8 @@
             nanoPickr1 = new Pickr(
                 Object.assign(
                     {
-                        el,
-                        theme,
+                        el: el,
+                        theme: theme,
                         default: "#0162e8",
                     },
                     config
@@ -319,8 +317,6 @@
     /* back to top */
 
     /* header dropdowns scroll */
-
-
     const myHeadernotification = document.getElementById("header-notification-scroll");
     new SimpleBar(myHeadernotification, { autoHide: true });
 
