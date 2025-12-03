@@ -1,13 +1,4 @@
 (() => {
-    /* page loader */
-    function hideLoader() {
-        const loader = document.getElementById("loader");
-        loader.classList.add("d-none")
-    }
-
-    window.addEventListener("load", hideLoader);
-    /* page loader */
-
     /* tooltip */
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
     const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl));
@@ -255,44 +246,6 @@
     Waves.attach(".btn-wave", ["waves-light"]);
     Waves.init();
     /* node waves */
-
-    /* card with close button */
-    const DIV_CARD = ".card";
-    const cardRemoveBtn = document.querySelectorAll('[data-bs-toggle="card-remove"]');
-    cardRemoveBtn.forEach((ele) => {
-        ele.addEventListener("click", function (e) {
-        e.preventDefault();
-        const card = this.closest(DIV_CARD);
-        card.remove();
-        return false;
-        });
-    });
-    /* card with close button */
-
-    /* card with fullscreen */
-    const cardFullscreenBtn = document.querySelectorAll('[data-bs-toggle="card-fullscreen"]');
-    cardFullscreenBtn.forEach((ele) => {
-        ele.addEventListener("click", function (e) {
-            const card = this.closest(DIV_CARD);
-            card.classList.toggle("card-fullscreen");
-            card.classList.remove("card-collapsed");
-            e.preventDefault();
-            return false;
-        });
-    });
-    /* card with fullscreen */
-
-    /* count-up */
-    let i = 1;
-    setInterval(() => {
-        document.querySelectorAll(".count-up").forEach((ele) => {
-            if (ele.getAttribute("data-count") >= i) {
-                i = i + 1;
-                ele.innerText = i;
-            }
-        });
-    }, 10);
-    /* count-up */
 
     /* header dropdowns scroll */
     const myHeadernotification = document.getElementById("header-notification-scroll");
