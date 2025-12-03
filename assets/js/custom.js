@@ -1,11 +1,13 @@
 (() => {
+    const html = document.querySelector("html");
+
     /* tooltip */
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-    const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl));
+    const _tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl));
 
     /* popover  */
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-    const popoverList = [...popoverTriggerList].map((popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl));
+    const _popoverList = [...popoverTriggerList].map((popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl));
 
     //switcher color pickers
     const pickrContainerPrimary = document.querySelector(".pickr-container-primary");
@@ -70,9 +72,8 @@
             );
 
              /* Set events */
-            nanoPickr.on("changestop", (source, instance) => {
+            nanoPickr.on("changestop", (_source, instance) => {
                 const color = instance.getColor().toRGBA();
-                const html = document.querySelector("html");
                 html.style.setProperty("--primary-rgb", `${Math.floor(color[0])}, ${Math.floor(color[1])}, ${Math.floor(color[2])}`);
                 /* theme color picker */
                 localStorage.setItem("primaryRGB", `${Math.floor(color[0])}, ${Math.floor(color[1])}, ${Math.floor(color[2])}`);
@@ -142,9 +143,8 @@
             );
 
             /* Set events */
-            nanoPickr1.on("changestop", (source, instance) => {
+            nanoPickr1.on("changestop", (_source, instance) => {
                 const color = instance.getColor().toRGBA();
-                const html = document.querySelector("html");
                 html.style.setProperty("--body-bg-rgb", `${color[0]}, ${color[1]}, ${color[2]}`);
                 html.style.setProperty("--light-rgb", `${color[0] + 14}, ${color[1] + 14}, ${color[2] + 14}`);
                 html.style.setProperty("--form-control-bg", `rgb(${color[0] + 14}, ${color[1] + 14}, ${color[2] + 14})`);
@@ -194,7 +194,7 @@
             localStorage.removeItem("valexHeader");
             localStorage.removeItem("bodylightRGB");
             localStorage.removeItem("bodyBgRGB");
-            if (localStorage.getItem("valexlayout") != "horizontal") {
+            if (localStorage.getItem("valexlayout") !== "horizontal") {
                 html.setAttribute("data-menu-styles", "light");
             }
             html.setAttribute("data-header-styles", "light");
